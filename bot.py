@@ -131,28 +131,29 @@ def main():
         }
 
     # Environment variable overrides for GitHub Actions / Cloud deployments
-    if os.environ.get("ERP_UID"):
-        config["uid"] = os.environ.get("ERP_UID")
-    if os.environ.get("ERP_PASS"):
-        config["pass"] = os.environ.get("ERP_PASS")
-    if os.environ.get("ERP_CID"):
-        config["cid"] = os.environ.get("ERP_CID")
-    if os.environ.get("ERP_DB"):
-        config["db"] = os.environ.get("ERP_DB")
-    if os.environ.get("ERP_LOGIN_URL"):
-        config["login_url"] = os.environ.get("ERP_LOGIN_URL")
+    env_uid = (os.environ.get("ERP_UID") or "").strip()
+    env_pass = (os.environ.get("ERP_PASS") or "").strip()
+    env_cid = (os.environ.get("ERP_CID") or "").strip()
+    env_db = (os.environ.get("ERP_DB") or "").strip()
+    env_url = (os.environ.get("ERP_LOGIN_URL") or "").strip()
+
+    if env_uid: config["uid"] = env_uid
+    if env_pass: config["pass"] = env_pass
+    if env_cid: config["cid"] = env_cid
+    if env_db: config["db"] = env_db
+    if env_url: config["login_url"] = env_url
 
     # Safe fallbacks if any field is empty or template dummy
     if not config.get("uid") or config.get("uid") == "YOUR_USER_ID":
-        config["uid"] = os.environ.get("ERP_UID") or "15387"
+        config["uid"] = "15387"
     if not config.get("pass") or config.get("pass") == "YOUR_PASSWORD":
-        config["pass"] = os.environ.get("ERP_PASS") or "anikanik556"
+        config["pass"] = "anikanik556"
     if not config.get("cid"):
-        config["cid"] = os.environ.get("ERP_CID") or "mep"
+        config["cid"] = "mep"
     if not config.get("db"):
-        config["db"] = os.environ.get("ERP_DB") or "erpcombd"
+        config["db"] = "erpcombd"
     if not config.get("login_url"):
-        config["login_url"] = os.environ.get("ERP_LOGIN_URL") or "https://mepgrouperp.com/1027/login/pages/main/index.php"
+        config["login_url"] = "https://mepgrouperp.com/1027/login/pages/main/index.php"
     if not config.get("max_workers"):
         config["max_workers"] = 24
 
