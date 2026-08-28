@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MEP Industrial Intelligence — Production BOM & Warehouse Execution System</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              900: '#064e3b',
+            },
+            dark: {
+              950: '#060911',
+              900: '#080c14',
+              850: '#0e1422',
+              800: '#111827',
+              750: '#1a2234',
+              700: '#222d42',
+              600: '#334155',
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+            mono: ['JetBrains Mono', 'Fira Code', 'Consolas', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Phosphor Icons & Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=20260828ai" />
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-dark-900 dark:text-slate-100 min-h-screen flex antialiased selection:bg-emerald-500 selection:text-white transition-colors duration-200 overflow-x-hidden">
+
+  <!-- ================= LEFT COLLAPSIBLE SIDEBAR ================= -->
+  <aside id="app-sidebar" class="shrink-0 bg-white/95 dark:bg-dark-850/95 border-r border-slate-200 dark:border-slate-800/80 flex flex-col justify-between hidden md:flex sticky top-0 h-screen z-40 backdrop-blur-md transition-all duration-200">
+    <div class="p-3.5 space-y-5">
+      
+      <!-- Enterprise Brand Header -->
+      <div class="flex items-center justify-between px-1.5 sidebar-header-box">
+        <div class="flex items-center gap-3 cursor-pointer" onclick="switchNavTab('registry')">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-600 via-teal-500 to-cyan-500 flex items-center justify-center text-white shadow-md shadow-emerald-500/20 shrink-0">
+            <i class="ph ph-cube text-xl"></i>
+          </div>
+          <div class="sidebar-text">
+            <h1 class="font-bold text-xs leading-tight text-slate-900 dark:text-white tracking-tight">MEP INTELLIGENCE</h1>
+            <p class="text-[10px] font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">Industrial MES Suite</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Groups -->
+      <nav class="space-y-4">
+        
+        <!-- Operations & Intelligence Master Collapsible Card -->
+        <div class="space-y-1">
+          <div class="px-2 text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1.5 sidebar-group-title">
+            Operations & Analytics
+          </div>
+          
+          <!-- Master Parent Collapsible Button -->
+          <div class="space-y-1.5" id="ops-accordion-group">
+            <button type="button" onclick="toggleOpsAccordion()" id="btn-ops-parent" class="ops-parent-btn w-full text-left" title="Toggle Operations Suite Views">
+              <div class="flex items-center gap-2.5 min-w-0">
+                <div class="w-6 h-6 rounded-lg bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
+                  <i class="ph-bold ph-squares-four text-sm"></i>
+                </div>
+                <span class="truncate sidebar-text font-bold">Operations Suite</span>
+              </div>
+              <div class="flex items-center gap-1.5 sidebar-badge shrink-0">
+                <span class="glass-pill glass-pill-emerald font-mono text-[9px] font-bold py-0.5 px-1.5">3</span>
+                <i id="ops-caret" class="ph ph-caret-down text-xs text-slate-400"></i>
+              </div>
+            </button>
+
+            <!-- 3 Nested Child Items inside Frosted Sub-Card -->
+            <div id="ops-submenu" class="ops-sub-card space-y-0.5">
+              
+              <button type="button" onclick="switchNavTab('registry')" id="nav-btn-registry" class="ops-child-item active w-full text-left" title="BOM Master Registry">
+                <div class="flex items-center gap-2 truncate">
+                  <i class="ph ph-cube text-emerald-500 text-sm shrink-0"></i>
+                  <span class="truncate">BOM Registry</span>
+                </div>
+                <span id="badge-total-boms-sidebar" class="glass-pill glass-pill-neutral font-mono text-[10px] py-0 px-1.5">174</span>
+              </button>
+
+              <button type="button" onclick="switchNavTab('inventory')" id="nav-btn-inventory" class="ops-child-item w-full text-left" title="Warehouse Stock (Report 91223)">
+                <div class="flex items-center gap-2 truncate">
+                  <i class="ph ph-warehouse text-purple-500 text-sm shrink-0"></i>
+                  <span class="truncate">Warehouse Stock</span>
+                </div>
+                <span id="badge-stock-items-sidebar" class="glass-pill glass-pill-neutral font-mono text-[10px] py-0 px-1.5">418</span>
+              </button>
+
+              <button type="button" onclick="switchNavTab('history')" id="nav-btn-history" class="ops-child-item w-full text-left" title="Differential Audit Trail & Log">
+                <div class="flex items-center gap-2 truncate">
+                  <i class="ph ph-clock-counter-clockwise text-amber-500 text-sm shrink-0"></i>
+                  <span class="truncate">Audit Trail & Log</span>
+                </div>
+                <span class="glass-pill glass-pill-neutral text-[9px] py-0 px-1.5 font-medium">Live</span>
+              </button>
+
+            </div>
+          </div>
+        </div>
+
+      </nav>
+    </div>
+
+    <!-- Sidebar Bottom Profile & Version Widget -->
+    <div class="p-3 border-t border-slate-200 dark:border-slate-800/80 space-y-2.5 sidebar-bottom-container">
+      <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-dark-800 border border-slate-200 dark:border-slate-700/60 flex items-center gap-2.5 sidebar-profile-card" title="Plant Supervisor • Plant 1027">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-700 flex items-center justify-center font-bold text-xs text-white shrink-0 shadow-sm">
+          PS
+        </div>
+        <div class="flex-1 min-w-0 sidebar-user-details">
+          <p class="text-xs font-bold text-slate-900 dark:text-white truncate leading-tight">Plant Supervisor</p>
+          <div class="flex items-center gap-1.5 text-[10px] text-slate-400">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 pulse-dot"></span>
+            <span class="truncate font-mono">Plant 1027 • Fan Div</span>
+          </div>
+        </div>
+      </div>
+      <div class="text-[10px] text-slate-400 dark:text-slate-500 text-center font-mono sidebar-footer-info">
+        v3.2 Enterprise • Port 8088
+      </div>
+    </div>
+  </aside>
+
+  <!-- ================= MAIN WORKSPACE AREA ================= -->
+  <div class="flex-1 flex flex-col min-w-0 overflow-x-hidden">
+    
+    <!-- Top Sticky Header Bar -->
+    <header class="sticky top-0 z-50 glass-header">
+      <div class="px-4 sm:px-6 h-14 flex items-center justify-between gap-4">
+        
+        <!-- Left: Mobile Toggle, Collapse Button & Breadcrumb -->
+        <div class="flex items-center gap-3">
+          <button onclick="toggleMobileSidebar()" class="md:hidden p-1.5 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300">
+            <i class="ph ph-list text-lg"></i>
+          </button>
+          
+          <!-- Executive Sidebar Toggle -->
+          <button onclick="toggleSidebarCollapse()" id="btn-sidebar-toggle-main" class="hidden md:flex btn-glass-secondary w-8 h-8 items-center justify-center rounded-xl" title="Toggle Sidebar (Shortcut: [ )">
+            <i id="sidebar-toggle-icon" class="ph ph-sidebar-simple text-base"></i>
+          </button>
+
+          <div>
+            <div class="flex items-center gap-1.5 text-xs text-slate-400 dark:text-slate-500 font-medium">
+              <span>Operations</span>
+              <i class="ph ph-caret-right text-[10px]"></i>
+              <span id="breadcrumb-current" class="text-slate-900 dark:text-slate-100 font-semibold">BOM Master Registry</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Header Tools & Actions (Enterprise Frosted Glass Cluster) -->
+        <div class="flex items-center gap-2.5">
+          
+          <!-- Live Sync Status Indicator (Glass Pill) -->
+          <div id="live-sync-indicator" class="hidden sm:flex items-center status-chip-emerald font-semibold py-1">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.9)]"></span>
+            <span id="last-sync-time-text" class="font-mono text-[11px] font-bold tracking-tight">Synced • 87 BOMs</span>
+          </div>
+
+          <!-- Notification Bell with Dropdown (Glass Button) -->
+          <div class="relative">
+            <button id="notification-btn" onclick="toggleNotificationMenu(event)" class="btn-glass-secondary w-8 h-8 flex items-center justify-center rounded-xl relative" title="Production & Shortage Alerts">
+              <i class="ph ph-bell text-base"></i>
+              <span id="notif-badge" class="absolute -top-1 -right-1 px-1.5 py-0.2 rounded-full bg-rose-500 text-white text-[9px] font-bold font-mono border border-white dark:border-dark-850 shadow-xs">3</span>
+            </button>
+            
+            <div id="notification-menu" class="hidden absolute right-0 mt-2 w-80 rounded-2xl bg-white dark:bg-dark-850 backdrop-blur-2xl border border-slate-200/90 dark:border-slate-700/80 shadow-2xl p-4 z-[100] text-xs" style="box-shadow: 0 25px 60px rgba(15, 23, 42, 0.22);">
+              <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-100 dark:border-slate-800">
+                <span class="font-bold text-slate-900 dark:text-white">Active Production Alerts</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300 font-bold">3 Critical</span>
+              </div>
+              <div class="space-y-2 max-h-60 overflow-y-auto">
+                <div class="p-2.5 rounded-xl bg-rose-50/70 dark:bg-rose-950/30 border border-rose-200/70 dark:border-rose-800/50">
+                  <div class="flex items-center gap-1.5 font-bold text-rose-700 dark:text-rose-400 text-[11px]">
+                    <i class="ph ph-warning-circle"></i> Shortage Alert
+                  </div>
+                  <p class="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5">48 Production BOMs blocked by missing raw materials.</p>
+                </div>
+                <div class="p-2.5 rounded-xl bg-amber-50/70 dark:bg-amber-950/30 border border-amber-200/70 dark:border-amber-800/50">
+                  <div class="flex items-center gap-1.5 font-bold text-amber-700 dark:text-amber-400 text-[11px]">
+                    <i class="ph ph-package"></i> Warehouse Notice
+                  </div>
+                  <p class="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5">Report 91223 Closing Stock loaded (418 Total Tracked Items).</p>
+                </div>
+                <div class="p-2.5 rounded-xl bg-emerald-50/70 dark:bg-emerald-950/30 border border-emerald-200/70 dark:border-emerald-800/50">
+                  <div class="flex items-center gap-1.5 font-bold text-emerald-700 dark:text-emerald-400 text-[11px]">
+                    <i class="ph ph-check-circle"></i> Ready to Produce
+                  </div>
+                  <p class="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5">39 Products have 100% sufficient warehouse stock for builds.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Primary ERP Sync Action Button (Enterprise SaaS CTA) -->
+          <button onclick="openSyncModal()" class="btn-primary-enterprise py-2 px-4 rounded-xl text-xs">
+            <i class="ph ph-arrows-clockwise text-sm font-bold"></i>
+            <span>Update BOM & Stock</span>
+          </button>
+
+          <!-- Theme Toggle (Glass Button) -->
+          <button onclick="toggleDarkMode()" class="btn-glass-secondary w-8 h-8 flex items-center justify-center rounded-xl" title="Toggle Theme">
+            <i id="theme-icon" class="ph ph-sun text-base"></i>
+          </button>
+
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Main Dynamic Content Workspace (Fluid Full-Width with Optimized Compact Vertical Spacing) -->
+    <main class="flex-1 px-4 sm:px-6 py-3.5 space-y-3.5 w-full">
+      
+      <!-- ================= VIEW 1: BOM MASTER REGISTRY ================= -->
+      <div id="view-registry" class="space-y-3.5">
+        
+        <!-- COMPACT HORIZONTAL STAT CARDS GRID -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3">
+          
+          <!-- Card 1: Total Production BOMs -->
+          <div class="glass-card p-3 px-4 flex items-center justify-between relative overflow-hidden !rounded-xl shadow-xs">
+            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#10B981] to-[#34D399]"></div>
+            <div>
+              <span class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider block">Total Active BOMs</span>
+              <p id="stat-total-boms" class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white font-tabular leading-tight mt-0.5">--</p>
+              <span class="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold block mt-0.5">100% Approved Formulas</span>
+            </div>
+            <div class="w-8 h-8 rounded-lg bg-white/70 dark:bg-dark-800/70 border border-white/60 dark:border-white/10 shadow-xs flex items-center justify-center text-sm text-emerald-600 dark:text-emerald-400 shrink-0">
+              <i class="ph ph-file-text"></i>
+            </div>
+          </div>
+
+          <!-- Card 2: Ready to Build Capacity -->
+          <div class="glass-card p-3 px-4 flex items-center justify-between relative overflow-hidden cursor-pointer group !rounded-xl shadow-xs" onclick="filterByFeasibility('can_produce')">
+            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#10B981] to-[#34D399]"></div>
+            <div>
+              <span class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider block">Ready to Build</span>
+              <p id="stat-ready-produce" class="text-xl sm:text-2xl font-extrabold text-emerald-600 dark:text-emerald-400 font-tabular leading-tight mt-0.5">--</p>
+              <span class="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold block mt-0.5">44.8% Ready • <span class="font-mono text-slate-400">39 Products</span></span>
+            </div>
+            <div class="w-8 h-8 rounded-lg bg-white/70 dark:bg-dark-800/70 border border-white/60 dark:border-white/10 shadow-xs flex items-center justify-center text-sm text-emerald-600 dark:text-emerald-400 shrink-0">
+              <i class="ph ph-package"></i>
+            </div>
+          </div>
+
+          <!-- Card 3: Capacity Blocked / Shortage -->
+          <div class="glass-card p-3 px-4 flex items-center justify-between relative overflow-hidden cursor-pointer group !rounded-xl shadow-xs" onclick="filterByFeasibility('blocked')">
+            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#EF4444] to-[#FB7185]"></div>
+            <div>
+              <span class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider block">Capacity Blocked</span>
+              <p id="stat-blocked-count" class="text-xl sm:text-2xl font-extrabold text-rose-600 dark:text-rose-400 font-tabular leading-tight mt-0.5">48</p>
+              <span class="text-[10px] text-rose-600 dark:text-rose-400 font-bold block mt-0.5">55.2% Shortage • <span class="font-mono text-slate-400">Needs Material</span></span>
+            </div>
+            <div class="w-8 h-8 rounded-lg bg-white/70 dark:bg-dark-800/70 border border-white/60 dark:border-white/10 shadow-xs flex items-center justify-center text-sm text-rose-600 dark:text-rose-400 shrink-0">
+              <i class="ph ph-warning-octagon"></i>
+            </div>
+          </div>
+
+          <!-- Card 4: Warehouse Closing Stock Items -->
+          <div class="glass-card p-3 px-4 flex items-center justify-between relative overflow-hidden cursor-pointer group !rounded-xl shadow-xs" onclick="switchNavTab('inventory')">
+            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#06B6D4] to-[#67E8F9]"></div>
+            <div>
+              <span class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider block">Warehouse Stock Items</span>
+              <p id="stat-warehouse-items" class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white font-tabular leading-tight mt-0.5">--</p>
+              <span class="text-[10px] text-cyan-600 dark:text-cyan-400 font-bold block mt-0.5">Report 91223 • <span class="font-mono text-slate-400">340 Active RMs</span></span>
+            </div>
+            <div class="w-8 h-8 rounded-lg bg-white/70 dark:bg-dark-800/70 border border-white/60 dark:border-white/10 shadow-xs flex items-center justify-center text-sm text-cyan-600 dark:text-cyan-400 shrink-0">
+              <i class="ph ph-warehouse"></i>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- ADVANCED SEARCH, FILTER & SEGMENTED CONTROL TOOLBAR (Compact Height) -->
+        <section class="glass-card p-3 sm:p-3.5 space-y-2.5 !rounded-xl shadow-xs relative z-20">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-2.5 items-center">
+            
+            <!-- Enterprise Glass Search Bar -->
+            <div class="md:col-span-6 relative">
+              <div class="relative flex items-center input-glass px-2.5 overflow-hidden">
+                <!-- Clickable Search Button -->
+                <button type="button" onclick="handleSearchNow()" class="pl-1 pr-1.5 py-1.5 flex items-center justify-center text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 cursor-pointer" title="Click to Search">
+                  <i class="ph ph-magnifying-glass text-base"></i>
+                </button>
+                
+                <!-- Input field with Instant Search & Enter key support -->
+                <input 
+                  type="text" 
+                  id="search-input" 
+                  placeholder="Search product name..." 
+                  class="w-full py-2 pr-14 bg-transparent text-xs sm:text-sm font-medium text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:outline-none"
+                  oninput="handleSearch()"
+                  onkeydown="if(event.key === 'Enter'){ handleSearchNow(); }"
+                />
+                
+                <!-- Clear Button -->
+                <button id="search-clear-btn" onclick="clearSearch()" class="hidden absolute right-14 top-1/2 -translate-y-1/2 text-slate-400 hover:text-rose-600 p-1">
+                  <i class="ph ph-x-circle text-sm"></i>
+                </button>
+                
+                <!-- ⌘K Glass Capsule Badge -->
+                <div class="absolute right-2 top-1/2 -translate-y-1/2 flex items-center">
+                  <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-[9px] font-mono font-bold bg-white/60 dark:bg-dark-800/60 text-slate-500 dark:text-slate-400 border border-slate-200/80 dark:border-slate-700/80 shadow-2xs">
+                    Ctrl+K
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floor / Section Custom Frosted Glass Dropdown -->
+            <div class="md:col-span-3 relative z-30" id="custom-floor-container">
+              <button 
+                type="button" 
+                id="custom-floor-btn" 
+                onclick="toggleCustomFloorDropdown(event)" 
+                class="w-full input-glass px-3.5 flex items-center justify-between text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-100 cursor-pointer select-none"
+              >
+                <div class="flex items-center gap-2 truncate">
+                  <i class="ph ph-buildings text-slate-400 text-sm"></i>
+                  <span id="custom-floor-text" class="truncate font-semibold">All Production Floors</span>
+                </div>
+                <i id="custom-floor-caret" class="ph ph-caret-down text-xs text-slate-400 shrink-0"></i>
+              </button>
+
+              <!-- Custom Glass Dropdown Popup Menu -->
+              <div 
+                id="custom-floor-menu" 
+                class="hidden absolute left-0 right-0 top-full mt-1.5 py-1.5 rounded-2xl bg-white dark:bg-dark-850 backdrop-blur-2xl border border-slate-200/90 dark:border-slate-700/80 shadow-2xl z-50 text-xs max-h-64 overflow-y-auto space-y-0.5 p-1.5"
+                style="box-shadow: 0 20px 50px rgba(15, 23, 42, 0.2);"
+              >
+                <!-- Populated dynamically via JS -->
+              </div>
+
+              <!-- Hidden input for backwards compatibility with applyFilters() -->
+              <input type="hidden" id="filter-section" value="" />
+            </div>
+
+            <!-- Feasibility Segmented Tab Control (Glass Pills) -->
+            <div class="md:col-span-3 flex p-1 rounded-xl bg-slate-100/80 dark:bg-dark-800/80 border border-slate-200/60 dark:border-slate-700/50 text-xs font-semibold h-[42px] items-center">
+              <button onclick="setFeasibilitySegment('')" id="seg-all" class="flex-1 h-full rounded-lg flex items-center justify-center bg-white dark:bg-dark-750 text-slate-900 dark:text-white shadow-2xs font-bold text-[11px]">
+                All (174)
+              </button>
+              <button onclick="setFeasibilitySegment('can_produce')" id="seg-ready" class="flex-1 h-full rounded-lg flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-emerald-500 font-semibold text-[11px]">
+                🟢 Ready
+              </button>
+              <button onclick="setFeasibilitySegment('blocked')" id="seg-blocked" class="flex-1 h-full rounded-lg flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-rose-500 font-semibold text-[11px]">
+                🔴 Blocked
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Active Filter Chips Bar & Results Info -->
+          <div class="flex flex-wrap items-center justify-between gap-2 text-xs text-slate-500 dark:text-slate-400 pt-2 border-t border-slate-200/60 dark:border-slate-800/60">
+            <div class="flex flex-wrap items-center gap-2">
+              <span>Showing <strong id="filter-count" class="text-slate-900 dark:text-white font-mono">0</strong> of <span id="total-count" class="font-mono">0</span> Formulations</span>
+              
+              <!-- Dynamic Filter Chips container -->
+              <div id="filter-chips-container" class="flex flex-wrap items-center gap-1.5">
+                <!-- Injected via JavaScript -->
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <button onclick="resetFilters()" class="hover:text-emerald-600 dark:hover:text-emerald-400 font-semibold flex items-center gap-1">
+                <i class="ph ph-arrow-counter-clockwise"></i> Reset Filters
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ENTERPRISE DATAGRID TABLE -->
+        <section class="glass-card overflow-hidden">
+          <div class="overflow-x-auto max-h-[700px] overflow-y-auto">
+            <table id="master-datagrid" class="w-full text-left text-xs sm:text-sm border-collapse datagrid-table density-comfortable">
+              <thead>
+                <tr class="text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider text-[11px]">
+                  <th class="py-4 px-3 w-12 text-center font-mono">#</th>
+                  <th class="py-4 px-4 w-32">BOM ID</th>
+                  <th class="py-4 px-4">Product Name & Item Code</th>
+                  <th class="py-4 px-4 w-44">Floor / Section</th>
+                  <th class="py-4 px-4 w-28 text-center">Components</th>
+                  <th class="py-4 px-4 w-44 text-center">Build Capacity</th>
+                  <th class="py-4 px-4 w-28 text-center">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="bom-table-body" class="divide-y divide-slate-100/60 dark:divide-slate-800/60 text-slate-700 dark:text-slate-300">
+                <!-- Dynamically rendered rows -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Pagination Bar -->
+          <div class="px-5 py-3.5 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500 dark:text-slate-400">
+            <div class="flex items-center gap-2">
+              <span>Rows per page:</span>
+              <select id="page-size" onchange="changePageSize()" class="bg-slate-50 dark:bg-dark-800 border border-slate-200 dark:border-slate-700 rounded-lg px-2 py-1 font-mono focus:outline-none">
+                <option value="15">15</option>
+                <option value="30">30</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="999999" selected>All</option>
+              </select>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <span id="page-info" class="font-mono">Page 1 of 1</span>
+              <div class="flex items-center gap-1">
+                <button id="btn-prev-page" onclick="prevPage()" class="p-1.5 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-dark-800 disabled:opacity-40 disabled:cursor-not-allowed transition-colors">
+                  <i class="ph ph-caret-left text-sm"></i>
+                </button>
+                <button id="btn-next-page" onclick="nextPage()" class="p-1.5 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-dark-800 disabled:opacity-40 disabled:cursor-not-allowed transition-colors">
+                  <i class="ph ph-caret-right text-sm"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- ================= VIEW 2: WAREHOUSE INVENTORY ================= -->
+      <div id="view-inventory" class="hidden space-y-4">
+        <div class="glass-card p-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
+          <div>
+            <h2 class="text-base font-bold text-slate-900 dark:text-white">Warehouse Closing Stock Report (91223)</h2>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Search and audit raw material stock distributed across Central Store and Floor Section locations.</p>
+          </div>
+          <div class="w-full md:w-80 relative">
+            <i class="ph ph-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-base"></i>
+            <input 
+              type="text" 
+              id="rm-search-input" 
+              placeholder="Search component code or description..." 
+              class="w-full pl-9 pr-3 py-2 rounded-xl bg-slate-50 dark:bg-dark-800 border border-slate-200 dark:border-slate-700/80 text-xs focus:outline-none focus:ring-2 focus:ring-emerald-500 text-slate-800 dark:text-slate-100"
+              oninput="handleRMSearch()"
+            />
+          </div>
+        </div>
+
+        <div class="glass-card overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs sm:text-sm border-collapse">
+              <thead>
+                <tr class="bg-slate-50/80 dark:bg-dark-800/80 border-b border-slate-200 dark:border-slate-700/80 text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                  <th class="py-3 px-3.5 w-10 text-center">#</th>
+                  <th class="py-3 px-3.5 w-28">Item Code</th>
+                  <th class="py-3 px-3.5">Component Description</th>
+                  <th class="py-3 px-3.5 w-32">Category</th>
+                  <th class="py-3 px-3.5 w-16 text-center">Unit</th>
+                  <th class="py-3 px-3.5 w-28 text-right text-cyan-600 dark:text-cyan-400 font-mono">Store Stock</th>
+                  <th class="py-3 px-3.5 w-28 text-right text-purple-600 dark:text-purple-400 font-mono">Floor Stock</th>
+                  <th class="py-3 px-3.5 w-28 text-right font-bold font-mono text-slate-900 dark:text-white">Total Available</th>
+                  <th class="py-3 px-3.5 w-24 text-center font-mono">BOMs Used</th>
+                  <th class="py-3 px-3.5 w-24 text-center">Action</th>
+                </tr>
+              </thead>
+              <tbody id="rm-table-body" class="divide-y divide-slate-100 dark:divide-slate-800/80 text-slate-700 dark:text-slate-300 text-xs">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= VIEW 3: DIFFERENTIAL AUDIT LOG ================= -->
+      <div id="view-history" class="hidden space-y-4">
+        <div class="glass-card p-5">
+          <h2 class="text-base font-bold text-slate-900 dark:text-white">Differential Audit Trail & Synchronization Log</h2>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Complete historical records of all automated updates, showing added, modified and removed formulations.</p>
+        </div>
+
+        <div id="history-container" class="space-y-3">
+          <!-- History Cards rendered here -->
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- ================= PRODUCT SPECIFICATION & BATCH CAPACITY SIMULATOR MODAL ================= -->
+  <div id="analysis-modal" onclick="if (event.target === this) closeAnalysisModal()" class="fixed inset-0 z-50 hidden bg-slate-950/60 backdrop-blur-md flex items-center justify-center p-3 sm:p-5 overflow-hidden">
+    <div class="glass-card bg-white/95 dark:bg-dark-850/95 backdrop-blur-2xl rounded-3xl max-w-[97vw] xl:max-w-[1380px] w-full h-[92vh] max-h-[92vh] flex flex-col overflow-hidden shadow-2xl border border-white/80 dark:border-white/10 !p-0">
+      
+      <!-- ▌ HERO HEADER — Gradient Bar + Product Info -->
+      <div class="relative overflow-hidden border-b border-slate-200/60 dark:border-slate-800/60 bg-white/40 dark:bg-dark-800/40 backdrop-blur-md shrink-0">
+        <!-- Top gradient accent bar -->
+        <div class="h-1 w-full bg-gradient-to-r from-emerald-500 via-teal-400 to-cyan-500"></div>
+        
+        <div class="p-4 sm:p-5 flex items-start justify-between">
+          <div class="space-y-2 flex-1 pr-4">
+            <!-- Badge row -->
+            <div class="flex flex-wrap items-center gap-2">
+              <div id="modal-history-nav" class="hidden"></div>
+              <span id="modal-bom-no" class="glass-pill glass-pill-emerald font-bold font-mono text-xs">
+                <i class="ph-bold ph-hash"></i> BOM-XXXXX
+              </span>
+              <span class="glass-pill glass-pill-neutral font-mono font-bold text-xs">
+                <i class="ph ph-barcode text-slate-400"></i> <span id="modal-item-code">--</span>
+              </span>
+              <span id="modal-status" class="glass-pill glass-pill-neutral font-bold text-xs text-blue-600 dark:text-blue-400">
+                <i class="ph ph-seal-check"></i> APPROVED
+              </span>
+              <span id="modal-section" class="glass-pill glass-pill-neutral text-xs font-medium">
+                <i class="ph ph-factory text-slate-400"></i> FAN Assemble
+              </span>
+            </div>
+
+            <!-- Product title -->
+            <h2 id="modal-product-name" class="text-lg sm:text-xl font-black text-slate-900 dark:text-white tracking-tight leading-tight">
+              Product Name
+            </h2>
+          </div>
+
+          <div class="flex items-center gap-2 shrink-0">
+            <button onclick="copyBOMTable()" class="btn-glass-secondary w-9 h-9 flex items-center justify-center rounded-xl" title="Copy Table">
+              <i class="ph ph-copy text-base"></i>
+            </button>
+            <button onclick="closeAnalysisModal()" class="btn-glass-secondary w-9 h-9 flex items-center justify-center rounded-xl" title="Close (ESC)">
+              <i class="ph ph-x text-base"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ▌ METRIC CARDS — 5 Stats with colored top accent -->
+      <div class="px-4 sm:px-5 py-3 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 text-xs border-b border-slate-200/60 dark:border-slate-800/60 shrink-0">
+        
+        <!-- Card 1: Output Batch (Blue accent) -->
+        <div class="rounded-xl overflow-hidden border border-slate-200/80 dark:border-slate-700/60 bg-white/60 dark:bg-dark-800/60 backdrop-blur-md shadow-2xs">
+          <div class="h-1 bg-gradient-to-r from-blue-500 to-blue-400"></div>
+          <div class="p-2.5 px-3">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] uppercase font-bold tracking-wider text-slate-400">Output Batch</span>
+              <div class="w-6 h-6 rounded-lg flex items-center justify-center bg-blue-50 dark:bg-blue-950/50">
+                <i class="ph ph-package text-blue-500 text-xs"></i>
+              </div>
+            </div>
+            <strong id="modal-output-batch" class="text-slate-900 dark:text-white font-mono text-base font-black mt-1 block">1 Pcs</strong>
+          </div>
+        </div>
+
+        <!-- Card 2: Formula Items (Indigo accent) -->
+        <div class="rounded-xl overflow-hidden border border-slate-200/80 dark:border-slate-700/60 bg-white/60 dark:bg-dark-800/60 backdrop-blur-md shadow-2xs">
+          <div class="h-1 bg-gradient-to-r from-indigo-500 to-violet-400"></div>
+          <div class="p-2.5 px-3">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] uppercase font-bold tracking-wider text-slate-400">Formula Items</span>
+              <div class="w-6 h-6 rounded-lg flex items-center justify-center bg-indigo-50 dark:bg-indigo-950/50">
+                <i class="ph ph-stack text-indigo-500 text-xs"></i>
+              </div>
+            </div>
+            <strong id="modal-component-count" class="text-indigo-600 dark:text-indigo-400 font-mono text-base font-black mt-1 block">36 Items</strong>
+          </div>
+        </div>
+
+        <!-- Card 3: Max Buildable (Emerald accent) -->
+        <div class="rounded-xl overflow-hidden border border-slate-200/80 dark:border-slate-700/60 bg-white/60 dark:bg-dark-800/60 backdrop-blur-md shadow-2xs">
+          <div class="h-1 bg-gradient-to-r from-emerald-500 to-teal-400"></div>
+          <div class="p-2.5 px-3">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] uppercase font-bold tracking-wider text-slate-400">Max Buildable</span>
+              <div class="w-6 h-6 rounded-lg flex items-center justify-center bg-emerald-50 dark:bg-emerald-950/50">
+                <i class="ph ph-trend-up text-emerald-500 text-xs"></i>
+              </div>
+            </div>
+            <strong id="modal-max-buildable" class="text-emerald-600 dark:text-emerald-400 font-mono text-base font-black mt-1 block">🟢 36 Units</strong>
+          </div>
+        </div>
+
+        <!-- Card 4: Target Build Qty (Amber accent, interactive) -->
+        <div id="modal-target-card" class="rounded-xl overflow-hidden border-2 border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-dark-800/80 backdrop-blur-md transition-all shadow-2xs">
+          <div id="modal-target-accent" class="h-1 bg-gradient-to-r from-amber-400 to-orange-400"></div>
+          <div class="p-2.5 px-3">
+            <div class="flex items-center justify-between">
+              <label for="modal-target-input" class="text-[10px] uppercase font-bold tracking-wider text-slate-600 dark:text-slate-300">Target Build Qty</label>
+              <div class="w-6 h-6 rounded-lg flex items-center justify-center bg-amber-50 dark:bg-amber-950/50">
+                <i class="ph ph-crosshair text-amber-500 text-xs"></i>
+              </div>
+            </div>
+            <div class="flex items-center gap-1.5 mt-0.5">
+              <input type="number" id="modal-target-input" value="0" min="0" oninput="onModalTargetQtyChange(this.value)" placeholder="0" class="w-full px-2 py-0.5 text-center font-mono font-black text-sm bg-slate-50 dark:bg-dark-900 border border-slate-200 dark:border-slate-650 rounded-lg text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+              <span class="text-slate-400 text-[10px] font-bold font-mono shrink-0">Units</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: Shortage Status (Rose accent) -->
+        <div class="rounded-xl overflow-hidden border border-slate-200/80 dark:border-slate-700/60 bg-white/60 dark:bg-dark-800/60 backdrop-blur-md shadow-2xs">
+          <div id="modal-shortage-accent" class="h-1 bg-gradient-to-r from-slate-300 to-slate-200 dark:from-slate-600 dark:to-slate-700"></div>
+          <div class="p-2.5 px-3">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] uppercase font-bold tracking-wider text-slate-400">Shortage Status</span>
+              <div class="w-6 h-6 rounded-lg flex items-center justify-center bg-rose-50 dark:bg-rose-950/50">
+                <i class="ph ph-warning-octagon text-rose-500 text-xs"></i>
+              </div>
+            </div>
+            <div class="mt-1 flex items-center justify-between">
+              <strong id="modal-shortage-count" class="text-slate-900 dark:text-white font-mono text-base font-black">0 Items</strong>
+              <span id="modal-shortage-subtext" class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-slate-100 text-slate-500 dark:bg-dark-750 dark:text-slate-400">Ready</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ▌ RAW MATERIALS TABLE SECTION -->
+      <div class="p-4 sm:p-5 pt-3 space-y-2.5 flex-1 min-h-0 flex flex-col overflow-hidden">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 shrink-0">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-xl flex items-center justify-center text-white text-sm bg-gradient-to-br from-emerald-500 to-teal-600 shadow-xs">
+              <i class="ph-bold ph-stack"></i>
+            </div>
+            <div>
+              <h3 class="font-black text-slate-900 dark:text-white text-sm tracking-tight">Raw Materials & Warehouse Stock</h3>
+            </div>
+            <span id="modal-rm-count-badge" class="glass-pill glass-pill-emerald text-[11px] font-bold font-mono">
+              36 items
+            </span>
+          </div>
+
+          <!-- Search & Filter -->
+          <div class="flex items-center gap-2">
+            <div class="relative">
+              <i class="ph ph-magnifying-glass absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+              <input type="text" id="modal-rm-search" oninput="onModalRMSearch(this.value)" placeholder="Search material, code..." class="pl-7 pr-2.5 py-1.5 rounded-xl text-xs bg-slate-50 dark:bg-dark-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 w-36 sm:w-48" />
+            </div>
+            <button onclick="toggleModalShortageFilter()" id="btn-modal-filter-shortage" class="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-dark-800 text-xs font-bold text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-dark-750 flex items-center gap-1.5 transition-colors">
+              <i class="ph ph-funnel"></i> <span id="btn-modal-filter-text">Filters</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Table with clear, solid, professional header -->
+        <div class="flex-1 min-h-0 overflow-y-auto rounded-2xl border border-slate-200/80 dark:border-slate-700/80 bg-white/60 dark:bg-dark-850/60 backdrop-blur-md shadow-xs">
+          <table class="w-full text-left text-xs border-collapse">
+            <thead class="sticky top-0 z-10 bg-slate-100/90 dark:bg-dark-800/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-700 shadow-xs">
+              <tr class="text-slate-700 dark:text-slate-200 font-bold text-[10px] uppercase tracking-wider">
+                <th class="py-2.5 px-2 w-8 text-center" rowspan="2">#</th>
+                <th class="py-2.5 px-2.5 w-24" rowspan="2">Category</th>
+                <th class="py-2.5 px-2.5 w-28 font-mono" rowspan="2">Item Code</th>
+                <th class="py-2.5 px-3" rowspan="2">Item Description</th>
+                <th class="py-2.5 px-2 w-10 text-center" rowspan="2">Unit</th>
+                <th class="py-2.5 px-2 w-16 text-right font-mono" rowspan="2">
+                  <span>BOM Req</span><br>
+                  <span class="text-[9px] lowercase font-normal text-slate-500 dark:text-slate-400">(per unit)</span>
+                </th>
+                <th class="py-2.5 px-2.5 w-22 text-right font-mono text-slate-800 dark:text-slate-100" rowspan="2">
+                  <span>Required</span><br>
+                  <span id="th-target-qty-label" class="text-[9px] lowercase font-normal text-slate-500 dark:text-slate-400">(for 0 units)</span>
+                </th>
+                <th class="py-1.5 px-2 text-center text-[10px] tracking-wider font-extrabold border-b border-slate-200 dark:border-slate-700 bg-slate-200/70 dark:bg-dark-750 text-slate-800 dark:text-slate-200" colspan="3">
+                  Available Warehouse Stock
+                </th>
+                <th class="py-2.5 px-2.5 w-20 text-center font-mono" rowspan="2">
+                  <span>Max Build</span><br>
+                  <span class="text-[9px] lowercase font-normal text-slate-500 dark:text-slate-400">(from stock)</span>
+                </th>
+                <th class="py-2.5 px-2.5 w-22 text-right font-mono" rowspan="2">
+                  <span>Shortage</span><br>
+                  <span class="text-[9px] lowercase font-normal text-slate-500 dark:text-slate-400">(deficit)</span>
+                </th>
+                <th class="py-2.5 px-2 w-20 text-center" rowspan="2">Status</th>
+              </tr>
+              <tr class="bg-slate-100/90 dark:bg-dark-800/90 border-b border-slate-200 dark:border-slate-700 font-bold text-[9px]">
+                <th class="py-1.5 px-2 text-right font-mono text-cyan-600 dark:text-cyan-400 w-16">Store</th>
+                <th class="py-1.5 px-2 text-right font-mono text-purple-600 dark:text-purple-400 w-16">Floor</th>
+                <th class="py-1.5 px-2 text-right font-mono font-extrabold text-slate-900 dark:text-white w-18">Total</th>
+              </tr>
+            </thead>
+            <tbody id="modal-rm-tbody" class="divide-y divide-slate-100/60 dark:divide-slate-800/60 text-slate-700 dark:text-slate-300">
+              <!-- Dynamically populated rows -->
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+      <!-- ▌ FOOTER -->
+      <div class="p-3.5 px-6 border-t border-slate-200/60 dark:border-slate-800/60 bg-white/40 dark:bg-dark-800/40 backdrop-blur-md flex items-center justify-between shrink-0">
+        <span class="text-[11px] text-slate-400 font-mono">Press ESC to dismiss</span>
+        <button onclick="closeAnalysisModal()" class="btn-glass-secondary px-5 py-2 rounded-xl text-xs font-bold">
+          Close Window
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= LIVE ERP SYNCHRONIZATION MODAL ================= -->
+  <div id="sync-modal" class="fixed inset-0 z-50 hidden bg-slate-950/60 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+    <div class="glass-card bg-white/95 dark:bg-dark-850/95 backdrop-blur-2xl max-w-2xl w-full flex flex-col overflow-hidden shadow-2xl !p-0 !rounded-3xl border border-white/80 dark:border-white/10">
+      
+      <!-- Sync Header -->
+      <div class="p-5 px-6 border-b border-slate-200/60 dark:border-slate-800/60 flex items-center justify-between bg-white/40 dark:bg-dark-800/40 backdrop-blur-md">
+        <div class="flex items-center gap-3.5">
+          <div id="sync-icon-box" class="w-11 h-11 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl shadow-xs">
+            <i id="sync-main-icon" class="ph ph-arrows-clockwise"></i>
+          </div>
+          <div>
+            <h2 class="text-base font-bold text-slate-900 dark:text-white tracking-tight">MEP ERP Automated Synchronization</h2>
+            <p id="sync-status-text" class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Connecting to ERP session...</p>
+          </div>
+        </div>
+        <button id="sync-modal-close-btn" onclick="closeSyncModal()" class="hidden btn-glass-secondary w-9 h-9 flex items-center justify-center rounded-xl text-slate-400 hover:text-slate-700 dark:hover:text-white">
+          <i class="ph ph-x text-lg"></i>
+        </button>
+      </div>
+
+      <!-- Sync Content -->
+      <div class="p-6 space-y-5">
+        
+        <!-- Progress Bar -->
+        <div class="space-y-2">
+          <div class="flex items-center justify-between text-xs font-semibold">
+            <span id="sync-progress-step" class="text-slate-700 dark:text-slate-300">Extracting Production BOMs & Warehouse Stock...</span>
+            <span id="sync-progress-pct" class="text-emerald-600 dark:text-emerald-400 font-mono font-bold">0%</span>
+          </div>
+          <div class="w-full h-2.5 bg-slate-100/80 dark:bg-dark-800/80 rounded-full overflow-hidden p-0.5 border border-slate-200/60 dark:border-slate-700/60 shadow-inner">
+            <div id="sync-progress-bar" class="h-full bg-gradient-to-r from-emerald-500 via-teal-400 to-emerald-400 rounded-full transition-all duration-300 w-0"></div>
+          </div>
+        </div>
+
+        <!-- Terminal Console Logs -->
+        <div class="space-y-2">
+          <div class="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 font-medium">
+            <span>Automated Worker Stream</span>
+            <span class="font-mono text-[11px] text-emerald-500 font-bold flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,0.9)]"></span>
+              Live Socket Active
+            </span>
+          </div>
+          <div id="sync-console-logs" class="h-44 p-3.5 rounded-2xl bg-[#090d16] text-emerald-400 font-mono text-[11px] leading-relaxed overflow-y-auto space-y-1 border border-slate-800 shadow-inner">
+            <div class="text-slate-500">[INIT] Starting automated background sync...</div>
+          </div>
+        </div>
+
+        <!-- Differential Summary Card -->
+        <div id="sync-diff-card" class="hidden p-4 rounded-2xl bg-white/50 dark:bg-dark-800/50 backdrop-blur-md border border-slate-200/80 dark:border-slate-700/60 space-y-3 shadow-xs">
+          <div class="flex items-center justify-between">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Differential Summary Report</h4>
+            <span id="sync-duration-badge" class="text-xs px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 font-bold font-mono border border-emerald-500/25">0.0s</span>
+          </div>
+          <div class="grid grid-cols-3 gap-2.5 text-center text-xs">
+            <div class="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20">
+              <span class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">New Formulations</span>
+              <p id="diff-added-count" class="text-xl font-black text-emerald-600 dark:text-emerald-400 font-mono mt-0.5">+0</p>
+            </div>
+            <div class="p-3 rounded-xl bg-amber-500/10 border border-amber-500/20">
+              <span class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Updated BOMs</span>
+              <p id="diff-updated-count" class="text-xl font-black text-amber-600 dark:text-amber-400 font-mono mt-0.5">~0</p>
+            </div>
+            <div class="p-3 rounded-xl bg-cyan-500/10 border border-cyan-500/20">
+              <span class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Warehouse RM Items</span>
+              <p id="diff-stock-count" class="text-xl font-black text-cyan-600 dark:text-cyan-400 font-mono mt-0.5">0</p>
+            </div>
+          </div>
+          <p id="diff-summary-note" class="text-xs text-slate-600 dark:text-slate-300 italic text-center">Dataset and Warehouse Inventory are fully verified and up-to-date.</p>
+        </div>
+
+      </div>
+
+      <!-- Sync Footer -->
+      <div class="p-4 px-6 border-t border-slate-200/60 dark:border-slate-800/60 bg-white/40 dark:bg-dark-800/40 backdrop-blur-md flex items-center justify-end gap-3">
+        <button id="btn-sync-dismiss" onclick="closeSyncModal()" class="btn-primary-enterprise py-2.5 px-6 rounded-xl text-xs font-bold shadow-md flex items-center gap-2">
+          <i class="ph ph-check-circle text-base"></i>
+          <span>Done & Refresh Dashboard</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Application Logic -->
+  <script src="js/app.js?v=20260828ai"></script>
+</body>
+</html>

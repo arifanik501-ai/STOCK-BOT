@@ -1,0 +1,563 @@
+/* ==========================================================================
+   MEP ENTERPRISE MANUFACTURING INTELLIGENCE — DESIGN SYSTEM 5.0
+   Apple + Linear + Stripe Inspired Frosted Glass Enterprise SaaS Architecture
+   Zero Animations • High Readability • Large Breathing Space • Pure Performance
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  --font-sans: 'Inter', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Premium Light Frosted Palette */
+  --bg-app: #FAFBFC;
+  --bg-sidebar: rgba(255, 255, 255, 0.75);
+  --bg-header: rgba(255, 255, 255, 0.72);
+  --bg-surface: rgba(255, 255, 255, 0.68);
+  --bg-surface-elevated: rgba(255, 255, 255, 0.92);
+  --bg-surface-subtle: rgba(241, 245, 249, 0.65);
+  
+  --border-glass: 1px solid rgba(255, 255, 255, 0.55);
+  --border-subtle: rgba(148, 163, 184, 0.14);
+  --border-medium: rgba(148, 163, 184, 0.25);
+  --border-focus: #10B981;
+
+  --text-primary: #0F172A;
+  --text-secondary: #64748B;
+  --text-muted: #94A3B8;
+
+  --glass-blur: blur(28px) saturate(180%);
+  --glass-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+  --glass-shadow-soft: 0 8px 24px rgba(15, 23, 42, 0.05);
+
+  --scrollbar-thumb: #CBD5E1;
+  --scrollbar-track: transparent;
+}
+
+.dark {
+  /* Obsidian Enterprise Frosted Palette */
+  --bg-app: #080C14;
+  --bg-sidebar: rgba(14, 20, 34, 0.78);
+  --bg-header: rgba(13, 20, 36, 0.78);
+  --bg-surface: rgba(17, 24, 39, 0.72);
+  --bg-surface-elevated: rgba(26, 34, 52, 0.88);
+  --bg-surface-subtle: rgba(30, 41, 59, 0.65);
+
+  --border-glass: 1px solid rgba(255, 255, 255, 0.08);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.16);
+  --border-focus: #10B981;
+
+  --text-primary: #F8FAFC;
+  --text-secondary: #CBD5E1;
+  --text-muted: #64748B;
+
+  --glass-blur: blur(28px) saturate(180%);
+  --glass-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  --glass-shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.4);
+
+  --scrollbar-thumb: #334155;
+  --scrollbar-track: #080C14;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-app);
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.035) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(59, 130, 246, 0.035) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(241, 245, 249, 0.6) 0px, transparent 100%);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  letter-spacing: -0.011em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dark body, body.dark {
+  background-color: var(--bg-app);
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.07) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(59, 130, 246, 0.07) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(17, 24, 39, 0.7) 0px, transparent 100%);
+}
+
+.font-tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ================= Precision Scrollbars ================= */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 9999px;
+}
+
+/* ================= Collapsible Sidebar System ================= */
+aside#app-sidebar {
+  width: 245px;
+  background: var(--bg-sidebar);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border-right: var(--border-glass);
+  box-shadow: 0 4px 30px rgba(15, 23, 42, 0.03);
+}
+
+aside#app-sidebar.sidebar-collapsed {
+  width: 68px;
+}
+
+aside#app-sidebar.sidebar-collapsed .sidebar-text,
+aside#app-sidebar.sidebar-collapsed .sidebar-badge,
+aside#app-sidebar.sidebar-collapsed .sidebar-group-title,
+aside#app-sidebar.sidebar-collapsed .sidebar-user-details,
+aside#app-sidebar.sidebar-collapsed .sidebar-footer-info {
+  display: none !important;
+}
+
+aside#app-sidebar.sidebar-collapsed .nav-item {
+  justify-content: center;
+  padding: 0.625rem;
+}
+
+aside#app-sidebar.sidebar-collapsed .sidebar-header-box {
+  justify-content: center;
+  padding: 0;
+}
+
+aside#app-sidebar.sidebar-collapsed .sidebar-profile-card {
+  padding: 0 !important;
+  background: transparent !important;
+  border-color: transparent !important;
+  justify-content: center !important;
+}
+
+aside#app-sidebar.sidebar-collapsed .sidebar-bottom-container {
+  padding: 0.75rem 0.25rem !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+/* ================= Nav Item States ================= */
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.625rem 0.875rem;
+  border-radius: 14px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+
+.nav-item:hover {
+  color: var(--text-primary);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.dark .nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.nav-item.active {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(20, 184, 166, 0.08) 100%);
+  color: #10B981;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+/* ================= Operations Suite Accordion & Child Items ================= */
+.ops-parent-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.625rem 0.75rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.03);
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.dark .ops-parent-btn {
+  background: rgba(26, 34, 52, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.ops-parent-btn:hover {
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+.ops-sub-card {
+  padding: 0.375rem;
+  border-radius: 16px;
+  background: rgba(241, 245, 249, 0.75);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.dark .ops-sub-card {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.ops-child-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.625rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+}
+
+.ops-child-item:hover {
+  color: var(--text-primary);
+  background-color: rgba(255, 255, 255, 0.65);
+}
+
+.dark .ops-child-item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.ops-child-item.active {
+  background: #FFFFFF;
+  color: #065F46;
+  font-weight: 700;
+  border-color: rgba(16, 185, 129, 0.3);
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+}
+
+.dark .ops-child-item.active {
+  background: rgba(30, 41, 59, 0.95);
+  color: #34D399;
+  border-color: rgba(52, 211, 153, 0.35);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+aside#app-sidebar.sidebar-collapsed .ops-parent-btn {
+  justify-content: center;
+  padding: 0.625rem;
+}
+
+aside#app-sidebar.sidebar-collapsed .ops-sub-card {
+  display: none !important;
+}
+
+/* ================= Enterprise Glass Cards ================= */
+.glass-card {
+  background: var(--bg-surface);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: var(--border-glass);
+  border-radius: 24px;
+  box-shadow: var(--glass-shadow);
+}
+
+.glass-header {
+  background: var(--bg-header);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  border-bottom: var(--border-glass);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+}
+
+/* ================= Enterprise SaaS Buttons ================= */
+.btn-primary-enterprise {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  background: linear-gradient(135deg, #10B981, #14B8A6);
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  padding: 0.75rem 1.375rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 16px 35px rgba(16, 185, 129, 0.28);
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  white-space: nowrap;
+}
+
+.btn-primary-enterprise:hover {
+  filter: brightness(1.05);
+}
+
+.btn-glass-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: var(--border-glass);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  color: var(--text-secondary);
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+}
+
+.dark .btn-glass-secondary {
+  background: rgba(26, 34, 52, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  color: var(--text-secondary);
+}
+
+.btn-glass-secondary:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.dark .btn-glass-secondary:hover {
+  background: rgba(30, 41, 59, 0.8);
+}
+
+/* ================= Status Chip ================= */
+.status-chip-emerald {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.875rem;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(20, 184, 166, 0.08));
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #065F46;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+.dark .status-chip-emerald {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.18), rgba(20, 184, 166, 0.12));
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  color: #34D399;
+}
+
+/* ================= Glass Inputs & Dropdowns ================= */
+.input-glass {
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+  color: var(--text-primary);
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.dark .input-glass {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.input-glass:focus-within {
+  border-color: #10B981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+}
+
+/* ================= Enterprise Table Styles ================= */
+.datagrid-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 15;
+  background: rgba(241, 245, 249, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.dark .datagrid-table thead th {
+  background: rgba(17, 24, 39, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.datagrid-table tbody tr {
+  height: 68px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.dark .datagrid-table tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.datagrid-table tbody tr:nth-child(even) {
+  background-color: rgba(248, 250, 252, 0.4);
+}
+
+.dark .datagrid-table tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.015);
+}
+
+.datagrid-table tbody tr:hover {
+  background-color: rgba(241, 245, 249, 0.85);
+}
+
+.dark .datagrid-table tbody tr:hover {
+  background-color: rgba(30, 41, 59, 0.65);
+}
+
+/* ================= Glass Pills & Badges ================= */
+.glass-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-pill-neutral {
+  background: rgba(241, 245, 249, 0.7);
+  border: 1px solid rgba(203, 213, 225, 0.6);
+  color: #475569;
+}
+
+.dark .glass-pill-neutral {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #CBD5E1;
+}
+
+.glass-pill-emerald {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  color: #065F46;
+}
+
+.dark .glass-pill-emerald {
+  background: rgba(16, 185, 129, 0.18);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+  color: #34D399;
+}
+
+.glass-pill-rose {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  color: #991B1B;
+}
+
+.dark .glass-pill-rose {
+  background: rgba(239, 68, 68, 0.18);
+  border: 1px solid rgba(248, 113, 113, 0.3);
+  color: #F87171;
+}
+
+.glass-pill-cyan {
+  background: rgba(6, 182, 212, 0.1);
+  border: 1px solid rgba(6, 182, 212, 0.25);
+  color: #155E75;
+}
+
+.dark .glass-pill-cyan {
+  background: rgba(6, 182, 212, 0.18);
+  border: 1px solid rgba(103, 232, 249, 0.3);
+  color: #67E8F9;
+}
+
+.glass-pill-blue {
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  color: #1E40AF;
+}
+
+.dark .glass-pill-blue {
+  background: rgba(59, 130, 246, 0.18);
+  border: 1px solid rgba(96, 165, 250, 0.3);
+  color: #60A5FA;
+}
+
+/* ================= Table Action Square Button ================= */
+.btn-table-action {
+  width: 36px;
+  height: 36px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.dark .btn-table-action {
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.btn-table-action:hover {
+  color: #10B981;
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+/* ================= Static Indicators ================= */
+.pulse-dot {
+  display: inline-block;
+  box-shadow: 0 0 6px rgba(16, 185, 129, 0.9);
+}
+
+.animate-modal {
+  opacity: 1;
+  transform: none;
+}
+
+/* ================= Extreme Performance Optimization ================= */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.glass-card, .glass-header, .glass-pill, .btn-primary-enterprise, .btn-glass-secondary, .btn-table-action {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: auto;
+}
+
+.datagrid-table {
+  contain: style layout;
+}
+
+.datagrid-table tr {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 48px;
+}
+
+

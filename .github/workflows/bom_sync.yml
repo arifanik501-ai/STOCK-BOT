@@ -1,0 +1,47 @@
+name: Scheduled BOM & Stock Sync Bot
+
+on:
+  schedule:
+    # Run automatically every 30 minutes (24/7 round the clock)
+    - cron: '*/30 * * * *'
+  workflow_dispatch: # Allows manual one-click trigger anytime from GitHub UI
+
+jobs:
+  sync_and_deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: ⚙️ Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: 🤖 Run Headless BOM & Warehouse Stock Sync Bot
+        env:
+          ERP_UID: ${{ secrets.ERP_UID }}
+          ERP_PASS: ${{ secrets.ERP_PASS }}
+          ERP_CID: ${{ secrets.ERP_CID }}
+          ERP_DB: ${{ secrets.ERP_DB }}
+          ERP_LOGIN_URL: ${{ secrets.ERP_LOGIN_URL }}
+        run: |
+          python bot.py --sync
+
+      - name: 💾 Commit and Push Updated Datasets to GitHub
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action Bot"
+          git add data/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-Sync: Updated BOMs & Warehouse Stock [skip ci]" && git push)
