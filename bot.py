@@ -11,7 +11,6 @@ from datetime import datetime
 from database import Database
 from diff_engine import DiffEngine
 from scraper import BOMScraper
-from server import run_server
 
 # Universal UTF-8 encoding support & ANSI escape sequences
 try:
@@ -199,6 +198,7 @@ def main():
             webbrowser.open(f"http://localhost:{port}")
         threading.Thread(target=open_browser, daemon=True).start()
 
+    from server import run_server
     run_server(base_dir, port=port, config=config)
 
 if __name__ == "__main__":
