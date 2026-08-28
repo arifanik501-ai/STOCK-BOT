@@ -142,6 +142,20 @@ def main():
     if os.environ.get("ERP_LOGIN_URL"):
         config["login_url"] = os.environ.get("ERP_LOGIN_URL")
 
+    # Safe fallbacks if any field is empty or template dummy
+    if not config.get("uid") or config.get("uid") == "YOUR_USER_ID":
+        config["uid"] = os.environ.get("ERP_UID") or "15387"
+    if not config.get("pass") or config.get("pass") == "YOUR_PASSWORD":
+        config["pass"] = os.environ.get("ERP_PASS") or "anikanik556"
+    if not config.get("cid"):
+        config["cid"] = os.environ.get("ERP_CID") or "mep"
+    if not config.get("db"):
+        config["db"] = os.environ.get("ERP_DB") or "erpcombd"
+    if not config.get("login_url"):
+        config["login_url"] = os.environ.get("ERP_LOGIN_URL") or "https://mepgrouperp.com/1027/login/pages/main/index.php"
+    if not config.get("max_workers"):
+        config["max_workers"] = 24
+
     port = args.port or config.get("port", 8088)
 
     print_banner()

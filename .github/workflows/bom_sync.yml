@@ -6,28 +6,28 @@ on:
     - cron: '*/3 2-14 * * *'
   workflow_dispatch: # Allows manual one-click trigger anytime from GitHub UI
 
+permissions:
+  contents: write
+
 jobs:
   sync_and_deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
 
     steps:
       - name: 📥 Checkout Repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🐍 Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: 'pip'
 
       - name: ⚙️ Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: 🤖 Run Headless BOM & Warehouse Stock Sync Bot
         env:
@@ -41,7 +41,13 @@ jobs:
 
       - name: 💾 Commit and Push Updated Datasets to GitHub
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action Bot"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           git add data/
-          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-Sync: Updated BOMs & Warehouse Stock [skip ci]" && git push)
+          if ! git diff --quiet data/ || ! git diff --staged --quiet data/; then
+            git commit -m "🤖 Auto-Sync: Updated BOMs & Warehouse Stock [skip ci]"
+            git pull --rebase origin main || true
+            git push origin main
+          else
+            echo "No changes in data files to commit."
+          fi
