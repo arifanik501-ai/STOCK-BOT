@@ -174,7 +174,11 @@ async function fetchStats() {
 
 async function fetchBOMs() {
   try {
-    const res = await fetch('/api/boms');
+    let res = await fetch('/api/boms');
+    if (!res.ok) {
+      // Fallback to static data file on GitHub Pages / Static Hosting
+      res = await fetch('data/boms.json');
+    }
     if (!res.ok) return;
     allBOMs = await res.json();
     
@@ -1255,7 +1259,13 @@ function renderFeasibilityMatrix() {
 // -------------------------------------------------------------
 async function fetchRawMaterials() {
   try {
-    const res = await fetch('/api/raw-materials');
+    let res = await fetch('/api/raw-materials');
+    if (!res.ok) {
+      res = await fetch('/api/stock');
+    }
+    if (!res.ok) {
+      res = await fetch('data/warehouse_stock.json');
+    }
     if (!res.ok) return;
     allRawMaterials = await res.json();
     renderRMTable(allRawMaterials);
@@ -1436,6 +1446,33 @@ function openSyncModal() {
 }
 
 async function triggerLiveSync() {
+  const isGitHubPages = window.location.hostname.includes('github.io');
+  if (isGitHubPages) {
+    const pathParts = window.location.pathname.split('/').filter(Boolean);
+    const repoName = pathParts[0] || 'STOCK-BOT';
+    const repoOwner = window.location.hostname.split('.')[0];
+    const actionsUrl = `https://github.com/${repoOwner}/${repoName}/actions`;
+
+    document.getElementById('sync-status-text').textContent = 'GitHub Cloud Automation Active';
+    document.getElementById('sync-progress-step').textContent = 'Cloud Workflow Engine';
+    document.getElementById('sync-progress-pct').textContent = '100%';
+    document.getElementById('sync-progress-bar').style.width = '100%';
+
+    const logsEl = document.getElementById('sync-console-logs');
+    logsEl.innerHTML = `
+      <div class="text-emerald-400 font-bold">[INFO] GitHub Cloud Actions Scheduler is Active!</div>
+      <div class="text-slate-300 mt-1.5">• In GitHub, sync runs automatically in the cloud every 30 minutes.</div>
+      <div class="text-slate-300">• To trigger a manual sync right now in the cloud, open GitHub Actions and click 'Run workflow'.</div>
+      <div class="mt-3">
+        <a href="${actionsUrl}" target="_blank" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-md transition-colors">
+          <i class="ph ph-arrow-square-out text-sm"></i> Open GitHub Actions & Run Sync
+        </a>
+      </div>
+    `;
+    document.getElementById('sync-modal-close-btn').classList.remove('hidden');
+    return;
+  }
+
   try {
     const res = await fetch('/api/sync', { method: 'POST' });
     if (!res.ok) throw new Error('Sync endpoint returned non-200 status');
