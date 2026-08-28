@@ -120,13 +120,76 @@ function toggleNotificationMenu(e) {
   if (menu) menu.classList.toggle('hidden');
 }
 
+function switchNavTab(tab) {
+  currentTab = tab;
+  
+  // Hide all view containers
+  const viewRegistry = document.getElementById('view-registry');
+  const viewInventory = document.getElementById('view-inventory');
+  const viewHistory = document.getElementById('view-history');
+
+  if (viewRegistry) viewRegistry.classList.add('hidden');
+  if (viewInventory) viewInventory.classList.add('hidden');
+  if (viewHistory) viewHistory.classList.add('hidden');
+
+  // Deactivate all sidebar nav buttons
+  const btnReg = document.getElementById('nav-btn-registry');
+  const btnInv = document.getElementById('nav-btn-inventory');
+  const btnHist = document.getElementById('nav-btn-history');
+
+  if (btnReg) btnReg.classList.remove('active');
+  if (btnInv) btnInv.classList.remove('active');
+  if (btnHist) btnHist.classList.remove('active');
+
+  const breadcrumb = document.getElementById('breadcrumb-current');
+
+  if (tab === 'registry') {
+    if (viewRegistry) viewRegistry.classList.remove('hidden');
+    if (btnReg) btnReg.classList.add('active');
+    if (breadcrumb) breadcrumb.textContent = 'BOM Master Registry';
+  } else if (tab === 'inventory') {
+    if (viewInventory) viewInventory.classList.remove('hidden');
+    if (btnInv) btnInv.classList.add('active');
+    if (breadcrumb) breadcrumb.textContent = 'Warehouse Closing Stock Report (91223)';
+    fetchRawMaterials();
+  } else if (tab === 'history') {
+    if (viewHistory) viewHistory.classList.remove('hidden');
+    if (btnHist) btnHist.classList.add('active');
+    if (breadcrumb) breadcrumb.textContent = 'Differential Audit Trail & Log';
+    fetchSyncHistory();
+  }
+
+  // Close mobile sidebar if open
+  if (isMobileSidebarOpen) {
+    toggleMobileSidebar();
+  }
+}
+
+function toggleOpsAccordion() {
+  const submenu = document.getElementById('ops-submenu');
+  const caret = document.getElementById('ops-caret');
+  if (!submenu) return;
+  const isHidden = submenu.classList.toggle('hidden');
+  if (caret) {
+    caret.className = isHidden ? 'ph ph-caret-right text-xs text-slate-400' : 'ph ph-caret-down text-xs text-slate-400';
+  }
+}
+
+function toggleMobileSidebar() {
+  const sidebar = document.getElementById('app-sidebar');
+  if (!sidebar) return;
+  isMobileSidebarOpen = !isMobileSidebarOpen;
+  sidebar.classList.toggle('mobile-open', isMobileSidebarOpen);
+}
+
 // -------------------------------------------------------------
 // 2. Data Fetching & Dashboard KPIs
 // -------------------------------------------------------------
 async function loadAllData() {
   await Promise.all([
     fetchStats(),
-    fetchBOMs()
+    fetchBOMs(),
+    fetchRawMaterials()
   ]);
 }
 
@@ -1317,11 +1380,11 @@ function handleRMSearch() {
     }
     const filtered = allRawMaterials.filter(rm => 
       (rm.item_code || '').toLowerCase().includes(q) ||
-      (rm.item_description || '').toLowerCase().includes(q) ||
+      (rm.item_name || rm.item_description || '').toLowerCase().includes(q) ||
       (rm.category || '').toLowerCase().includes(q)
     );
     renderRMTable(filtered);
-  }, 120);
+  }, 80);
 }
 
 function renderRMTable(items) {
@@ -1329,38 +1392,53 @@ function renderRMTable(items) {
   if (!tbody) return;
   tbody.innerHTML = '';
 
-  if (items.length === 0) {
+  if (!items || items.length === 0) {
     tbody.innerHTML = `<tr><td colspan="10" class="text-center py-10 text-slate-400">No matching warehouse raw materials found.</td></tr>`;
     return;
   }
+
+  // Precompute BOM counts for each raw material component
+  const codeToBomCount = {};
+  allBOMs.forEach(b => {
+    (b.raw_materials || []).forEach(rm => {
+      const code = rm.item_code;
+      if (code) codeToBomCount[code] = (codeToBomCount[code] || 0) + 1;
+    });
+  });
+
+  const fragment = document.createDocumentFragment();
 
   items.forEach((item, idx) => {
     const tr = document.createElement('tr');
     tr.className = 'table-row-hover';
 
-    const storeQty = item.store_qty !== undefined ? item.store_qty : 0.0;
-    const secQty = item.section_qty !== undefined ? item.section_qty : 0.0;
-    const totalQty = item.total_stock !== undefined ? item.total_stock : (storeQty + secQty);
+    const itemDesc = item.item_name || item.item_description || '--';
+    const storeQty = item.store_qty !== undefined ? Number(item.store_qty) : 0.0;
+    const secQty = item.section_qty !== undefined ? Number(item.section_qty) : 0.0;
+    const totalQty = item.total_qty !== undefined ? Number(item.total_qty) : (item.total_stock !== undefined ? Number(item.total_stock) : (storeQty + secQty));
     const hasStock = totalQty > 0;
+    const bomCount = item.bom_count !== undefined ? item.bom_count : (codeToBomCount[item.item_code] || 0);
 
     tr.innerHTML = `
       <td class="py-3 px-3.5 text-center text-slate-400 font-mono text-xs">${idx + 1}</td>
       <td class="py-3 px-3.5 font-mono font-semibold text-xs text-slate-800 dark:text-slate-200">${escapeHtml(item.item_code)}</td>
-      <td class="py-3 px-3.5 font-medium text-slate-900 dark:text-slate-100">${escapeHtml(item.item_description)}</td>
+      <td class="py-3 px-3.5 font-medium text-slate-900 dark:text-slate-100">${escapeHtml(itemDesc)}</td>
       <td class="py-3 px-3.5 text-slate-500 dark:text-slate-400 text-xs">${escapeHtml(item.category || '--')}</td>
       <td class="py-3 px-3.5 text-center text-xs font-medium">${escapeHtml(item.unit || '--')}</td>
       <td class="py-3 px-3.5 text-right font-mono font-semibold text-cyan-600 dark:text-cyan-400">${formatQty(storeQty)}</td>
       <td class="py-3 px-3.5 text-right font-mono font-semibold text-purple-600 dark:text-purple-400">${formatQty(secQty)}</td>
       <td class="py-3 px-3.5 text-right font-mono font-bold text-xs ${hasStock ? 'text-slate-900 dark:text-white' : 'text-slate-400'}">${formatQty(totalQty)}</td>
-      <td class="py-3 px-3.5 text-center font-mono font-bold text-xs text-emerald-600 dark:text-emerald-400">${item.bom_count || 0}</td>
+      <td class="py-3 px-3.5 text-center font-mono font-bold text-xs text-emerald-600 dark:text-emerald-400">${bomCount}</td>
       <td class="py-3 px-3.5 text-center">
         <button onclick="filterByComponent('${escapeHtml(item.item_code)}')" class="btn-luxury btn-luxury-secondary text-[11px] py-1 px-2.5">
           View BOMs
         </button>
       </td>
     `;
-    tbody.appendChild(tr);
+    fragment.appendChild(tr);
   });
+
+  tbody.appendChild(fragment);
 }
 
 function filterByComponent(code) {
