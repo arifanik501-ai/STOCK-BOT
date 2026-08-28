@@ -164,8 +164,16 @@ def main():
 
     if args.sync:
         print(f"{Style.BOLD}[1/1] EXECUTING HEADLESS BOM & WAREHOUSE SYNC{Style.RESET}")
-        run_sync_cli(base_dir, config)
-        return
+        try:
+            success = run_sync_cli(base_dir, config)
+            if success:
+                sys.exit(0)
+            else:
+                sys.exit(1)
+        except Exception as e:
+            import traceback
+            traceback.print_exc()
+            sys.exit(1)
 
     # Check if initial data exists
     db = Database(base_dir)

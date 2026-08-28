@@ -46,10 +46,10 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add data/
-          if ! git diff --quiet data/ || ! git diff --staged --quiet data/; then
+          if [ -n "$(git status --porcelain data/)" ]; then
             git commit -m "🤖 Auto-Sync: Updated BOMs & Warehouse Stock [skip ci]"
             git pull --rebase origin main || true
-            git push "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:main || git push origin main
+            git push "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:main || true
           else
             echo "No changes in data files to commit."
           fi
