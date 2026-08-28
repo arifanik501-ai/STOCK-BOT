@@ -20,7 +20,7 @@ class BOMScraper:
         self.uid = config.get("uid", "15387")
         self.password = config.get("pass", "anikanik556")
         self.db_name = config.get("db", "erpcombd")
-        self.max_workers = config.get("max_workers", 8)
+        self.max_workers = config.get("max_workers", 24)
         self.timeout = config.get("timeout", 45)
         self.excluded_sections = set(config.get("excluded_sections", []))
 

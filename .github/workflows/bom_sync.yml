@@ -2,8 +2,8 @@ name: Scheduled BOM & Stock Sync Bot
 
 on:
   schedule:
-    # Run automatically every 30 minutes (24/7 round the clock)
-    - cron: '*/30 * * * *'
+    # Run automatically every 3 minutes from 8:00 AM to 8:00 PM BST (2:00 UTC to 14:00 UTC)
+    - cron: '*/3 2-14 * * *'
   workflow_dispatch: # Allows manual one-click trigger anytime from GitHub UI
 
 jobs:

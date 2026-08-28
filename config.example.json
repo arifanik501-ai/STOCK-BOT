@@ -1,4 +1,4 @@
-﻿{
+{
   "login_url": "https://mepgrouperp.com/1027/login/pages/main/index.php",
   "cid": "mep",
   "uid": "YOUR_USER_ID",
@@ -6,7 +6,7 @@
   "db": "erpcombd",
   "port": 8088,
   "auto_open_browser": true,
-  "max_workers": 8,
+  "max_workers": 24,
   "timeout": 30,
   "excluded_sections": []
 }

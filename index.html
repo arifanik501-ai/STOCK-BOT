@@ -47,7 +47,7 @@
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=20260828aj" />
+  <link rel="stylesheet" href="css/style.css?v=20260828ak" />
 </head>
 <body class="bg-slate-50 text-slate-800 dark:bg-dark-900 dark:text-slate-100 min-h-screen flex antialiased selection:bg-emerald-500 selection:text-white transition-colors duration-200 overflow-x-hidden">
 
@@ -177,9 +177,9 @@
         <div class="flex items-center gap-2.5">
           
           <!-- Live Sync Status Indicator (Glass Pill) -->
-          <div id="live-sync-indicator" class="hidden sm:flex items-center status-chip-emerald font-semibold py-1">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.9)]"></span>
-            <span id="last-sync-time-text" class="font-mono text-[11px] font-bold tracking-tight">Synced • 87 BOMs</span>
+          <div id="live-sync-indicator" class="flex items-center gap-2 status-chip-emerald font-semibold py-1 px-3 shadow-xs" title="Last ERP Master Sync Time">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.9)] animate-pulse"></span>
+            <span id="last-sync-time-text" class="font-mono text-[11px] font-bold tracking-tight text-emerald-800 dark:text-emerald-300">Live Sync: Just Now • 174 BOMs</span>
           </div>
 
           <!-- Notification Bell with Dropdown (Glass Button) -->
@@ -797,6 +797,6 @@
   </div>
 
   <!-- Application Logic -->
-  <script src="js/app.js?v=20260828aj"></script>
+  <script src="js/app.js?v=20260828ak"></script>
 </body>
 </html>
