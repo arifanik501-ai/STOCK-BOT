@@ -13,13 +13,14 @@ from diff_engine import DiffEngine
 from scraper import BOMScraper
 from server import run_server
 
-# Windows terminal UTF-8 encoding support & ANSI escape sequences
+# Universal UTF-8 encoding support & ANSI escape sequences
+try:
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace", line_buffering=True)
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace", line_buffering=True)
+except Exception:
+    pass
+
 if sys.platform == "win32":
-    try:
-        sys.stdout.reconfigure(encoding="utf-8", line_buffering=True)
-        sys.stderr.reconfigure(encoding="utf-8", line_buffering=True)
-    except Exception:
-        pass
     try:
         kernel32 = ctypes.windll.kernel32
         handle = kernel32.GetStdHandle(-11)

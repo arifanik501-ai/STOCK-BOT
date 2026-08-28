@@ -31,6 +31,8 @@ jobs:
 
       - name: 🤖 Run Headless BOM & Warehouse Stock Sync Bot
         env:
+          PYTHONIOENCODING: utf-8
+          PYTHONUNBUFFERED: "1"
           ERP_UID: ${{ secrets.ERP_UID }}
           ERP_PASS: ${{ secrets.ERP_PASS }}
           ERP_CID: ${{ secrets.ERP_CID }}
