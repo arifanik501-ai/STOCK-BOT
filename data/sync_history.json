@@ -1,5 +1,33 @@
 [
   {
+    "sync_time": "2026-08-28 19:25:32",
+    "duration_seconds": 11.23,
+    "total_boms": 174,
+    "added_count": 0,
+    "updated_count": 0,
+    "deleted_count": 0,
+    "unchanged_count": 174,
+    "added": [],
+    "updated": [],
+    "deleted": [],
+    "status": "SUCCESS",
+    "total_stock_items": 418
+  },
+  {
+    "sync_time": "2026-08-28 17:13:21",
+    "duration_seconds": 34.43,
+    "total_boms": 174,
+    "added_count": 0,
+    "updated_count": 0,
+    "deleted_count": 0,
+    "unchanged_count": 174,
+    "added": [],
+    "updated": [],
+    "deleted": [],
+    "status": "SUCCESS",
+    "total_stock_items": 418
+  },
+  {
     "sync_time": "2026-08-28 17:10:22",
     "duration_seconds": 14.34,
     "total_boms": 174,
@@ -2110,32 +2138,5 @@
     "deleted": [],
     "status": "SUCCESS",
     "total_stock_items": 418
-  },
-  {
-    "sync_time": "2026-08-28 02:38:59",
-    "duration_seconds": 5.06,
-    "total_boms": 128,
-    "added_count": 0,
-    "updated_count": 0,
-    "deleted_count": 0,
-    "unchanged_count": 128,
-    "added": [],
-    "updated": [],
-    "deleted": [],
-    "status": "SUCCESS",
-    "total_stock_items": 418
-  },
-  {
-    "sync_time": "2026-08-28 02:31:57",
-    "duration_seconds": 4.01,
-    "total_boms": 128,
-    "added_count": 0,
-    "updated_count": 0,
-    "deleted_count": 0,
-    "unchanged_count": 128,
-    "added": [],
-    "updated": [],
-    "deleted": [],
-    "status": "SUCCESS"
   }
 ]
