@@ -1,5 +1,19 @@
 [
   {
+    "sync_time": "2026-08-28 14:02:04",
+    "duration_seconds": 16.49,
+    "total_boms": 174,
+    "added_count": 0,
+    "updated_count": 0,
+    "deleted_count": 0,
+    "unchanged_count": 174,
+    "added": [],
+    "updated": [],
+    "deleted": [],
+    "status": "SUCCESS",
+    "total_stock_items": 418
+  },
+  {
     "sync_time": "2026-08-28 19:57:55",
     "duration_seconds": 6.11,
     "total_boms": 174,
@@ -1285,20 +1299,6 @@
   {
     "sync_time": "2026-08-28 03:07:31",
     "duration_seconds": 4.1,
-    "total_boms": 87,
-    "added_count": 0,
-    "updated_count": 0,
-    "deleted_count": 0,
-    "unchanged_count": 87,
-    "added": [],
-    "updated": [],
-    "deleted": [],
-    "status": "SUCCESS",
-    "total_stock_items": 418
-  },
-  {
-    "sync_time": "2026-08-28 03:00:52",
-    "duration_seconds": 5.44,
     "total_boms": 87,
     "added_count": 0,
     "updated_count": 0,
