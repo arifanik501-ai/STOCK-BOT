@@ -1,7 +1,12 @@
 [
   {
+<<<<<<< HEAD
     "sync_time": "2026-08-30 00:05:26",
     "duration_seconds": 7.24,
+=======
+    "sync_time": "2026-08-29 17:39:51",
+    "duration_seconds": 19.83,
+>>>>>>> b0a1b9378750e8be7bac0b5c667a057b6aef6100
     "total_boms": 174,
     "added_count": 0,
     "updated_count": 0,
@@ -14,8 +19,13 @@
     "total_stock_items": 418
   },
   {
+<<<<<<< HEAD
     "sync_time": "2026-08-29 23:20:11",
     "duration_seconds": 6.02,
+=======
+    "sync_time": "2026-08-29 14:00:17",
+    "duration_seconds": 16.48,
+>>>>>>> b0a1b9378750e8be7bac0b5c667a057b6aef6100
     "total_boms": 174,
     "added_count": 0,
     "updated_count": 0,
@@ -28,14 +38,20 @@
     "total_stock_items": 418
   },
   {
+<<<<<<< HEAD
     "sync_time": "2026-08-29 23:13:44",
     "duration_seconds": 7.84,
+=======
+    "sync_time": "2026-08-29 08:39:55",
+    "duration_seconds": 19.77,
+>>>>>>> b0a1b9378750e8be7bac0b5c667a057b6aef6100
     "total_boms": 174,
     "added_count": 0,
-    "updated_count": 0,
+    "updated_count": 1,
     "deleted_count": 0,
-    "unchanged_count": 174,
+    "unchanged_count": 173,
     "added": [],
+<<<<<<< HEAD
     "updated": [],
     "deleted": [],
     "status": "SUCCESS",
@@ -302,6 +318,8 @@
     "deleted_count": 0,
     "unchanged_count": 173,
     "added": [],
+=======
+>>>>>>> b0a1b9378750e8be7bac0b5c667a057b6aef6100
     "updated": [
       {
         "bom_no": "23090105",
@@ -318,6 +336,7 @@
     "total_stock_items": 418
   },
   {
+<<<<<<< HEAD
     "sync_time": "2026-08-29 13:06:03",
     "duration_seconds": 14.08,
     "total_boms": 174,
@@ -558,6 +577,10 @@
   {
     "sync_time": "2026-08-28 21:02:17",
     "duration_seconds": 7.6,
+=======
+    "sync_time": "2026-08-28 21:19:01",
+    "duration_seconds": 24.99,
+>>>>>>> b0a1b9378750e8be7bac0b5c667a057b6aef6100
     "total_boms": 174,
     "added_count": 0,
     "updated_count": 0,
@@ -570,8 +593,13 @@
     "total_stock_items": 418
   },
   {
+<<<<<<< HEAD
     "sync_time": "2026-08-28 20:19:50",
     "duration_seconds": 7.2,
+=======
+    "sync_time": "2026-08-28 14:16:41",
+    "duration_seconds": 18.2,
+>>>>>>> b0a1b9378750e8be7bac0b5c667a057b6aef6100
     "total_boms": 174,
     "added_count": 0,
     "updated_count": 0,
@@ -584,8 +612,13 @@
     "total_stock_items": 418
   },
   {
+<<<<<<< HEAD
     "sync_time": "2026-08-28 20:18:28",
     "duration_seconds": 6.4,
+=======
+    "sync_time": "2026-08-28 14:14:25",
+    "duration_seconds": 18.28,
+>>>>>>> b0a1b9378750e8be7bac0b5c667a057b6aef6100
     "total_boms": 174,
     "added_count": 0,
     "updated_count": 0,
