@@ -799,3 +799,237 @@ class Database:
             except Exception:
                 pass
         return []
+
+    def load_physical_entry_sheet(self, force_refresh: bool = False) -> List[Dict[str, Any]]:
+        """Reads 'Entry Sheet Physical' tab from BOT/ALL REPORT.xlsx with fast JSON caching and auto file-change detection."""
+        cache_path = os.path.join(self.data_dir, "physical_entry_sheet.json")
+        excel_path = os.path.join(self.base_dir, "BOT", "ALL REPORT.xlsx")
+        
+        # Fast Path: Return from cache file ONLY if Excel hasn't been modified since cache creation
+        if not force_refresh and os.path.exists(cache_path):
+            try:
+                cache_valid = True
+                if os.path.exists(excel_path):
+                    excel_mtime = os.path.getmtime(excel_path)
+                    cache_mtime = os.path.getmtime(cache_path)
+                    if excel_mtime > cache_mtime:
+                        cache_valid = False
+                if cache_valid:
+                    with open(cache_path, "r", encoding="utf-8") as f:
+                        data = json.load(f)
+                        if data:
+                            return data
+            except Exception:
+                pass
+
+        # Slow Path: Read live from Excel file
+        if os.path.exists(excel_path):
+            try:
+                import tempfile, shutil, openpyxl
+                from datetime import datetime
+                
+                temp_dir = tempfile.gettempdir()
+                temp_file = os.path.join(temp_dir, f"temp_all_report_{os.getpid()}.xlsx")
+                shutil.copy2(excel_path, temp_file)
+                wb = openpyxl.load_workbook(temp_file, data_only=True, read_only=True)
+                
+                sheet_name = "Entry Sheet Physical" if "Entry Sheet Physical" in wb.sheetnames else None
+                if not sheet_name:
+                    for name in wb.sheetnames:
+                        if "physical" in name.lower() and "entry" in name.lower():
+                            sheet_name = name
+                            break
+                            
+                if sheet_name:
+                    ws = wb[sheet_name]
+                    entries = []
+                    for row in ws.iter_rows(min_row=2, values_only=True):
+                        if not any(row):
+                            continue
+                        day_val = row[0] if len(row) > 0 else None
+                        date_val = row[1] if len(row) > 1 else None
+                        item_code = row[2] if len(row) > 2 else None
+                        item_name = row[3] if len(row) > 3 else None
+                        qty = row[4] if len(row) > 4 else None
+                        month = row[5] if len(row) > 5 else None
+                        types = row[6] if len(row) > 6 else None
+                        model_num = row[7] if len(row) > 7 else None
+                        part_type = row[8] if len(row) > 8 else None
+                        year = row[9] if len(row) > 9 else None
+
+                        if not item_code and not item_name and not qty:
+                            continue
+                        if item_code is None and item_name is None:
+                            continue
+
+                        if isinstance(date_val, datetime):
+                            date_str = date_val.strftime("%Y-%m-%d")
+                        elif isinstance(day_val, datetime):
+                            date_str = day_val.strftime("%Y-%m-%d")
+                        elif date_val is not None:
+                            date_str = str(date_val).split(" ")[0]
+                        else:
+                            date_str = ""
+
+                        clean_part = str(part_type or "").strip().lower()
+                        if not clean_part:
+                            if "{body}" in str(item_name).lower():
+                                clean_part = "body"
+                            elif "{blade}" in str(item_name).lower() or "(bl)" in str(item_code).lower():
+                                clean_part = "blade"
+                            else:
+                                clean_part = "unit"
+
+                        entries.append({
+                            "id": len(entries) + 1,
+                            "date": date_str,
+                            "item_code": str(item_code or "").strip(),
+                            "item_name": str(item_name or "").strip(),
+                            "qty": int(qty or 0) if isinstance(qty, (int, float)) else 0,
+                            "month": str(month or "").strip(),
+                            "type": str(types or "Ceiling Fan").strip(),
+                            "model_num": str(model_num or "").strip(),
+                            "part_type": clean_part,
+                            "year": int(year or 2026) if isinstance(year, (int, float)) else 2026
+                        })
+                        
+                    wb.close()
+                    try:
+                        if os.path.exists(temp_file):
+                            os.remove(temp_file)
+                    except Exception:
+                        pass
+
+                    if entries:
+                        with open(cache_path, "w", encoding="utf-8") as f:
+                            json.dump(entries, f, indent=2, ensure_ascii=False)
+                        return entries
+            except Exception:
+                pass
+                
+        # Final Fallback to cached json
+        if os.path.exists(cache_path):
+            try:
+                with open(cache_path, "r", encoding="utf-8") as f:
+                    return json.load(f)
+            except Exception:
+                pass
+        return []
+
+    def get_physical_matrix(self, part_type: str = 'body', force_refresh: bool = False) -> Dict[str, Any]:
+        """Calculates Day and Model Wise Production Matrix matching Excel 'Per Day Production' tab."""
+        entries = self.load_physical_entry_sheet(force_refresh=force_refresh)
+        clean_part = part_type.lower().strip()
+        filtered_entries = [e for e in entries if e.get("part_type") == clean_part]
+
+        # Model columns order
+        if clean_part == "blade":
+            models_order = ["5601 BL", "5602 BL", "5603 BL", "5606 BL", "5607 BL", "4801 BL", "3601 BL", "2401 BL"]
+            monthly_target = 45500
+            daily_target = 1750
+        else:
+            models_order = ["5601", "5602", "5603", "5606", "5607", "4801", "3601", "2401"]
+            monthly_target = 45500
+            daily_target = 1750
+
+        # Unique models from dataset
+        found_models = {e.get("model_num") for e in filtered_entries if e.get("model_num")}
+        # Merge preserving order
+        models = [m for m in models_order if m in found_models or any(m.startswith(x) for x in found_models)]
+        for m in sorted(found_models):
+            if m not in models:
+                models.append(m)
+
+        # Date mapping
+        date_map = {}
+        for e in filtered_entries:
+            d = e.get("date")
+            m = e.get("model_num")
+            q = e.get("qty", 0)
+            if d:
+                if d not in date_map:
+                    date_map[d] = {}
+                date_map[d][m] = date_map[d].get(m, 0) + q
+
+        # Days of August (1 to 31)
+        dates = [f"2026-08-{i:02d}" for i in range(1, 32)]
+        daily_rows = []
+        total_prod = 0
+        model_totals = {m: 0 for m in models}
+
+        for d in dates:
+            row_models = {}
+            row_total = 0
+            try:
+                dt = datetime.strptime(d, "%Y-%m-%d")
+                day_name = dt.strftime("%A")
+            except Exception:
+                day_name = ""
+
+            for m in models:
+                val = date_map.get(d, {}).get(m, 0)
+                row_models[m] = val
+                row_total += val
+                model_totals[m] += val
+
+            has_prod = row_total > 0
+            variance = row_total - daily_target if has_prod else 0
+            loss = daily_target - row_total if has_prod else 0
+
+            total_prod += row_total
+            daily_rows.append({
+                "date": d,
+                "day_name": day_name,
+                "models": row_models,
+                "total": row_total,
+                "target": daily_target if has_prod else 0,
+                "variance": variance,
+                "loss": loss,
+                "has_production": has_prod
+            })
+
+        achieve_pct = round((total_prod / monthly_target) * 100, 1) if monthly_target else 0
+
+        # Model shares
+        model_shares = []
+        for m in models:
+            m_qty = model_totals.get(m, 0)
+            m_pct = round((m_qty / total_prod) * 100, 1) if total_prod > 0 else 0
+            model_shares.append({
+                "model": m,
+                "quantity": m_qty,
+                "percentage": m_pct
+            })
+
+        model_shares.sort(key=lambda x: x["quantity"], reverse=True)
+
+        active_days = sum(1 for r in daily_rows if r["has_production"])
+        avg_output = round(total_prod / max(1, active_days))
+        peak_day = max(daily_rows, key=lambda x: x["total"]) if daily_rows else None
+
+        result = {
+            "part": clean_part,
+            "part_label": "Ceiling Fan Blade Stamping & Balancing" if clean_part == "blade" else "Ceiling Fan Body Assembly",
+            "models": models,
+            "model_totals": model_totals,
+            "model_shares": model_shares,
+            "total_production": total_prod,
+            "monthly_target": monthly_target,
+            "achievement_pct": achieve_pct,
+            "daily_target": daily_target,
+            "daily_rows": daily_rows,
+            "active_days_count": active_days,
+            "average_daily_output": avg_output,
+            "peak_day": peak_day,
+            "raw_entries": filtered_entries
+        }
+
+        # Cache matrix JSON
+        matrix_cache_path = os.path.join(self.data_dir, f"physical_matrix_{clean_part}.json")
+        try:
+            with open(matrix_cache_path, "w", encoding="utf-8") as f:
+                json.dump(result, f, indent=2, ensure_ascii=False)
+        except Exception:
+            pass
+
+        return result

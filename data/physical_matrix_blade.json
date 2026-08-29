@@ -1,0 +1,1125 @@
+{
+  "part": "blade",
+  "part_label": "Ceiling Fan Blade Stamping & Balancing",
+  "models": [
+    "5601 BL",
+    "5602 BL",
+    "5606 BL",
+    "5607 BL",
+    "4801 BL",
+    "3601 BL",
+    "2401 BL"
+  ],
+  "model_totals": {
+    "5601 BL": 26701,
+    "5602 BL": 3270,
+    "5606 BL": 300,
+    "5607 BL": 265,
+    "4801 BL": 270,
+    "3601 BL": 3140,
+    "2401 BL": 5366
+  },
+  "model_shares": [
+    {
+      "model": "5601 BL",
+      "quantity": 26701,
+      "percentage": 67.9
+    },
+    {
+      "model": "2401 BL",
+      "quantity": 5366,
+      "percentage": 13.6
+    },
+    {
+      "model": "5602 BL",
+      "quantity": 3270,
+      "percentage": 8.3
+    },
+    {
+      "model": "3601 BL",
+      "quantity": 3140,
+      "percentage": 8.0
+    },
+    {
+      "model": "5606 BL",
+      "quantity": 300,
+      "percentage": 0.8
+    },
+    {
+      "model": "4801 BL",
+      "quantity": 270,
+      "percentage": 0.7
+    },
+    {
+      "model": "5607 BL",
+      "quantity": 265,
+      "percentage": 0.7
+    }
+  ],
+  "total_production": 39312,
+  "monthly_target": 45500,
+  "achievement_pct": 86.4,
+  "daily_target": 1750,
+  "daily_rows": [
+    {
+      "date": "2026-08-01",
+      "day_name": "Saturday",
+      "models": {
+        "5601 BL": 0,
+        "5602 BL": 0,
+        "5606 BL": 0,
+        "5607 BL": 0,
+        "4801 BL": 0,
+        "3601 BL": 0,
+        "2401 BL": 1400
+      },
+      "total": 1400,
+      "target": 1750,
+      "variance": -350,
+      "loss": 350,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-02",
+      "day_name": "Sunday",
+      "models": {
+        "5601 BL": 0,
+        "5602 BL": 0,
+        "5606 BL": 0,
+        "5607 BL": 0,
+        "4801 BL": 0,
+        "3601 BL": 0,
+        "2401 BL": 2170
+      },
+      "total": 2170,
+      "target": 1750,
+      "variance": 420,
+      "loss": -420,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-03",
+      "day_name": "Monday",
+      "models": {
+        "5601 BL": 1300,
+        "5602 BL": 0,
+        "5606 BL": 0,
+        "5607 BL": 0,
+        "4801 BL": 0,
+        "3601 BL": 0,
+        "2401 BL": 351
+      },
+      "total": 1651,
+      "target": 1750,
+      "variance": -99,
+      "loss": 99,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-04",
+      "day_name": "Tuesday",
+      "models": {
+        "5601 BL": 2130,
+        "5602 BL": 0,
+        "5606 BL": 0,
+        "5607 BL": 0,
+        "4801 BL": 0,
+        "3601 BL": 0,
+        "2401 BL": 0
+      },
+      "total": 2130,
+      "target": 1750,
+      "variance": 380,
+      "loss": -380,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-05",
+      "day_name": "Wednesday",
+      "models": {
+        "5601 BL": 0,
+        "5602 BL": 0,
+        "5606 BL": 0,
+        "5607 BL": 0,
+        "4801 BL": 0,
+        "3601 BL": 0,
+        "2401 BL": 0
+      },
+      "total": 0,
+      "target": 0,
+      "variance": 0,
+      "loss": 0,
+      "has_production": false
+    },
+    {
+      "date": "2026-08-06",
+      "day_name": "Thursday",
+      "models": {
+        "5601 BL": 0,
+        "5602 BL": 0,
+        "5606 BL": 0,
+        "5607 BL": 0,
+        "4801 BL": 0,
+        "3601 BL": 0,
+        "2401 BL": 0
+      },
+      "total": 0,
+      "target": 0,
+      "variance": 0,
+      "loss": 0,
+      "has_production": false
+    },
+    {
+      "date": "2026-08-07",
+      "day_name": "Friday",
+      "models": {
+        "5601 BL": 0,
+        "5602 BL": 0,
+        "5606 BL": 0,
+        "5607 BL": 0,
+        "4801 BL": 0,
+        "3601 BL": 0,
+        "2401 BL": 0
+      },
+      "total": 0,
+      "target": 0,
+      "variance": 0,
+      "loss": 0,
+      "has_production": false
+    },
+    {
+      "date": "2026-08-08",
+      "day_name": "Saturday",
+      "models": {
+        "5601 BL": 2150,
+        "5602 BL": 0,
+        "5606 BL": 30,
+        "5607 BL": 0,
+        "4801 BL": 0,
+        "3601 BL": 0,
+        "2401 BL": 0
+      },
+      "total": 2180,
+      "target": 1750,
+      "variance": 430,
+      "loss": -430,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-09",
+      "day_name": "Sunday",
+      "models": {
+        "5601 BL": 1950,
+        "5602 BL": 0,
+        "5606 BL": 30,
+        "5607 BL": 0,
+        "4801 BL": 0,
+        "3601 BL": 0,
+        "2401 BL": 0
+      },
+      "total": 1980,
+      "target": 1750,
+      "variance": 230,
+      "loss": -230,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-10",
+      "day_name": "Monday",
+      "models": {
+        "5601 BL": 1400,
+        "5602 BL": 0,
+        "5606 BL": 0,
+        "5607 BL": 0,
+        "4801 BL": 0,
+        "3601 BL": 0,
+        "2401 BL": 0
+      },
+      "total": 1400,
+      "target": 1750,
+      "variance": -350,
+      "loss": 350,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-11",
+      "day_name": "Tuesday",
+      "models": {
+        "5601 BL": 1800,
+        "5602 BL": 0,
+        "5606 BL": 0,
+        "5607 BL": 0,
+        "4801 BL": 0,
+        "3601 BL": 0,
+        "2401 BL": 0
+      },
+      "total": 1800,
+      "target": 1750,
+      "variance": 50,
+      "loss": -50,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-12",
+      "day_name": "Wednesday",
+      "models": {
+        "5601 BL": 1680,
+        "5602 BL": 0,
+        "5606 BL": 0,
+        "5607 BL": 0,
+        "4801 BL": 0,
+        "3601 BL": 0,
+        "2401 BL": 0
+      },
+      "total": 1680,
+      "target": 1750,
+      "variance": -70,
+      "loss": 70,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-13",
+      "day_name": "Thursday",
+      "models": {
+        "5601 BL": 891,
+        "5602 BL": 0,
+        "5606 BL": 0,
+        "5607 BL": 0,
+        "4801 BL": 0,
+        "3601 BL": 650,
+        "2401 BL": 0
+      },
+      "total": 1541,
+      "target": 1750,
+      "variance": -209,
+      "loss": 209,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-14",
+      "day_name": "Friday",
+      "models": {
+        "5601 BL": 121,
+        "5602 BL": 0,
+        "5606 BL": 0,
+        "5607 BL": 265,
+        "4801 BL": 0,
+        "3601 BL": 820,
+        "2401 BL": 0
+      },
+      "total": 1206,
+      "target": 1750,
+      "variance": -544,
+      "loss": 544,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-15",
+      "day_name": "Saturday",
+      "models": {
+        "5601 BL": 790,
+        "5602 BL": 0,
+        "5606 BL": 240,
+        "5607 BL": 0,
+        "4801 BL": 270,
+        "3601 BL": 130,
+        "2401 BL": 0
+      },
+      "total": 1430,
+      "target": 1750,
+      "variance": -320,
+      "loss": 320,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-16",
+      "day_name": "Sunday",
+      "models": {
+        "5601 BL": 1250,
+        "5602 BL": 0,
+        "5606 BL": 0,
+        "5607 BL": 0,
+        "4801 BL": 0,
+        "3601 BL": 0,
+        "2401 BL": 0
+      },
+      "total": 1250,
+      "target": 1750,
+      "variance": -500,
+      "loss": 500,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-17",
+      "day_name": "Monday",
+      "models": {
+        "5601 BL": 1800,
+        "5602 BL": 0,
+        "5606 BL": 0,
+        "5607 BL": 0,
+        "4801 BL": 0,
+        "3601 BL": 0,
+        "2401 BL": 0
+      },
+      "total": 1800,
+      "target": 1750,
+      "variance": 50,
+      "loss": -50,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-18",
+      "day_name": "Tuesday",
+      "models": {
+        "5601 BL": 2200,
+        "5602 BL": 0,
+        "5606 BL": 0,
+        "5607 BL": 0,
+        "4801 BL": 0,
+        "3601 BL": 0,
+        "2401 BL": 0
+      },
+      "total": 2200,
+      "target": 1750,
+      "variance": 450,
+      "loss": -450,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-19",
+      "day_name": "Wednesday",
+      "models": {
+        "5601 BL": 1750,
+        "5602 BL": 0,
+        "5606 BL": 0,
+        "5607 BL": 0,
+        "4801 BL": 0,
+        "3601 BL": 0,
+        "2401 BL": 0
+      },
+      "total": 1750,
+      "target": 1750,
+      "variance": 0,
+      "loss": 0,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-20",
+      "day_name": "Thursday",
+      "models": {
+        "5601 BL": 1150,
+        "5602 BL": 0,
+        "5606 BL": 0,
+        "5607 BL": 0,
+        "4801 BL": 0,
+        "3601 BL": 0,
+        "2401 BL": 0
+      },
+      "total": 1150,
+      "target": 1750,
+      "variance": -600,
+      "loss": 600,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-21",
+      "day_name": "Friday",
+      "models": {
+        "5601 BL": 0,
+        "5602 BL": 0,
+        "5606 BL": 0,
+        "5607 BL": 0,
+        "4801 BL": 0,
+        "3601 BL": 0,
+        "2401 BL": 0
+      },
+      "total": 0,
+      "target": 0,
+      "variance": 0,
+      "loss": 0,
+      "has_production": false
+    },
+    {
+      "date": "2026-08-22",
+      "day_name": "Saturday",
+      "models": {
+        "5601 BL": 50,
+        "5602 BL": 1090,
+        "5606 BL": 0,
+        "5607 BL": 0,
+        "4801 BL": 0,
+        "3601 BL": 0,
+        "2401 BL": 0
+      },
+      "total": 1140,
+      "target": 1750,
+      "variance": -610,
+      "loss": 610,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-23",
+      "day_name": "Sunday",
+      "models": {
+        "5601 BL": 0,
+        "5602 BL": 1380,
+        "5606 BL": 0,
+        "5607 BL": 0,
+        "4801 BL": 0,
+        "3601 BL": 0,
+        "2401 BL": 0
+      },
+      "total": 1380,
+      "target": 1750,
+      "variance": -370,
+      "loss": 370,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-24",
+      "day_name": "Monday",
+      "models": {
+        "5601 BL": 349,
+        "5602 BL": 800,
+        "5606 BL": 0,
+        "5607 BL": 0,
+        "4801 BL": 0,
+        "3601 BL": 0,
+        "2401 BL": 0
+      },
+      "total": 1149,
+      "target": 1750,
+      "variance": -601,
+      "loss": 601,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-25",
+      "day_name": "Tuesday",
+      "models": {
+        "5601 BL": 590,
+        "5602 BL": 0,
+        "5606 BL": 0,
+        "5607 BL": 0,
+        "4801 BL": 0,
+        "3601 BL": 600,
+        "2401 BL": 0
+      },
+      "total": 1190,
+      "target": 1750,
+      "variance": -560,
+      "loss": 560,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-26",
+      "day_name": "Wednesday",
+      "models": {
+        "5601 BL": 2050,
+        "5602 BL": 0,
+        "5606 BL": 0,
+        "5607 BL": 0,
+        "4801 BL": 0,
+        "3601 BL": 630,
+        "2401 BL": 0
+      },
+      "total": 2680,
+      "target": 1750,
+      "variance": 930,
+      "loss": -930,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-27",
+      "day_name": "Thursday",
+      "models": {
+        "5601 BL": 60,
+        "5602 BL": 0,
+        "5606 BL": 0,
+        "5607 BL": 0,
+        "4801 BL": 0,
+        "3601 BL": 310,
+        "2401 BL": 1445
+      },
+      "total": 1815,
+      "target": 1750,
+      "variance": 65,
+      "loss": -65,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-28",
+      "day_name": "Friday",
+      "models": {
+        "5601 BL": 0,
+        "5602 BL": 0,
+        "5606 BL": 0,
+        "5607 BL": 0,
+        "4801 BL": 0,
+        "3601 BL": 0,
+        "2401 BL": 0
+      },
+      "total": 0,
+      "target": 0,
+      "variance": 0,
+      "loss": 0,
+      "has_production": false
+    },
+    {
+      "date": "2026-08-29",
+      "day_name": "Saturday",
+      "models": {
+        "5601 BL": 1240,
+        "5602 BL": 0,
+        "5606 BL": 0,
+        "5607 BL": 0,
+        "4801 BL": 0,
+        "3601 BL": 0,
+        "2401 BL": 0
+      },
+      "total": 1240,
+      "target": 1750,
+      "variance": -510,
+      "loss": 510,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-30",
+      "day_name": "Sunday",
+      "models": {
+        "5601 BL": 0,
+        "5602 BL": 0,
+        "5606 BL": 0,
+        "5607 BL": 0,
+        "4801 BL": 0,
+        "3601 BL": 0,
+        "2401 BL": 0
+      },
+      "total": 0,
+      "target": 0,
+      "variance": 0,
+      "loss": 0,
+      "has_production": false
+    },
+    {
+      "date": "2026-08-31",
+      "day_name": "Monday",
+      "models": {
+        "5601 BL": 0,
+        "5602 BL": 0,
+        "5606 BL": 0,
+        "5607 BL": 0,
+        "4801 BL": 0,
+        "3601 BL": 0,
+        "2401 BL": 0
+      },
+      "total": 0,
+      "target": 0,
+      "variance": 0,
+      "loss": 0,
+      "has_production": false
+    }
+  ],
+  "active_days_count": 24,
+  "average_daily_output": 1638,
+  "peak_day": {
+    "date": "2026-08-26",
+    "day_name": "Wednesday",
+    "models": {
+      "5601 BL": 2050,
+      "5602 BL": 0,
+      "5606 BL": 0,
+      "5607 BL": 0,
+      "4801 BL": 0,
+      "3601 BL": 630,
+      "2401 BL": 0
+    },
+    "total": 2680,
+    "target": 1750,
+    "variance": 930,
+    "loss": -930,
+    "has_production": true
+  },
+  "raw_entries": [
+    {
+      "id": 3,
+      "date": "2026-08-01",
+      "item_code": "CF2401/CF2401IV (BL)",
+      "item_name": "24 Inch Super Ceiling Fan - Ivory {Blade}",
+      "qty": 1400,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "2401 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 8,
+      "date": "2026-08-02",
+      "item_code": "CF2401/CF2401IV (BL)",
+      "item_name": "24 Inch Super Ceiling Fan - Ivory {Blade}",
+      "qty": 2170,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "2401 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 10,
+      "date": "2026-08-03",
+      "item_code": "CF5601/CF5601IV (BL)",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Blade}",
+      "qty": 1300,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 11,
+      "date": "2026-08-03",
+      "item_code": "CF2401/CF2401IV (BL)",
+      "item_name": "24 Inch Super Ceiling Fan - Ivory {Blade}",
+      "qty": 351,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "2401 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 15,
+      "date": "2026-08-04",
+      "item_code": "CF5601/CF5601IV (BL)",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Blade}",
+      "qty": 2130,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 19,
+      "date": "2026-08-08",
+      "item_code": "CF5606/CF5606IV (BL)",
+      "item_name": "56 Inch Premium Plus Ceiling Fan - Ivory {Blade}",
+      "qty": 30,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5606 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 20,
+      "date": "2026-08-08",
+      "item_code": "CF5601/CF5601IV (BL)",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Blade}",
+      "qty": 2150,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 22,
+      "date": "2026-08-09",
+      "item_code": "CF5601/CF5601IV (BL)",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Blade}",
+      "qty": 1950,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 23,
+      "date": "2026-08-09",
+      "item_code": "CF5606/CF5606IV (BL)",
+      "item_name": "56 Inch Premium Plus Ceiling Fan - Ivory {Blade}",
+      "qty": 30,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5606 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 25,
+      "date": "2026-08-10",
+      "item_code": "CF5601/CF5601IV (BL)",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Blade}",
+      "qty": 1400,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 27,
+      "date": "2026-08-11",
+      "item_code": "CF5601/CF5601IV (BL)",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Blade}",
+      "qty": 1800,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 30,
+      "date": "2026-08-12",
+      "item_code": "CF5601/CF5601IV (BL)",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Blade}",
+      "qty": 1680,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 33,
+      "date": "2026-08-13",
+      "item_code": "CF5601/CF5601IV (BL)",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Blade}",
+      "qty": 800,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 34,
+      "date": "2026-08-13",
+      "item_code": "CF5601/CF5601IV (BL)",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Blade}",
+      "qty": 91,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 35,
+      "date": "2026-08-13",
+      "item_code": "CF3601/CF3601IV (BL)",
+      "item_name": "36 Inch Hero Ceiling Fan - Ivory {Blade}",
+      "qty": 650,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "3601 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 37,
+      "date": "2026-08-14",
+      "item_code": "CF5601/CF5601IV (BL)",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Blade}",
+      "qty": 121,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 38,
+      "date": "2026-08-14",
+      "item_code": "CF5607/CF5607IV (BL)",
+      "item_name": "56 Inch Crown Ceiling Fan - Ivory {Blade}",
+      "qty": 265,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5607 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 39,
+      "date": "2026-08-14",
+      "item_code": "CF3601/CF3601IV (BL)",
+      "item_name": "36 Inch Hero Ceiling Fan - Ivory {Blade}",
+      "qty": 820,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "3601 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 41,
+      "date": "2026-08-15",
+      "item_code": "CF5601/CF5601IV (BL)",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Blade}",
+      "qty": 790,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 42,
+      "date": "2026-08-15",
+      "item_code": "CF5606/CF5606IV (BL)",
+      "item_name": "56 Inch Premium Plus Ceiling Fan - Ivory {Blade}",
+      "qty": 240,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5606 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 43,
+      "date": "2026-08-15",
+      "item_code": "CF4801/CF4801IV  (BL)",
+      "item_name": "48 Inch Popular Ceiling Fan - Ivory {Blade}",
+      "qty": 270,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "4801 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 44,
+      "date": "2026-08-15",
+      "item_code": "CF3601/CF3601IV (BL)",
+      "item_name": "36 Inch Hero Ceiling Fan - Ivory {Blade}",
+      "qty": 130,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "3601 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 48,
+      "date": "2026-08-16",
+      "item_code": "CF5601/CF5601IV (BL)",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Blade}",
+      "qty": 1250,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 51,
+      "date": "2026-08-17",
+      "item_code": "CF5601/CF5601IV (BL)",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Blade}",
+      "qty": 1800,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 53,
+      "date": "2026-08-18",
+      "item_code": "CF5601/CF5601IV (BL)",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Blade}",
+      "qty": 2200,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 56,
+      "date": "2026-08-19",
+      "item_code": "CF5601/CF5601IV (BL)",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Blade}",
+      "qty": 1750,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 58,
+      "date": "2026-08-20",
+      "item_code": "CF5601/CF5601IV (BL)",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Blade}",
+      "qty": 1150,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 60,
+      "date": "2026-08-22",
+      "item_code": "CR5601IV (BL)",
+      "item_name": "56 Inch Premium Ceiling Fan- Ivory (Without Regulator) {Blade}",
+      "qty": 50,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 61,
+      "date": "2026-08-22",
+      "item_code": "CF5602/CF5602IV (BL)",
+      "item_name": "56 Inch Speed King Ceiling Fan - Ivory {Blade}",
+      "qty": 1090,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5602 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 63,
+      "date": "2026-08-23",
+      "item_code": "CF5602/CF5602IV (BL)",
+      "item_name": "56 Inch Speed King Ceiling Fan - Ivory {Blade}",
+      "qty": 1380,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5602 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 65,
+      "date": "2026-08-24",
+      "item_code": "CF5601/CF5601IV (BL)",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Blade}",
+      "qty": 349,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 66,
+      "date": "2026-08-24",
+      "item_code": "CF5602/CF5602IV (BL)",
+      "item_name": "56 Inch Speed King Ceiling Fan - Ivory {Blade}",
+      "qty": 800,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5602 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 69,
+      "date": "2026-08-25",
+      "item_code": "CF5601/CF5601IV (BL)",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Blade}",
+      "qty": 590,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 70,
+      "date": "2026-08-25",
+      "item_code": "CF3601/CF3601IV (BL)",
+      "item_name": "36 Inch Hero Ceiling Fan - Ivory {Blade}",
+      "qty": 600,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "3601 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 72,
+      "date": "2026-08-26",
+      "item_code": "CF5601/CF5601IV (BL)",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Blade}",
+      "qty": 2050,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 73,
+      "date": "2026-08-26",
+      "item_code": "CF3601/CF3601IV (BL)",
+      "item_name": "36 Inch Hero Ceiling Fan - Ivory {Blade}",
+      "qty": 630,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "3601 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 75,
+      "date": "2026-08-27",
+      "item_code": "CF5601/CF5601IV (BL)",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Blade}",
+      "qty": 60,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 76,
+      "date": "2026-08-27",
+      "item_code": "CF3601/CF3601IV (BL)",
+      "item_name": "36 Inch Hero Ceiling Fan - Ivory {Blade}",
+      "qty": 310,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "3601 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 77,
+      "date": "2026-08-27",
+      "item_code": "CF2401/CF2401IV (BL)",
+      "item_name": "24 Inch Super Ceiling Fan - Ivory {Blade}",
+      "qty": 1445,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "2401 BL",
+      "part_type": "blade",
+      "year": 2026
+    },
+    {
+      "id": 79,
+      "date": "2026-08-29",
+      "item_code": "CF5601/CF5601IV (BL)",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Blade}",
+      "qty": 1240,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601 BL",
+      "part_type": "blade",
+      "year": 2026
+    }
+  ]
+}

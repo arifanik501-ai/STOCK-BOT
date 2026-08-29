@@ -1,10 +1,30 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MEP Industrial Intelligence — Production BOM & Warehouse Execution System</title>
+  <title>MEP FAN LTD — Stock Report</title>
   
+  <!-- Instant Zero-FOUC Theme & Mode Initializer -->
+  <script>
+    (function() {
+      try {
+        var theme = localStorage.getItem('mep_theme') || 'light';
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+        var beast = localStorage.getItem('mep_beast_mode');
+        if (beast === 'true') {
+          document.documentElement.classList.add('beast-mode-active');
+        } else {
+          document.documentElement.classList.remove('beast-mode-active');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -32,8 +52,8 @@
             }
           },
           fontFamily: {
-            sans: ['Plus Jakarta Sans', 'Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-            mono: ['JetBrains Mono', 'Fira Code', 'Consolas', 'monospace']
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
+            mono: ['"JetBrains Mono"', '"SF Mono"', 'Consolas', 'monospace']
           }
         }
       }
@@ -43,277 +63,519 @@
   <!-- Phosphor Icons & Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
+  <!-- App Favicon, Icons & PWA Manifest -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/logo-256.png" />
+  <link rel="manifest" href="manifest.json" />
+
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=20260828ak" />
+  <link rel="stylesheet" href="css/style.css?v=20260829entryv6" />
 </head>
-<body class="bg-slate-50 text-slate-800 dark:bg-dark-900 dark:text-slate-100 min-h-screen flex antialiased selection:bg-emerald-500 selection:text-white transition-colors duration-200 overflow-x-hidden">
+<body class="bg-slate-50 text-slate-800 dark:bg-dark-900 dark:text-slate-100 h-screen overflow-hidden flex antialiased selection:bg-emerald-500 selection:text-white transition-colors duration-200">
 
   <!-- ================= LEFT COLLAPSIBLE SIDEBAR ================= -->
-  <aside id="app-sidebar" class="shrink-0 bg-white/95 dark:bg-dark-850/95 border-r border-slate-200 dark:border-slate-800/80 flex flex-col justify-between hidden md:flex sticky top-0 h-screen z-40 backdrop-blur-md transition-all duration-200">
+  <aside id="app-sidebar" class="shrink-0 bg-white/95 dark:bg-dark-850/95 border-r border-slate-200 dark:border-slate-800/80 flex flex-col justify-between hidden md:flex h-screen z-40 backdrop-blur-md transition-all duration-200">
     <div class="p-3.5 space-y-5">
       
-      <!-- Enterprise Brand Header -->
+      <!-- Enterprise Brand Header (Static / Non-clickable) -->
       <div class="flex items-center justify-between px-1.5 sidebar-header-box">
-        <div class="flex items-center gap-3 cursor-pointer" onclick="switchNavTab('registry')">
-          <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-600 via-teal-500 to-cyan-500 flex items-center justify-center text-white shadow-md shadow-emerald-500/20 shrink-0">
-            <i class="ph ph-cube text-xl"></i>
+        <div class="flex items-center gap-3 select-none">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500/15 via-teal-500/10 to-cyan-500/15 dark:bg-dark-800 border border-slate-200/80 dark:border-slate-700/80 flex items-center justify-center p-0.5 shadow-sm shrink-0 overflow-hidden">
+            <picture>
+              <source srcset="assets/logo-128.webp" type="image/webp">
+              <img src="assets/logo-128.png" alt="MEP Industrial Intelligence" class="w-full h-full object-contain drop-shadow-sm pointer-events-none" width="40" height="40" loading="eager" decoding="async" />
+            </picture>
           </div>
           <div class="sidebar-text">
-            <h1 class="font-bold text-xs leading-tight text-slate-900 dark:text-white tracking-tight">MEP INTELLIGENCE</h1>
-            <p class="text-[10px] font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">Industrial MES Suite</p>
+            <h1 class="font-bold text-xs leading-tight text-slate-900 dark:text-white tracking-tight">MEP FAN LTD</h1>
+            <p class="text-[10px] font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">Stock Report</p>
           </div>
         </div>
       </div>
 
       <!-- Navigation Groups -->
-      <nav class="space-y-4">
+      <nav class="space-y-2">
         
-        <!-- Operations & Intelligence Master Collapsible Card -->
-        <div class="space-y-1">
-          <div class="px-2 text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1.5 sidebar-group-title">
-            Operations & Analytics
+        <!-- ================= 0. EXECUTIVE DASHBOARD (FIRST PLACE) ================= -->
+        <button type="button" onclick="switchNavTab('dashboard')" id="nav-btn-dashboard" class="ops-parent-btn w-full text-left" title="Manufacturing Cockpit & Dashboard">
+          <div class="flex items-center gap-2.5 min-w-0">
+            <div class="w-6 h-6 rounded-lg bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
+              <i class="ph-bold ph-squares-four text-sm"></i>
+            </div>
+            <span class="sidebar-text font-bold">Dashboard</span>
           </div>
-          
-          <!-- Master Parent Collapsible Button -->
-          <div class="space-y-1.5" id="ops-accordion-group">
-            <button type="button" onclick="toggleOpsAccordion()" id="btn-ops-parent" class="ops-parent-btn w-full text-left" title="Toggle Operations Suite Views">
+        </button>
+
+        <!-- ================= GROUP 1: STOCK & PRODUCTION ACCORDION ================= -->
+        <div class="space-y-1.5 pt-0.5" id="stock-ops-accordion">
+          <!-- Parent Button: Stock & Production -->
+          <button type="button" onclick="toggleStockAccordion()" id="nav-btn-stock-ops" class="ops-parent-btn active w-full text-left" title="Stock & Production Operations Suite">
+            <div class="flex items-center gap-2.5 min-w-0">
+              <div class="w-6 h-6 rounded-lg bg-gradient-to-tr from-emerald-500/20 via-teal-500/15 to-cyan-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 shadow-2xs">
+                <i class="ph-bold ph-stack text-sm"></i>
+              </div>
+              <span class="sidebar-text font-bold">Stock & Production</span>
+            </div>
+            <div class="flex items-center gap-1.5 sidebar-badge shrink-0">
+              <i id="stock-caret" class="ph ph-caret-down text-xs text-slate-400 transition-transform duration-200"></i>
+            </div>
+          </button>
+
+          <!-- Subcategories nested inside Frosted Sub-Card -->
+          <div id="stock-submenu" class="ops-sub-card space-y-0.5 pl-1.5">
+            
+            <!-- 1. BOM Registry -->
+            <button type="button" onclick="switchNavTab('registry')" id="nav-btn-registry" class="ops-child-item active w-full text-left" title="BOM Master Registry & Production Feasibility">
+              <div class="flex items-center gap-2 truncate">
+                <i class="ph-bold ph-cube text-emerald-500 text-sm shrink-0"></i>
+                <span class="truncate font-semibold">BOM Registry</span>
+              </div>
+              <span id="badge-total-boms-sidebar" class="glass-pill glass-pill-emerald font-mono text-[10px] py-0.5 px-2 font-bold shadow-2xs">174</span>
+            </button>
+
+            <!-- 2. Warehouse Stock -->
+            <button type="button" onclick="switchNavTab('inventory')" id="nav-btn-inventory" class="ops-child-item w-full text-left" title="Warehouse Stock (Report 91223)">
+              <div class="flex items-center gap-2 truncate">
+                <i class="ph-bold ph-warehouse text-cyan-500 text-sm shrink-0"></i>
+                <span class="truncate font-semibold">Warehouse Stock</span>
+              </div>
+              <span id="badge-stock-items-sidebar" class="glass-pill glass-pill-cyan font-mono text-[10px] py-0.5 px-2 font-bold shadow-2xs">418</span>
+            </button>
+
+            <!-- 3. Audit Trail & Log -->
+            <button type="button" onclick="switchNavTab('history')" id="nav-btn-history" class="ops-child-item w-full text-left" title="Differential Audit Trail & Log">
+              <div class="flex items-center gap-2 truncate">
+                <i class="ph-bold ph-clock-counter-clockwise text-emerald-500 text-sm shrink-0"></i>
+                <span class="truncate font-semibold">Audit Trail & Log</span>
+              </div>
+              <span class="glass-pill glass-pill-emerald text-[9px] py-0.5 px-2 font-extrabold uppercase tracking-wider inline-flex items-center gap-1.5 shadow-2xs">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,0.9)] animate-pulse shrink-0"></span>
+                <span>LIVE</span>
+              </span>
+            </button>
+
+          </div>
+        </div>
+
+        <!-- ================= GROUP 2: INDEPENDENT OPERATIONS MODULES ================= -->
+        <div class="space-y-1.5 pt-0.5">
+
+          <!-- ================= GROUP: PHYSICAL PRODUCTION ACCORDION ================= -->
+          <div class="space-y-1.5" id="physical-ops-accordion">
+            <!-- Parent Button: Physical Production -->
+            <button type="button" onclick="togglePhysicalAccordion()" id="nav-btn-physical-ops" class="ops-parent-btn w-full text-left" title="Physical Production Floor Assembly Suite">
               <div class="flex items-center gap-2.5 min-w-0">
-                <div class="w-6 h-6 rounded-lg bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
-                  <i class="ph-bold ph-squares-four text-sm"></i>
+                <div class="w-6 h-6 rounded-lg bg-rose-500/10 dark:bg-rose-500/20 text-rose-600 dark:text-rose-400 flex items-center justify-center shrink-0">
+                  <i class="ph-bold ph-factory text-sm"></i>
                 </div>
-                <span class="truncate sidebar-text font-bold">Operations Suite</span>
+                <span class="sidebar-text font-bold">Physical Production</span>
               </div>
               <div class="flex items-center gap-1.5 sidebar-badge shrink-0">
-                <span class="glass-pill glass-pill-emerald font-mono text-[9px] font-bold py-0.5 px-1.5">3</span>
-                <i id="ops-caret" class="ph ph-caret-down text-xs text-slate-400"></i>
+                <i id="physical-caret" class="ph ph-caret-down text-xs text-slate-400 transition-transform duration-200"></i>
               </div>
             </button>
 
-            <!-- 3 Nested Child Items inside Frosted Sub-Card -->
-            <div id="ops-submenu" class="ops-sub-card space-y-0.5">
+            <!-- Subcategories nested inside Frosted Sub-Card -->
+            <div id="physical-submenu" class="ops-sub-card space-y-0.5 pl-1.5">
               
-              <button type="button" onclick="switchNavTab('registry')" id="nav-btn-registry" class="ops-child-item active w-full text-left" title="BOM Master Registry">
+              <!-- 1. Ceiling Fan Body -->
+              <button type="button" onclick="switchNavTab('physical_cf_body')" id="nav-btn-physical-cf-body" class="ops-child-item w-full text-left" title="Ceiling Fan Motor & Body Assembly Floor">
                 <div class="flex items-center gap-2 truncate">
-                  <i class="ph ph-cube text-emerald-500 text-sm shrink-0"></i>
-                  <span class="truncate">BOM Registry</span>
+                  <i class="ph-bold ph-fan text-rose-500 text-sm shrink-0"></i>
+                  <span class="truncate font-semibold">Ceiling Fan Body</span>
                 </div>
-                <span id="badge-total-boms-sidebar" class="glass-pill glass-pill-neutral font-mono text-[10px] py-0 px-1.5">174</span>
               </button>
 
-              <button type="button" onclick="switchNavTab('inventory')" id="nav-btn-inventory" class="ops-child-item w-full text-left" title="Warehouse Stock (Report 91223)">
+              <!-- 2. Ceiling Fan Blade -->
+              <button type="button" onclick="switchNavTab('physical_cf_blade')" id="nav-btn-physical-cf-blade" class="ops-child-item w-full text-left" title="Ceiling Fan Aero Blade Stamping & Dynamic Balance">
                 <div class="flex items-center gap-2 truncate">
-                  <i class="ph ph-warehouse text-purple-500 text-sm shrink-0"></i>
-                  <span class="truncate">Warehouse Stock</span>
+                  <i class="ph-bold ph-wind text-teal-500 text-sm shrink-0"></i>
+                  <span class="truncate font-semibold">Ceiling Fan Blade</span>
                 </div>
-                <span id="badge-stock-items-sidebar" class="glass-pill glass-pill-neutral font-mono text-[10px] py-0 px-1.5">418</span>
               </button>
 
-              <button type="button" onclick="switchNavTab('history')" id="nav-btn-history" class="ops-child-item w-full text-left" title="Differential Audit Trail & Log">
+              <!-- 3. Entry Sheet -->
+              <button type="button" onclick="switchNavTab('physical_entry_sheet')" id="nav-btn-physical-entry-sheet" class="ops-child-item w-full text-left" title="Daily Floor Shift Entry & Output Logging Sheet">
                 <div class="flex items-center gap-2 truncate">
-                  <i class="ph ph-clock-counter-clockwise text-amber-500 text-sm shrink-0"></i>
-                  <span class="truncate">Audit Trail & Log</span>
+                  <i class="ph-bold ph-note-pencil text-amber-500 text-sm shrink-0"></i>
+                  <span class="truncate font-semibold">Entry Sheet</span>
                 </div>
-                <span class="glass-pill glass-pill-neutral text-[9px] py-0 px-1.5 font-medium">Live</span>
               </button>
 
             </div>
           </div>
-        </div>
 
+          <!-- Independent 2: ERP Production -->
+          <button type="button" onclick="switchNavTab('erp_production')" id="nav-btn-erp" class="ops-parent-btn w-full text-left" title="ERP Work Orders & Feasibility Staging">
+            <div class="flex items-center gap-2.5 min-w-0">
+              <div class="w-6 h-6 rounded-lg bg-blue-500/10 dark:bg-blue-500/20 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0">
+                <i class="ph-bold ph-cloud-arrow-up text-sm"></i>
+              </div>
+              <span class="sidebar-text font-bold">ERP Production</span>
+            </div>
+          </button>
+
+          <!-- Independent 3: SFG Stock -->
+          <button type="button" onclick="switchNavTab('sfg_stock')" id="nav-btn-sfg-stock" class="ops-parent-btn w-full text-left" title="Semi-Finished Goods (SFG) WIP Buffers">
+            <div class="flex items-center gap-2.5 min-w-0">
+              <div class="w-6 h-6 rounded-lg bg-indigo-500/10 dark:bg-indigo-500/20 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shrink-0">
+                <i class="ph-bold ph-stack text-sm"></i>
+              </div>
+              <span class="sidebar-text font-bold">SFG Stock</span>
+            </div>
+          </button>
+
+          <!-- Independent 4: OEE -->
+          <button type="button" onclick="switchNavTab('oee')" id="nav-btn-oee" class="ops-parent-btn w-full text-left" title="Overall Equipment Effectiveness (OEE)">
+            <div class="flex items-center gap-2.5 min-w-0">
+              <div class="w-6 h-6 rounded-lg bg-amber-500/10 dark:bg-amber-500/20 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0">
+                <i class="ph-bold ph-lightning text-sm"></i>
+              </div>
+              <span class="sidebar-text font-bold">OEE</span>
+            </div>
+          </button>
+
+          <!-- Independent 5: Inter Company -->
+          <button type="button" onclick="switchNavTab('inter_company')" id="nav-btn-inter-company" class="ops-parent-btn w-full text-left" title="Inter-Company Stock Transfers">
+            <div class="flex items-center gap-2.5 min-w-0">
+              <div class="w-6 h-6 rounded-lg bg-orange-500/10 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 flex items-center justify-center shrink-0">
+                <i class="ph-bold ph-arrows-left-right text-sm"></i>
+              </div>
+              <span class="sidebar-text font-bold">Inter Company</span>
+            </div>
+          </button>
+
+        </div>
       </nav>
     </div>
 
     <!-- Sidebar Bottom Profile & Version Widget -->
     <div class="p-3 border-t border-slate-200 dark:border-slate-800/80 space-y-2.5 sidebar-bottom-container">
-      <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-dark-800 border border-slate-200 dark:border-slate-700/60 flex items-center gap-2.5 sidebar-profile-card" title="Plant Supervisor • Plant 1027">
-        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-700 flex items-center justify-center font-bold text-xs text-white shrink-0 shadow-sm">
-          PS
+      <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-dark-800 border border-slate-200 dark:border-slate-700/60 flex items-center gap-2.5 sidebar-profile-card" title="Arif Ahmed Anik • Assistant Engineer • Production">
+        <div class="w-9 h-9 rounded-xl overflow-hidden shrink-0 shadow-sm border border-emerald-500/20 dark:border-emerald-400/30">
+          <img src="assets/avatar-male.svg" alt="Arif Ahmed Anik" class="w-full h-full object-cover select-none" width="36" height="36" />
         </div>
-        <div class="flex-1 min-w-0 sidebar-user-details">
-          <p class="text-xs font-bold text-slate-900 dark:text-white truncate leading-tight">Plant Supervisor</p>
-          <div class="flex items-center gap-1.5 text-[10px] text-slate-400">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 pulse-dot"></span>
-            <span class="truncate font-mono">Plant 1027 • Fan Div</span>
+        <div class="flex-1 min-w-0 sidebar-user-details space-y-0.5">
+          <p class="text-xs font-bold text-slate-900 dark:text-white truncate leading-tight">Arif Ahmed Anik</p>
+          <p class="text-[11px] font-semibold text-slate-600 dark:text-slate-300 truncate leading-tight">Assistant Engineer</p>
+          <div class="flex items-center gap-1.5 text-[10px] text-slate-400 dark:text-slate-400 leading-tight">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 pulse-dot shrink-0"></span>
+            <span class="truncate font-mono">Production</span>
           </div>
         </div>
-      </div>
-      <div class="text-[10px] text-slate-400 dark:text-slate-500 text-center font-mono sidebar-footer-info">
-        v3.2 Enterprise • Port 8088
       </div>
     </div>
   </aside>
 
   <!-- ================= MAIN WORKSPACE AREA ================= -->
-  <div class="flex-1 flex flex-col min-w-0 overflow-x-hidden">
+  <div class="flex-1 flex flex-col h-screen min-w-0 overflow-hidden">
     
-    <!-- Top Sticky Header Bar -->
-    <header class="sticky top-0 z-50 glass-header">
-      <div class="px-4 sm:px-6 h-14 flex items-center justify-between gap-4">
+    <!-- Top Sticky Header Bar (LOCKED TOP) -->
+    <header class="shrink-0 z-40 glass-header">
+      <div class="px-5 sm:px-8 py-3 flex items-center justify-between gap-4">
         
-        <!-- Left: Mobile Toggle, Collapse Button & Breadcrumb -->
+        <!-- Left: Mobile Toggle, Collapse Button & Breadcrumb (Frosted Gradient Glass) -->
         <div class="flex items-center gap-3">
-          <button onclick="toggleMobileSidebar()" class="md:hidden p-1.5 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300">
-            <i class="ph ph-list text-lg"></i>
+          <button onclick="toggleMobileSidebar()" class="md:hidden btn-glass-secondary w-9 h-9 flex items-center justify-center rounded-xl text-slate-600 dark:text-slate-300">
+            <i class="ph-bold ph-list text-base"></i>
           </button>
           
           <!-- Executive Sidebar Toggle -->
-          <button onclick="toggleSidebarCollapse()" id="btn-sidebar-toggle-main" class="hidden md:flex btn-glass-secondary w-8 h-8 items-center justify-center rounded-xl" title="Toggle Sidebar (Shortcut: [ )">
-            <i id="sidebar-toggle-icon" class="ph ph-sidebar-simple text-base"></i>
+          <button onclick="toggleSidebarCollapse()" id="btn-sidebar-toggle-main" class="hidden md:flex btn-glass-secondary w-9 h-9 items-center justify-center rounded-xl" title="Toggle Sidebar (Shortcut: [ )">
+            <i id="sidebar-toggle-icon" class="ph-bold ph-sidebar-simple text-base text-slate-600 dark:text-slate-300"></i>
           </button>
 
-          <div>
-            <div class="flex items-center gap-1.5 text-xs text-slate-400 dark:text-slate-500 font-medium">
-              <span>Operations</span>
-              <i class="ph ph-caret-right text-[10px]"></i>
-              <span id="breadcrumb-current" class="text-slate-900 dark:text-slate-100 font-semibold">BOM Master Registry</span>
-            </div>
+          <!-- Frosted Gradient Glass Breadcrumb Capsule -->
+          <div class="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white/60 dark:bg-dark-800/60 backdrop-blur-xl border border-slate-200/80 dark:border-slate-700/70 shadow-2xs text-xs">
+            <span class="text-slate-500 dark:text-slate-400 font-bold flex items-center gap-1.5">
+              <i class="ph-bold ph-squares-four text-xs text-emerald-500"></i> Operations
+            </span>
+            <i class="ph-bold ph-caret-right text-[10px] text-slate-400"></i>
+            <span id="breadcrumb-current" class="text-slate-900 dark:text-white font-extrabold tracking-tight">BOM Master Registry</span>
           </div>
         </div>
 
         <!-- Right Header Tools & Actions (Enterprise Frosted Glass Cluster) -->
-        <div class="flex items-center gap-2.5">
+        <div class="flex items-center gap-3">
           
           <!-- Live Sync Status Indicator (Glass Pill) -->
-          <div id="live-sync-indicator" class="flex items-center gap-2 status-chip-emerald font-semibold py-1 px-3 shadow-xs" title="Last ERP Master Sync Time">
+          <div id="live-sync-indicator" class="flex items-center gap-2 status-chip-emerald font-semibold py-1.5 px-3.5 shadow-xs" title="Last ERP Master Sync Time">
             <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.9)] animate-pulse"></span>
             <span id="last-sync-time-text" class="font-mono text-[11px] font-bold tracking-tight text-emerald-800 dark:text-emerald-300">Live Sync: Just Now • 174 BOMs</span>
           </div>
 
-          <!-- Notification Bell with Dropdown (Glass Button) -->
-          <div class="relative">
-            <button id="notification-btn" onclick="toggleNotificationMenu(event)" class="btn-glass-secondary w-8 h-8 flex items-center justify-center rounded-xl relative" title="Production & Shortage Alerts">
-              <i class="ph ph-bell text-base"></i>
-              <span id="notif-badge" class="absolute -top-1 -right-1 px-1.5 py-0.2 rounded-full bg-rose-500 text-white text-[9px] font-bold font-mono border border-white dark:border-dark-850 shadow-xs">3</span>
-            </button>
+          <!-- Expandable Settings Hover Dock (Quick Controls Hub) -->
+          <div id="settings-dock-container" class="settings-hover-dock group relative flex items-center">
             
-            <div id="notification-menu" class="hidden absolute right-0 mt-2 w-80 rounded-2xl bg-white dark:bg-dark-850 backdrop-blur-2xl border border-slate-200/90 dark:border-slate-700/80 shadow-2xl p-4 z-[100] text-xs" style="box-shadow: 0 25px 60px rgba(15, 23, 42, 0.22);">
-              <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-100 dark:border-slate-800">
-                <span class="font-bold text-slate-900 dark:text-white">Active Production Alerts</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300 font-bold">3 Critical</span>
-              </div>
-              <div class="space-y-2 max-h-60 overflow-y-auto">
-                <div class="p-2.5 rounded-xl bg-rose-50/70 dark:bg-rose-950/30 border border-rose-200/70 dark:border-rose-800/50">
-                  <div class="flex items-center gap-1.5 font-bold text-rose-700 dark:text-rose-400 text-[11px]">
-                    <i class="ph ph-warning-circle"></i> Shortage Alert
-                  </div>
-                  <p class="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5">48 Production BOMs blocked by missing raw materials.</p>
-                </div>
-                <div class="p-2.5 rounded-xl bg-amber-50/70 dark:bg-amber-950/30 border border-amber-200/70 dark:border-amber-800/50">
-                  <div class="flex items-center gap-1.5 font-bold text-amber-700 dark:text-amber-400 text-[11px]">
-                    <i class="ph ph-package"></i> Warehouse Notice
-                  </div>
-                  <p class="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5">Report 91223 Closing Stock loaded (418 Total Tracked Items).</p>
-                </div>
-                <div class="p-2.5 rounded-xl bg-emerald-50/70 dark:bg-emerald-950/30 border border-emerald-200/70 dark:border-emerald-800/50">
-                  <div class="flex items-center gap-1.5 font-bold text-emerald-700 dark:text-emerald-400 text-[11px]">
-                    <i class="ph ph-check-circle"></i> Ready to Produce
-                  </div>
-                  <p class="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5">39 Products have 100% sufficient warehouse stock for builds.</p>
-                </div>
-              </div>
+            <!-- Settings Trigger Button (Visible by default) -->
+            <button 
+              id="settings-hub-trigger" 
+              onclick="toggleSettingsDock(event)" 
+              class="btn-glass-secondary w-9 h-9 flex items-center justify-center rounded-xl relative shrink-0 shadow-xs cursor-pointer z-10" 
+              title="Quick Controls & Settings (Hover to Expand)"
+            >
+              <i class="ph-bold ph-gear-six text-base text-slate-700 dark:text-slate-200 group-hover:rotate-90 transition-transform duration-300"></i>
+            </button>
+
+            <!-- Slide-Out Actions Container (Expands horizontally on hover) -->
+            <div id="settings-dock-menu" class="settings-dock-menu flex items-center gap-2">
+              
+              <!-- 1. Primary ERP Sync Action Button -->
+              <button onclick="openSyncModal()" class="btn-primary-enterprise py-2 px-3.5 rounded-xl text-xs font-bold flex items-center gap-1.5 shrink-0" title="Update BOM & Warehouse Stock from ERP">
+                <i class="ph ph-arrows-clockwise text-sm font-bold"></i>
+                <span>Update</span>
+              </button>
+
+              <!-- 2. ⚡ Beast Performance Mode Toggle for Low-Spec PCs -->
+              <button id="btn-beast-mode" onclick="toggleBeastMode()" class="btn-glass-secondary px-3 py-1.5 h-9 flex items-center gap-1.5 rounded-xl text-xs font-bold font-mono transition-all cursor-pointer select-none bg-amber-500 text-white border-amber-400 shrink-0" title="Beast Mode Active (0ms Latency, Low GPU load). Click to switch to Ultra-HD Glass.">
+                <i id="beast-mode-icon" class="ph-fill ph-lightning text-white text-sm"></i>
+                <span id="beast-mode-label" class="hidden sm:inline text-[11px]">Beast: ON</span>
+              </button>
+
+              <!-- 3. Theme Toggle (Glass Button) -->
+              <button onclick="toggleDarkMode(event)" class="btn-glass-secondary w-9 h-9 flex items-center justify-center rounded-xl shrink-0" title="Toggle Theme (Shortcut: Alt+T)">
+                <i id="theme-icon" class="ph ph-sun text-base"></i>
+              </button>
+
             </div>
           </div>
-
-          <!-- Primary ERP Sync Action Button (Enterprise SaaS CTA) -->
-          <button onclick="openSyncModal()" class="btn-primary-enterprise py-2 px-4 rounded-xl text-xs">
-            <i class="ph ph-arrows-clockwise text-sm font-bold"></i>
-            <span>Update BOM & Stock</span>
-          </button>
-
-          <!-- Theme Toggle (Glass Button) -->
-          <button onclick="toggleDarkMode()" class="btn-glass-secondary w-8 h-8 flex items-center justify-center rounded-xl" title="Toggle Theme">
-            <i id="theme-icon" class="ph ph-sun text-base"></i>
-          </button>
 
         </div>
 
       </div>
     </header>
 
-    <!-- Main Dynamic Content Workspace (Fluid Full-Width with Optimized Compact Vertical Spacing) -->
-    <main class="flex-1 px-4 sm:px-6 py-3.5 space-y-3.5 w-full">
+    <!-- Main Dynamic Content Workspace (Fluid Full-Height Flex Container) -->
+    <main class="flex-1 px-5 sm:px-8 py-3.5 space-y-3.5 w-full flex flex-col min-h-0 overflow-hidden">
       
-      <!-- ================= VIEW 1: BOM MASTER REGISTRY ================= -->
-      <div id="view-registry" class="space-y-3.5">
+      <!-- ================= VIEW 0: EXECUTIVE COCKPIT DASHBOARD ================= -->
+      <div id="view-dashboard" class="hidden flex-1 flex flex-col min-h-0 space-y-3.5 overflow-y-auto datagrid-scroll-wrap pr-1">
         
-        <!-- COMPACT HORIZONTAL STAT CARDS GRID -->
-        <section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3">
+        <!-- Welcome Hero Header Bar -->
+        <section class="glass-card p-4 sm:p-5 flex flex-wrap items-center justify-between gap-4 shrink-0 bg-gradient-to-r from-emerald-500/10 via-teal-500/5 to-cyan-500/10 border border-emerald-500/20">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <span class="glass-pill glass-pill-emerald text-[10px] font-mono font-bold py-0.5 px-2.5 uppercase">Enterprise Cockpit</span>
+              <span class="text-slate-400 text-xs">• Live Production Telemetry</span>
+            </div>
+            <h2 class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white tracking-tight">MEP Fan Ltd — Operations & Manufacturing Intelligence</h2>
+            <p class="text-xs text-slate-600 dark:text-slate-400">Integrated visibility across BOM formulations, warehouse closing balances, floor assembly lines, ERP work orders, and plant OEE.</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <button onclick="loadAllData(); showToast('Synchronized live dashboard data');" class="btn-glass-primary px-3.5 py-2 text-xs rounded-xl font-bold flex items-center gap-2 shadow-sm">
+              <i class="ph-bold ph-arrows-clockwise text-xs"></i>
+              <span>Refresh Metrics</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- Executive Stat Cards (4 Key Industrial KPIs) -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3 shrink-0">
+          <div class="glass-stat-card glass-stat-indigo p-4 flex items-center justify-between cursor-pointer group" onclick="switchNavTab('registry')">
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">BOM Master Registry</span>
+              <p class="text-2xl font-black text-slate-900 dark:text-white font-tabular mt-1">174</p>
+              <span class="text-[11px] text-indigo-600 dark:text-indigo-400 font-bold block mt-1">100% Active Approved Formulas</span>
+            </div>
+            <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-indigo-500 to-cyan-500 text-white shadow-md flex items-center justify-center text-lg">
+              <i class="ph-bold ph-cube"></i>
+            </div>
+          </div>
+
+          <div class="glass-stat-card glass-stat-cyan p-4 flex items-center justify-between cursor-pointer group" onclick="switchNavTab('inventory')">
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Warehouse Stock (91223)</span>
+              <p class="text-2xl font-black text-cyan-600 dark:text-cyan-400 font-tabular mt-1">418</p>
+              <span class="text-[11px] text-cyan-600 dark:text-cyan-400 font-bold block mt-1">Raw Material SKUs In Store</span>
+            </div>
+            <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-cyan-500 to-blue-500 text-white shadow-md flex items-center justify-center text-lg">
+              <i class="ph-bold ph-warehouse"></i>
+            </div>
+          </div>
+
+          <div class="glass-stat-card glass-stat-emerald p-4 flex items-center justify-between cursor-pointer group" onclick="switchNavTab('physical_production')">
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Physical Shop Floor</span>
+              <p class="text-2xl font-black text-emerald-600 dark:text-emerald-400 font-tabular mt-1">6 / 6</p>
+              <span class="text-[11px] text-emerald-600 dark:text-emerald-400 font-bold block mt-1">100% Operational Line Capacity</span>
+            </div>
+            <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-emerald-500 to-teal-500 text-white shadow-md flex items-center justify-center text-lg">
+              <i class="ph-bold ph-factory"></i>
+            </div>
+          </div>
+
+          <div class="glass-stat-card glass-stat-amber p-4 flex items-center justify-between cursor-pointer group" onclick="switchNavTab('oee')">
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Overall Equipment Effectiveness</span>
+              <p class="text-2xl font-black text-amber-600 dark:text-amber-400 font-tabular mt-1">92.4%</p>
+              <span class="text-[11px] text-emerald-600 dark:text-emerald-400 font-bold block mt-1">World-Class Plant Uptime</span>
+            </div>
+            <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-amber-500 to-orange-500 text-white shadow-md flex items-center justify-center text-lg">
+              <i class="ph-bold ph-gauge"></i>
+            </div>
+          </div>
+        </section>
+
+        <!-- Quick Access Module Matrix -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <div class="glass-card p-4 space-y-3 cursor-pointer hover:border-emerald-500/40 transition-all" onclick="switchNavTab('registry')">
+            <div class="flex items-center justify-between">
+              <div class="w-8 h-8 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
+                <i class="ph-bold ph-cube text-base"></i>
+              </div>
+              <i class="ph ph-arrow-right text-slate-400 text-sm"></i>
+            </div>
+            <div>
+              <h3 class="text-sm font-bold text-slate-900 dark:text-white">BOM Master Registry</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Explore 174 formulation recipes, component breakups, and real-time production feasibility.</p>
+            </div>
+          </div>
+
+          <div class="glass-card p-4 space-y-3 cursor-pointer hover:border-cyan-500/40 transition-all" onclick="switchNavTab('inventory')">
+            <div class="flex items-center justify-between">
+              <div class="w-8 h-8 rounded-xl bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 flex items-center justify-center">
+                <i class="ph-bold ph-warehouse text-base"></i>
+              </div>
+              <i class="ph ph-arrow-right text-slate-400 text-sm"></i>
+            </div>
+            <div>
+              <h3 class="text-sm font-bold text-slate-900 dark:text-white">Warehouse Closing Stock</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Live store & floor stock ledger (Report 91223) with safety buffer and usage matrix.</p>
+            </div>
+          </div>
+
+          <div class="glass-card p-4 space-y-3 cursor-pointer hover:border-rose-500/40 transition-all" onclick="switchNavTab('physical_production')">
+            <div class="flex items-center justify-between">
+              <div class="w-8 h-8 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center">
+                <i class="ph-bold ph-factory text-base"></i>
+              </div>
+              <i class="ph ph-arrow-right text-slate-400 text-sm"></i>
+            </div>
+            <div>
+              <h3 class="text-sm font-bold text-slate-900 dark:text-white">Shop Floor Assembly</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Real-time telemetry for 6 active assembly lines across Ceiling, Stand, and Exhaust fan floors.</p>
+            </div>
+          </div>
+
+          <div class="glass-card p-4 space-y-3 cursor-pointer hover:border-blue-500/40 transition-all" onclick="switchNavTab('erp_production')">
+            <div class="flex items-center justify-between">
+              <div class="w-8 h-8 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center">
+                <i class="ph-bold ph-cloud-arrow-up text-base"></i>
+              </div>
+              <i class="ph ph-arrow-right text-slate-400 text-sm"></i>
+            </div>
+            <div>
+              <h3 class="text-sm font-bold text-slate-900 dark:text-white">ERP Work Orders</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">SAP dispatch schedule, batch order staging feasibility, and material allocation checks.</p>
+            </div>
+          </div>
+
+          <div class="glass-card p-4 space-y-3 cursor-pointer hover:border-indigo-500/40 transition-all" onclick="switchNavTab('sfg_stock')">
+            <div class="flex items-center justify-between">
+              <div class="w-8 h-8 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center">
+                <i class="ph-bold ph-stack text-base"></i>
+              </div>
+              <i class="ph ph-arrow-right text-slate-400 text-sm"></i>
+            </div>
+            <div>
+              <h3 class="text-sm font-bold text-slate-900 dark:text-white">SFG & WIP Buffers</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Semi-finished sub-assembly buffer stages (wound stators, balanced rotors, coated blade sets).</p>
+            </div>
+          </div>
+
+          <div class="glass-card p-4 space-y-3 cursor-pointer hover:border-amber-500/40 transition-all" onclick="switchNavTab('inter_company')">
+            <div class="flex items-center justify-between">
+              <div class="w-8 h-8 rounded-xl bg-orange-500/10 text-orange-600 dark:text-orange-400 flex items-center justify-center">
+                <i class="ph-bold ph-arrows-left-right text-base"></i>
+              </div>
+              <i class="ph ph-arrow-right text-slate-400 text-sm"></i>
+            </div>
+            <div>
+              <h3 class="text-sm font-bold text-slate-900 dark:text-white">Inter-Company Transfers</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Material transfer vouchers across MEP Fan, Cable, Electronics, and Plastic plants.</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- ================= VIEW 1: BOM MASTER REGISTRY ================= -->
+      <div id="view-registry" class="flex-1 flex flex-col min-h-0 space-y-2.5 overflow-hidden">
+        
+        <!-- COMPACT HORIZONTAL STAT CARDS GRID (LOCKED TOP) -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-2.5 shrink-0">
           
           <!-- Card 1: Total Production BOMs -->
-          <div class="glass-card p-3 px-4 flex items-center justify-between relative overflow-hidden !rounded-xl shadow-xs">
-            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#10B981] to-[#34D399]"></div>
+          <div class="glass-stat-card glass-stat-indigo p-3 px-3.5 flex items-center justify-between relative overflow-hidden">
+            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 via-blue-500 to-cyan-400"></div>
             <div>
-              <span class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider block">Total Active BOMs</span>
-              <p id="stat-total-boms" class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white font-tabular leading-tight mt-0.5">--</p>
-              <span class="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold block mt-0.5">100% Approved Formulas</span>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Total Active BOMs</span>
+              <p id="stat-total-boms" class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white font-tabular leading-tight mt-0.5">--</p>
+              <span class="text-[10px] text-indigo-600 dark:text-indigo-400 font-bold block mt-0.5">100% Approved Formulas</span>
             </div>
-            <div class="w-8 h-8 rounded-lg bg-white/70 dark:bg-dark-800/70 border border-white/60 dark:border-white/10 shadow-xs flex items-center justify-center text-sm text-emerald-600 dark:text-emerald-400 shrink-0">
-              <i class="ph ph-file-text"></i>
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-indigo-500 to-cyan-500 text-white shadow-md shadow-indigo-500/25 flex items-center justify-center text-sm shrink-0">
+              <i class="ph-bold ph-file-text"></i>
             </div>
           </div>
 
           <!-- Card 2: Ready to Build Capacity -->
-          <div class="glass-card p-3 px-4 flex items-center justify-between relative overflow-hidden cursor-pointer group !rounded-xl shadow-xs" onclick="filterByFeasibility('can_produce')">
-            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#10B981] to-[#34D399]"></div>
+          <div class="glass-stat-card glass-stat-emerald p-3 px-3.5 flex items-center justify-between relative overflow-hidden cursor-pointer group" onclick="filterByFeasibility('can_produce')">
+            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 via-teal-400 to-cyan-400"></div>
             <div>
-              <span class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider block">Ready to Build</span>
-              <p id="stat-ready-produce" class="text-xl sm:text-2xl font-extrabold text-emerald-600 dark:text-emerald-400 font-tabular leading-tight mt-0.5">--</p>
-              <span class="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold block mt-0.5">44.8% Ready • <span class="font-mono text-slate-400">39 Products</span></span>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Ready to Build</span>
+              <p id="stat-ready-produce" class="text-lg sm:text-xl font-extrabold text-emerald-600 dark:text-emerald-400 font-tabular leading-tight mt-0.5">--</p>
+              <span class="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold block mt-0.5">44.8% Ready • <span class="font-mono text-slate-500 dark:text-slate-400">39 Products</span></span>
             </div>
-            <div class="w-8 h-8 rounded-lg bg-white/70 dark:bg-dark-800/70 border border-white/60 dark:border-white/10 shadow-xs flex items-center justify-center text-sm text-emerald-600 dark:text-emerald-400 shrink-0">
-              <i class="ph ph-package"></i>
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-500 text-white shadow-md shadow-emerald-500/25 flex items-center justify-center text-sm shrink-0">
+              <i class="ph-bold ph-package"></i>
             </div>
           </div>
 
           <!-- Card 3: Capacity Blocked / Shortage -->
-          <div class="glass-card p-3 px-4 flex items-center justify-between relative overflow-hidden cursor-pointer group !rounded-xl shadow-xs" onclick="filterByFeasibility('blocked')">
-            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#EF4444] to-[#FB7185]"></div>
+          <div class="glass-stat-card glass-stat-rose p-3 px-3.5 flex items-center justify-between relative overflow-hidden cursor-pointer group" onclick="filterByFeasibility('blocked')">
+            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-rose-500 via-red-500 to-pink-500"></div>
             <div>
-              <span class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider block">Capacity Blocked</span>
-              <p id="stat-blocked-count" class="text-xl sm:text-2xl font-extrabold text-rose-600 dark:text-rose-400 font-tabular leading-tight mt-0.5">48</p>
-              <span class="text-[10px] text-rose-600 dark:text-rose-400 font-bold block mt-0.5">55.2% Shortage • <span class="font-mono text-slate-400">Needs Material</span></span>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Capacity Blocked</span>
+              <p id="stat-blocked-count" class="text-lg sm:text-xl font-extrabold text-rose-600 dark:text-rose-400 font-tabular leading-tight mt-0.5">48</p>
+              <span class="text-[10px] text-rose-600 dark:text-rose-400 font-bold block mt-0.5">55.2% Shortage • <span class="font-mono text-slate-500 dark:text-slate-400">Needs Material</span></span>
             </div>
-            <div class="w-8 h-8 rounded-lg bg-white/70 dark:bg-dark-800/70 border border-white/60 dark:border-white/10 shadow-xs flex items-center justify-center text-sm text-rose-600 dark:text-rose-400 shrink-0">
-              <i class="ph ph-warning-octagon"></i>
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-rose-500 to-red-500 text-white shadow-md shadow-rose-500/25 flex items-center justify-center text-sm shrink-0">
+              <i class="ph-bold ph-warning-octagon"></i>
             </div>
           </div>
 
           <!-- Card 4: Warehouse Closing Stock Items -->
-          <div class="glass-card p-3 px-4 flex items-center justify-between relative overflow-hidden cursor-pointer group !rounded-xl shadow-xs" onclick="switchNavTab('inventory')">
-            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#06B6D4] to-[#67E8F9]"></div>
+          <div class="glass-stat-card glass-stat-cyan p-3 px-3.5 flex items-center justify-between relative overflow-hidden cursor-pointer group" onclick="switchNavTab('inventory')">
+            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 via-sky-400 to-blue-500"></div>
             <div>
-              <span class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider block">Warehouse Stock Items</span>
-              <p id="stat-warehouse-items" class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white font-tabular leading-tight mt-0.5">--</p>
-              <span class="text-[10px] text-cyan-600 dark:text-cyan-400 font-bold block mt-0.5">Report 91223 • <span class="font-mono text-slate-400">340 Active RMs</span></span>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Warehouse Stock Items</span>
+              <p id="stat-warehouse-items" class="text-lg sm:text-xl font-extrabold text-cyan-600 dark:text-cyan-400 font-tabular leading-tight mt-0.5">--</p>
+              <span class="text-[10px] text-cyan-600 dark:text-cyan-400 font-bold block mt-0.5">Report 91223 • <span class="font-mono text-slate-500 dark:text-slate-400">340 Active RMs</span></span>
             </div>
-            <div class="w-8 h-8 rounded-lg bg-white/70 dark:bg-dark-800/70 border border-white/60 dark:border-white/10 shadow-xs flex items-center justify-center text-sm text-cyan-600 dark:text-cyan-400 shrink-0">
-              <i class="ph ph-warehouse"></i>
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-500 text-white shadow-md shadow-cyan-500/25 flex items-center justify-center text-sm shrink-0">
+              <i class="ph-bold ph-warehouse"></i>
             </div>
           </div>
 
         </section>
 
-        <!-- ADVANCED SEARCH, FILTER & SEGMENTED CONTROL TOOLBAR (Compact Height) -->
-        <section class="glass-card p-3 sm:p-3.5 space-y-2.5 !rounded-xl shadow-xs relative z-20">
-          <div class="grid grid-cols-1 md:grid-cols-12 gap-2.5 items-center">
+        <!-- SEARCH & INTERACTIVE CONTROLS TOOLBAR (LOCKED TOP WITH HIGH STACKING CONTEXT) -->
+        <section class="glass-card search-controls-toolbar p-2.5 px-3.5 space-y-2 shrink-0">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-2.5">
             
-            <!-- Enterprise Glass Search Bar -->
-            <div class="md:col-span-6 relative">
-              <div class="relative flex items-center input-glass px-2.5 overflow-hidden">
-                <!-- Clickable Search Button -->
-                <button type="button" onclick="handleSearchNow()" class="pl-1 pr-1.5 py-1.5 flex items-center justify-center text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 cursor-pointer" title="Click to Search">
-                  <i class="ph ph-magnifying-glass text-base"></i>
-                </button>
-                
-                <!-- Input field with Instant Search & Enter key support -->
+            <!-- Global Predictive Omnisearch Input (Glass Capsule) -->
+            <div class="md:col-span-5 relative">
+              <div class="relative flex items-center w-full input-glass rounded-xl px-3.5">
+                <i class="ph ph-magnifying-glass text-slate-400 text-base mr-2.5 shrink-0"></i>
                 <input 
                   type="text" 
                   id="search-input" 
                   placeholder="Search product name..." 
-                  class="w-full py-2 pr-14 bg-transparent text-xs sm:text-sm font-medium text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:outline-none"
+                  class="w-full py-1.5 pr-14 bg-transparent text-xs sm:text-sm font-medium text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:outline-none"
                   oninput="handleSearch()"
                   onkeydown="if(event.key === 'Enter'){ handleSearchNow(); }"
                 />
@@ -333,12 +595,12 @@
             </div>
 
             <!-- Floor / Section Custom Frosted Glass Dropdown -->
-            <div class="md:col-span-3 relative z-30" id="custom-floor-container">
+            <div class="md:col-span-3 relative z-40" id="custom-floor-container">
               <button 
                 type="button" 
                 id="custom-floor-btn" 
                 onclick="toggleCustomFloorDropdown(event)" 
-                class="w-full input-glass px-3.5 flex items-center justify-between text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-100 cursor-pointer select-none"
+                class="w-full input-glass rounded-xl px-3.5 flex items-center justify-between text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-100 cursor-pointer select-none"
               >
                 <div class="flex items-center gap-2 truncate">
                   <i class="ph ph-buildings text-slate-400 text-sm"></i>
@@ -350,8 +612,8 @@
               <!-- Custom Glass Dropdown Popup Menu -->
               <div 
                 id="custom-floor-menu" 
-                class="hidden absolute left-0 right-0 top-full mt-1.5 py-1.5 rounded-2xl bg-white dark:bg-dark-850 backdrop-blur-2xl border border-slate-200/90 dark:border-slate-700/80 shadow-2xl z-50 text-xs max-h-64 overflow-y-auto space-y-0.5 p-1.5"
-                style="box-shadow: 0 20px 50px rgba(15, 23, 42, 0.2);"
+                class="hidden absolute left-0 right-0 top-full mt-1.5 py-1.5 rounded-2xl bg-white dark:bg-dark-850 border border-slate-200/90 dark:border-slate-700/80 shadow-2xl z-50 text-xs max-h-[380px] overflow-y-auto space-y-0.5 p-1.5 pr-2"
+                style="box-shadow: 0 20px 50px rgba(15, 23, 42, 0.25);"
               >
                 <!-- Populated dynamically via JS -->
               </div>
@@ -360,53 +622,65 @@
               <input type="hidden" id="filter-section" value="" />
             </div>
 
-            <!-- Feasibility Segmented Tab Control (Glass Pills) -->
-            <div class="md:col-span-3 flex p-1 rounded-xl bg-slate-100/80 dark:bg-dark-800/80 border border-slate-200/60 dark:border-slate-700/50 text-xs font-semibold h-[42px] items-center">
-              <button onclick="setFeasibilitySegment('')" id="seg-all" class="flex-1 h-full rounded-lg flex items-center justify-center bg-white dark:bg-dark-750 text-slate-900 dark:text-white shadow-2xs font-bold text-[11px]">
-                All (174)
+            <!-- Feasibility Segmented Tab Control (Liquid Gliding Indicator) -->
+            <div id="feasibility-segmented-wrap" class="md:col-span-4 seg-control-container">
+              <!-- Liquid Sliding Pill Background Indicator -->
+              <div id="seg-liquid-pill" class="seg-liquid-indicator seg-liquid-all"></div>
+
+              <button onclick="setFeasibilitySegment('')" id="seg-all" class="seg-tab-btn active-all" title="Show All Formulations">
+                <span>All</span> (<span id="count-all" class="font-mono ml-0.5">174</span>)
               </button>
-              <button onclick="setFeasibilitySegment('can_produce')" id="seg-ready" class="flex-1 h-full rounded-lg flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-emerald-500 font-semibold text-[11px]">
-                🟢 Ready
+              <button onclick="setFeasibilitySegment('can_produce')" id="seg-ready" class="seg-tab-btn" title="Show 100% Ready to Build Formulations">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 mr-1.5 shrink-0 shadow-[0_0_6px_rgba(16,185,129,0.8)]"></span> Ready
               </button>
-              <button onclick="setFeasibilitySegment('blocked')" id="seg-blocked" class="flex-1 h-full rounded-lg flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-rose-500 font-semibold text-[11px]">
-                🔴 Blocked
+              <button onclick="setFeasibilitySegment('blocked')" id="seg-blocked" class="seg-tab-btn" title="Show Missing Materials / Blocked Formulations">
+                <span class="w-2 h-2 rounded-full bg-rose-500 mr-1.5 shrink-0 shadow-[0_0_6px_rgba(244,63,94,0.8)]"></span> Blocked
               </button>
             </div>
 
           </div>
 
-          <!-- Active Filter Chips Bar & Results Info -->
-          <div class="flex flex-wrap items-center justify-between gap-2 text-xs text-slate-500 dark:text-slate-400 pt-2 border-t border-slate-200/60 dark:border-slate-800/60">
+          <!-- Active Filter Chips Bar & Results Info (Luxury Frosted Header) -->
+          <div class="flex flex-wrap items-center justify-between gap-2 text-xs text-slate-500 dark:text-slate-400 pt-1.5 border-t border-slate-200/60 dark:border-slate-800/60">
             <div class="flex flex-wrap items-center gap-2">
-              <span>Showing <strong id="filter-count" class="text-slate-900 dark:text-white font-mono">0</strong> of <span id="total-count" class="font-mono">0</span> Formulations</span>
+              <span class="inline-flex items-center gap-1.5 font-medium text-slate-600 dark:text-slate-400">
+                <i class="ph-bold ph-funnel text-slate-400 text-xs"></i>
+                <span>Showing</span>
+                <span class="px-2 py-0.5 rounded-lg bg-slate-100 dark:bg-dark-800 text-slate-900 dark:text-white font-mono font-black text-xs border border-slate-200/80 dark:border-slate-700/80 shadow-2xs">
+                  <span id="filter-count">0</span>
+                </span>
+                <span>of</span>
+                <span id="total-count" class="font-mono font-bold text-slate-800 dark:text-slate-200">0</span>
+                <span>Formulations</span>
+              </span>
               
-              <!-- Dynamic Filter Chips container -->
-              <div id="filter-chips-container" class="flex flex-wrap items-center gap-1.5">
+              <!-- Dynamic Luxury Filter Chips container -->
+              <div id="filter-chips-container" class="flex flex-wrap items-center gap-1.5 ml-1">
                 <!-- Injected via JavaScript -->
               </div>
             </div>
 
             <div class="flex items-center gap-3">
-              <button onclick="resetFilters()" class="hover:text-emerald-600 dark:hover:text-emerald-400 font-semibold flex items-center gap-1">
+              <button onclick="resetFilters()" class="btn-glass-secondary px-2.5 py-1 rounded-xl text-[11px] font-bold text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 flex items-center gap-1.5">
                 <i class="ph ph-arrow-counter-clockwise"></i> Reset Filters
               </button>
             </div>
           </div>
         </section>
 
-        <!-- ENTERPRISE DATAGRID TABLE -->
-        <section class="glass-card overflow-hidden">
-          <div class="overflow-x-auto max-h-[700px] overflow-y-auto">
+        <!-- ENTERPRISE DATAGRID TABLE (SCROLLABLE TABLE ROWS ONLY) -->
+        <section class="glass-card datagrid-card-section flex-1 min-h-0 flex flex-col overflow-hidden">
+          <div class="flex-1 min-h-0 overflow-y-auto overflow-x-auto datagrid-scroll-wrap">
             <table id="master-datagrid" class="w-full text-left text-xs sm:text-sm border-collapse datagrid-table density-comfortable">
               <thead>
-                <tr class="text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider text-[11px]">
-                  <th class="py-4 px-3 w-12 text-center font-mono">#</th>
-                  <th class="py-4 px-4 w-32">BOM ID</th>
-                  <th class="py-4 px-4">Product Name & Item Code</th>
-                  <th class="py-4 px-4 w-44">Floor / Section</th>
-                  <th class="py-4 px-4 w-28 text-center">Components</th>
-                  <th class="py-4 px-4 w-44 text-center">Build Capacity</th>
-                  <th class="py-4 px-4 w-28 text-center">Actions</th>
+                <tr class="text-pink-900 dark:text-pink-100 font-extrabold uppercase tracking-wider text-[11px]">
+                  <th class="py-3 px-3 w-12 text-center font-mono sticky top-0 z-20">#</th>
+                  <th class="py-3 px-4 w-32 sticky top-0 z-20">BOM ID</th>
+                  <th class="py-3 px-4 sticky top-0 z-20">Product Name & Item Code</th>
+                  <th class="py-3 px-4 w-44 sticky top-0 z-20">Floor / Section</th>
+                  <th class="py-3 px-4 w-28 text-center sticky top-0 z-20">Components</th>
+                  <th class="py-3 px-4 w-44 text-center sticky top-0 z-20">Build Capacity</th>
+                  <th class="py-3 px-4 w-28 text-center sticky top-0 z-20">Actions</th>
                 </tr>
               </thead>
               <tbody id="bom-table-body" class="divide-y divide-slate-100/60 dark:divide-slate-800/60 text-slate-700 dark:text-slate-300">
@@ -415,8 +689,8 @@
             </table>
           </div>
 
-          <!-- Pagination Bar -->
-          <div class="px-5 py-3.5 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500 dark:text-slate-400">
+          <!-- Pagination Bar (LOCKED BOTTOM) -->
+          <div class="px-5 py-2.5 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500 dark:text-slate-400 shrink-0">
             <div class="flex items-center gap-2">
               <span>Rows per page:</span>
               <select id="page-size" onchange="changePageSize()" class="bg-slate-50 dark:bg-dark-800 border border-slate-200 dark:border-slate-700 rounded-lg px-2 py-1 font-mono focus:outline-none">
@@ -445,11 +719,19 @@
       </div>
 
       <!-- ================= VIEW 2: WAREHOUSE INVENTORY ================= -->
-      <div id="view-inventory" class="hidden space-y-4">
-        <div class="glass-card p-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
-          <div>
-            <h2 class="text-base font-bold text-slate-900 dark:text-white">Warehouse Closing Stock Report (91223)</h2>
-            <p class="text-xs text-slate-500 dark:text-slate-400">Search and audit raw material stock distributed across Central Store and Floor Section locations.</p>
+      <div id="view-inventory" class="hidden flex-1 flex flex-col min-h-0 space-y-2.5 overflow-hidden">
+        <div class="glass-card warehouse-header-card p-3 px-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 shrink-0">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-500 flex items-center justify-center text-white shadow-sm shrink-0">
+              <i class="ph-bold ph-warehouse text-base"></i>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <h2 class="text-sm font-extrabold text-emerald-950 dark:text-emerald-100 tracking-tight">Warehouse Closing Stock Report (91223)</h2>
+                <span class="px-2 py-0.5 rounded-full text-[10px] font-bold font-mono bg-emerald-500/15 text-emerald-800 dark:text-emerald-200 border border-emerald-500/30">Live Stock</span>
+              </div>
+              <p class="text-[11px] text-emerald-900/80 dark:text-emerald-300/80 font-medium">Search and audit raw material stock distributed across Central Store and Floor Section locations.</p>
+            </div>
           </div>
           <div class="w-full md:w-80 relative">
             <i class="ph ph-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-base"></i>
@@ -457,25 +739,25 @@
               type="text" 
               id="rm-search-input" 
               placeholder="Search component code or description..." 
-              class="w-full pl-9 pr-3 py-2 rounded-xl bg-slate-50 dark:bg-dark-800 border border-slate-200 dark:border-slate-700/80 text-xs focus:outline-none focus:ring-2 focus:ring-emerald-500 text-slate-800 dark:text-slate-100"
+              class="w-full pl-9 pr-3 py-1.5 rounded-xl bg-white/90 dark:bg-dark-800 border border-emerald-300 dark:border-emerald-700/80 text-xs focus:outline-none focus:ring-2 focus:ring-emerald-500 text-slate-800 dark:text-slate-100 shadow-2xs"
               oninput="handleRMSearch()"
             />
           </div>
         </div>
 
-        <div class="glass-card overflow-hidden">
-          <div class="overflow-x-auto">
-            <table class="w-full text-left text-xs sm:text-sm border-collapse">
+        <div class="glass-card flex-1 min-h-0 flex flex-col overflow-hidden">
+          <div class="flex-1 min-h-0 overflow-y-auto overflow-x-auto datagrid-scroll-wrap">
+            <table class="w-full text-left text-xs sm:text-sm border-collapse warehouse-table">
               <thead>
-                <tr class="bg-slate-50/80 dark:bg-dark-800/80 border-b border-slate-200 dark:border-slate-700/80 text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
-                  <th class="py-3 px-3.5 w-10 text-center">#</th>
+                <tr class="text-emerald-950 dark:text-emerald-100 font-extrabold uppercase tracking-wider text-[11px]">
+                  <th class="py-3 px-3.5 w-10 text-center font-mono">#</th>
                   <th class="py-3 px-3.5 w-28">Item Code</th>
                   <th class="py-3 px-3.5">Component Description</th>
                   <th class="py-3 px-3.5 w-32">Category</th>
                   <th class="py-3 px-3.5 w-16 text-center">Unit</th>
-                  <th class="py-3 px-3.5 w-28 text-right text-cyan-600 dark:text-cyan-400 font-mono">Store Stock</th>
-                  <th class="py-3 px-3.5 w-28 text-right text-purple-600 dark:text-purple-400 font-mono">Floor Stock</th>
-                  <th class="py-3 px-3.5 w-28 text-right font-bold font-mono text-slate-900 dark:text-white">Total Available</th>
+                  <th class="py-3 px-3.5 w-28 text-right text-cyan-700 dark:text-cyan-300 font-mono">Store Stock</th>
+                  <th class="py-3 px-3.5 w-28 text-right text-purple-700 dark:text-purple-300 font-mono">Floor Stock</th>
+                  <th class="py-3 px-3.5 w-28 text-right font-black font-mono text-emerald-950 dark:text-white">Total Available</th>
                   <th class="py-3 px-3.5 w-24 text-center font-mono">BOMs Used</th>
                   <th class="py-3 px-3.5 w-24 text-center">Action</th>
                 </tr>
@@ -488,14 +770,749 @@
         </div>
       </div>
 
-      <!-- ================= VIEW 3: DIFFERENTIAL AUDIT LOG ================= -->
-      <div id="view-history" class="hidden space-y-4">
-        <div class="glass-card p-5">
-          <h2 class="text-base font-bold text-slate-900 dark:text-white">Differential Audit Trail & Synchronization Log</h2>
-          <p class="text-xs text-slate-500 dark:text-slate-400">Complete historical records of all automated updates, showing added, modified and removed formulations.</p>
+      <!-- ================= VIEW: PHYSICAL CEILING FAN BODY ================= -->
+      <div id="view-physical-cf-body" class="hidden flex-1 flex flex-col min-h-0 space-y-2.5 overflow-hidden">
+        
+        <!-- Top Stats: Ceiling Fan Body KPIs -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-2.5 shrink-0">
+          <div class="glass-stat-card glass-stat-rose p-3 px-3.5 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Total Body Output</span>
+              <p id="stat-cf-body-total" class="text-lg sm:text-xl font-extrabold text-rose-600 dark:text-rose-400 font-tabular leading-tight mt-0.5">37,991 Pcs</p>
+              <span id="stat-cf-body-sub" class="text-[10px] text-rose-600 dark:text-rose-400 font-bold block mt-0.5">August Output (83.5% Target)</span>
+            </div>
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-rose-500 to-pink-500 text-white shadow-md flex items-center justify-center text-sm">
+              <i class="ph-bold ph-fan"></i>
+            </div>
+          </div>
+
+          <div class="glass-stat-card glass-stat-emerald p-3 px-3.5 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Monthly Target & Plan</span>
+              <p class="text-lg sm:text-xl font-extrabold text-emerald-600 dark:text-emerald-400 font-tabular leading-tight mt-0.5">45,500 Pcs</p>
+              <span class="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold block mt-0.5">Day Wise Target: 1,750 Pcs/Day</span>
+            </div>
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-500 text-white shadow-md flex items-center justify-center text-sm">
+              <i class="ph-bold ph-target"></i>
+            </div>
+          </div>
+
+          <div class="glass-stat-card glass-stat-indigo p-3 px-3.5 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Peak Daily Output</span>
+              <p id="stat-cf-body-peak" class="text-lg sm:text-xl font-extrabold text-indigo-600 dark:text-indigo-400 font-tabular leading-tight mt-0.5">3,178 Pcs</p>
+              <span id="stat-cf-body-peak-sub" class="text-[10px] text-indigo-600 dark:text-indigo-400 font-bold block mt-0.5">Highest Run: 10 Aug (CF 5601)</span>
+            </div>
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-indigo-500 to-blue-500 text-white shadow-md flex items-center justify-center text-sm">
+              <i class="ph-bold ph-chart-line-up"></i>
+            </div>
+          </div>
+
+          <div class="glass-stat-card glass-stat-amber p-3 px-3.5 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Active Body Models</span>
+              <p id="stat-cf-body-models" class="text-lg sm:text-xl font-extrabold text-amber-600 dark:text-amber-400 font-tabular leading-tight mt-0.5">6 Models</p>
+              <span id="stat-cf-body-models-sub" class="text-[10px] text-amber-600 dark:text-amber-400 font-bold block mt-0.5">Top: CF 5601 (28,431 Pcs)</span>
+            </div>
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-amber-500 to-orange-500 text-white shadow-md flex items-center justify-center text-sm">
+              <i class="ph-bold ph-stack"></i>
+            </div>
+          </div>
+        </section>
+
+        <!-- Model Distribution Quick Ribbon (Crystal Pill Cards) -->
+        <div id="body-model-chips-container" class="flex items-center gap-2 overflow-x-auto py-1 shrink-0 datagrid-scroll-wrap">
+          <!-- Populated dynamically via renderPhysicalCfBody() -->
         </div>
 
-        <div id="history-container" class="space-y-3">
+        <!-- Main Datagrid Container with View Switcher -->
+        <section class="glass-card datagrid-card-section flex-1 min-h-0 flex flex-col overflow-hidden">
+          <div class="p-3 px-4 flex flex-wrap items-center justify-between gap-3 border-b border-slate-200/60 dark:border-slate-800/60 bg-white/40 dark:bg-dark-800/40 shrink-0">
+            <div class="flex items-center gap-2">
+              <div class="w-6 h-6 rounded-lg bg-rose-500/20 text-rose-600 dark:text-rose-400 flex items-center justify-center">
+                <i class="ph-bold ph-fan text-sm"></i>
+              </div>
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Ceiling Fan Body Production Matrix (Per Day Production Formula)</span>
+              <span id="badge-cf-body-count" class="glass-pill glass-pill-rose text-[10px] font-mono font-bold py-0.5 px-2">31 Days</span>
+            </div>
+
+            <!-- Month Selector, View Switcher & Search -->
+            <div class="flex items-center gap-2">
+              <!-- Month Navigator Control -->
+              <div class="inline-flex items-center gap-0.5 px-1.5 py-1 rounded-xl bg-white/90 dark:bg-dark-800 border border-slate-200 dark:border-slate-700 shadow-2xs">
+                <button type="button" onclick="changePhysicalMonth('body', -1)" class="w-6 h-6 flex items-center justify-center rounded-lg text-slate-500 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-dark-700 transition-colors" title="Previous Month">
+                  <i class="ph-bold ph-caret-left text-xs"></i>
+                </button>
+                <div class="flex items-center gap-1 px-1">
+                  <i class="ph-bold ph-calendar text-rose-500 text-xs"></i>
+                  <select id="select-cf-body-month" onchange="onPhysicalMonthChange('body', this.value)" class="bg-transparent text-xs font-bold text-slate-800 dark:text-slate-100 focus:outline-none cursor-pointer">
+                    <option value="2026-08">Aug 2026</option>
+                    <option value="2026-07">Jul 2026</option>
+                    <option value="2026-06">Jun 2026</option>
+                    <option value="2026-05">May 2026</option>
+                    <option value="2026-04">Apr 2026</option>
+                    <option value="2026-03">Mar 2026</option>
+                    <option value="2026-02">Feb 2026</option>
+                    <option value="2026-01">Jan 2026</option>
+                  </select>
+                </div>
+                <button type="button" onclick="changePhysicalMonth('body', 1)" class="w-6 h-6 flex items-center justify-center rounded-lg text-slate-500 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-dark-700 transition-colors" title="Next Month">
+                  <i class="ph-bold ph-caret-right text-xs"></i>
+                </button>
+              </div>
+
+              <!-- View Mode Segment Tabs -->
+              <div class="inline-flex p-1 rounded-xl bg-slate-100 dark:bg-dark-800 border border-slate-200/80 dark:border-slate-700/80 text-xs">
+                <button type="button" onclick="setBodyViewMode('matrix')" id="btn-body-view-matrix" class="px-2.5 py-1 rounded-lg font-bold text-xs bg-white dark:bg-dark-700 shadow-2xs text-rose-600 dark:text-rose-400 flex items-center gap-1.5">
+                  <i class="ph-bold ph-grid-four text-xs"></i>
+                  <span>Per Day Matrix</span>
+                </button>
+                <button type="button" onclick="setBodyViewMode('logs')" id="btn-body-view-logs" class="px-2.5 py-1 rounded-lg font-semibold text-xs text-slate-600 dark:text-slate-300 hover:text-slate-900 flex items-center gap-1.5">
+                  <i class="ph ph-list-dashes text-xs"></i>
+                  <span>Shift Logs</span>
+                </button>
+              </div>
+
+              <!-- Search -->
+              <input 
+                type="text" 
+                id="search-physical-body" 
+                placeholder="Filter by date, model, day..." 
+                class="w-40 sm:w-52 px-3 py-1.5 rounded-xl bg-white/90 dark:bg-dark-800 border border-slate-200 dark:border-slate-700 text-xs focus:outline-none focus:ring-2 focus:ring-rose-500 text-slate-800 dark:text-slate-100 shadow-2xs"
+                oninput="renderPhysicalCfBody()"
+              />
+
+              <!-- Export CSV & Reload Excel -->
+              <button type="button" onclick="fetchPhysicalEntrySheet(true)" class="btn-glass-secondary px-2.5 py-1.5 text-xs rounded-xl font-bold flex items-center gap-1 text-slate-700 dark:text-slate-200" title="Reload from ALL REPORT.xlsx">
+                <i class="ph ph-arrows-clockwise text-xs"></i>
+                <span class="hidden sm:inline">Reload Excel</span>
+              </button>
+              <button type="button" onclick="exportBodyMatrixCSV()" class="btn-primary-enterprise px-3 py-1.5 text-xs rounded-xl font-bold flex items-center gap-1" title="Export to CSV">
+                <i class="ph-bold ph-download-simple text-xs"></i>
+                <span>Export CSV</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="flex-1 min-h-0 overflow-y-auto overflow-x-auto datagrid-scroll-wrap" id="body-table-container">
+            <table class="w-full text-left text-xs sm:text-sm border-collapse datagrid-table density-comfortable" id="body-matrix-table">
+              <!-- Dynamically populated via renderPhysicalCfBody() -->
+            </table>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- ================= VIEW: PHYSICAL CEILING FAN BLADE ================= -->
+      <div id="view-physical-cf-blade" class="hidden flex-1 flex flex-col min-h-0 space-y-2.5 overflow-hidden">
+        
+        <!-- Top Stats: Ceiling Fan Blade KPIs -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-2.5 shrink-0">
+          <div class="glass-stat-card glass-stat-cyan p-3 px-3.5 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Total Blade Output</span>
+              <p id="stat-cf-blade-total" class="text-lg sm:text-xl font-extrabold text-teal-600 dark:text-teal-400 font-tabular leading-tight mt-0.5">39,312 Pcs</p>
+              <span id="stat-cf-blade-sub" class="text-[10px] text-teal-600 dark:text-teal-400 font-bold block mt-0.5">August Output (86.4% Target)</span>
+            </div>
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-teal-500 to-cyan-500 text-white shadow-md flex items-center justify-center text-sm">
+              <i class="ph-bold ph-wind"></i>
+            </div>
+          </div>
+
+          <div class="glass-stat-card glass-stat-emerald p-3 px-3.5 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Monthly Target & Plan</span>
+              <p class="text-lg sm:text-xl font-extrabold text-emerald-600 dark:text-emerald-400 font-tabular leading-tight mt-0.5">45,500 Pcs</p>
+              <span class="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold block mt-0.5">Day Wise Target: 1,750 Pcs/Day</span>
+            </div>
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-500 text-white shadow-md flex items-center justify-center text-sm">
+              <i class="ph-bold ph-target"></i>
+            </div>
+          </div>
+
+          <div class="glass-stat-card glass-stat-indigo p-3 px-3.5 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Peak Daily Output</span>
+              <p id="stat-cf-blade-peak" class="text-lg sm:text-xl font-extrabold text-indigo-600 dark:text-indigo-400 font-tabular leading-tight mt-0.5">2,680 Pcs</p>
+              <span id="stat-cf-blade-peak-sub" class="text-[10px] text-indigo-600 dark:text-indigo-400 font-bold block mt-0.5">Highest Run: 26 Aug (5601+3601)</span>
+            </div>
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-indigo-500 to-blue-500 text-white shadow-md flex items-center justify-center text-sm">
+              <i class="ph-bold ph-chart-line-up"></i>
+            </div>
+          </div>
+
+          <div class="glass-stat-card glass-stat-amber p-3 px-3.5 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Active Blade Models</span>
+              <p id="stat-cf-blade-models" class="text-lg sm:text-xl font-extrabold text-amber-600 dark:text-amber-400 font-tabular leading-tight mt-0.5">7 Models</p>
+              <span id="stat-cf-blade-models-sub" class="text-[10px] text-amber-600 dark:text-amber-400 font-bold block mt-0.5">Top: CF 5601 BL (26,701 Pcs)</span>
+            </div>
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-amber-500 to-orange-500 text-white shadow-md flex items-center justify-center text-sm">
+              <i class="ph-bold ph-stack"></i>
+            </div>
+          </div>
+        </section>
+
+        <!-- Model Distribution Quick Ribbon (Crystal Pill Cards) -->
+        <div id="blade-model-chips-container" class="flex items-center gap-2 overflow-x-auto py-1 shrink-0 datagrid-scroll-wrap">
+          <!-- Populated dynamically via renderPhysicalCfBlade() -->
+        </div>
+
+        <!-- Main Datagrid Container with View Switcher -->
+        <section class="glass-card datagrid-card-section flex-1 min-h-0 flex flex-col overflow-hidden">
+          <div class="p-3 px-4 flex flex-wrap items-center justify-between gap-3 border-b border-slate-200/60 dark:border-slate-800/60 bg-white/40 dark:bg-dark-800/40 shrink-0">
+            <div class="flex items-center gap-2">
+              <div class="w-6 h-6 rounded-lg bg-teal-500/20 text-teal-600 dark:text-teal-400 flex items-center justify-center">
+                <i class="ph-bold ph-wind text-sm"></i>
+              </div>
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Ceiling Fan Blade Production Matrix (Per Day Production Tab)</span>
+              <span id="badge-cf-blade-count" class="glass-pill glass-pill-cyan text-[10px] font-mono font-bold py-0.5 px-2">31 Days</span>
+            </div>
+
+            <!-- Month Selector, View Switcher & Search -->
+            <div class="flex items-center gap-2">
+              <!-- Month Navigator Control -->
+              <div class="inline-flex items-center gap-0.5 px-1.5 py-1 rounded-xl bg-white/90 dark:bg-dark-800 border border-slate-200 dark:border-slate-700 shadow-2xs">
+                <button type="button" onclick="changePhysicalMonth('blade', -1)" class="w-6 h-6 flex items-center justify-center rounded-lg text-slate-500 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-dark-700 transition-colors" title="Previous Month">
+                  <i class="ph-bold ph-caret-left text-xs"></i>
+                </button>
+                <div class="flex items-center gap-1 px-1">
+                  <i class="ph-bold ph-calendar text-teal-500 text-xs"></i>
+                  <select id="select-cf-blade-month" onchange="onPhysicalMonthChange('blade', this.value)" class="bg-transparent text-xs font-bold text-slate-800 dark:text-slate-100 focus:outline-none cursor-pointer">
+                    <option value="2026-08">Aug 2026</option>
+                    <option value="2026-07">Jul 2026</option>
+                    <option value="2026-06">Jun 2026</option>
+                    <option value="2026-05">May 2026</option>
+                    <option value="2026-04">Apr 2026</option>
+                    <option value="2026-03">Mar 2026</option>
+                    <option value="2026-02">Feb 2026</option>
+                    <option value="2026-01">Jan 2026</option>
+                  </select>
+                </div>
+                <button type="button" onclick="changePhysicalMonth('blade', 1)" class="w-6 h-6 flex items-center justify-center rounded-lg text-slate-500 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-dark-700 transition-colors" title="Next Month">
+                  <i class="ph-bold ph-caret-right text-xs"></i>
+                </button>
+              </div>
+
+              <!-- View Mode Segment Tabs -->
+              <div class="inline-flex p-1 rounded-xl bg-slate-100 dark:bg-dark-800 border border-slate-200/80 dark:border-slate-700/80 text-xs">
+                <button type="button" onclick="setBladeViewMode('matrix')" id="btn-blade-view-matrix" class="px-2.5 py-1 rounded-lg font-bold text-xs bg-white dark:bg-dark-700 shadow-2xs text-teal-600 dark:text-teal-400 flex items-center gap-1.5">
+                  <i class="ph-bold ph-grid-four text-xs"></i>
+                  <span>Per Day Matrix</span>
+                </button>
+                <button type="button" onclick="setBladeViewMode('logs')" id="btn-blade-view-logs" class="px-2.5 py-1 rounded-lg font-semibold text-xs text-slate-600 dark:text-slate-300 hover:text-slate-900 flex items-center gap-1.5">
+                  <i class="ph ph-list-dashes text-xs"></i>
+                  <span>Shift Logs</span>
+                </button>
+              </div>
+
+              <!-- Search -->
+              <input 
+                type="text" 
+                id="search-physical-blade" 
+                placeholder="Filter by date, model, day..." 
+                class="w-40 sm:w-52 px-3 py-1.5 rounded-xl bg-white/90 dark:bg-dark-800 border border-slate-200 dark:border-slate-700 text-xs focus:outline-none focus:ring-2 focus:ring-teal-500 text-slate-800 dark:text-slate-100 shadow-2xs"
+                oninput="renderPhysicalCfBlade()"
+              />
+
+              <!-- Export CSV & Reload Excel -->
+              <button type="button" onclick="fetchPhysicalEntrySheet(true)" class="btn-glass-secondary px-2.5 py-1.5 text-xs rounded-xl font-bold flex items-center gap-1 text-slate-700 dark:text-slate-200" title="Reload from ALL REPORT.xlsx">
+                <i class="ph ph-arrows-clockwise text-xs"></i>
+                <span class="hidden sm:inline">Reload Excel</span>
+              </button>
+              <button type="button" onclick="exportBladeMatrixCSV()" class="btn-primary-enterprise px-3 py-1.5 text-xs rounded-xl font-bold flex items-center gap-1" title="Export to CSV">
+                <i class="ph-bold ph-download-simple text-xs"></i>
+                <span>Export CSV</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="flex-1 min-h-0 overflow-y-auto overflow-x-auto datagrid-scroll-wrap" id="blade-table-container">
+            <table class="w-full text-left text-xs sm:text-sm border-collapse datagrid-table density-comfortable" id="blade-matrix-table">
+              <!-- Dynamically populated via renderPhysicalCfBlade() -->
+            </table>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- ================= VIEW: PHYSICAL PRODUCTION ENTRY SHEET ================= -->
+      <div id="view-physical-entry-sheet" class="hidden flex-1 flex flex-col min-h-0 space-y-2.5 overflow-hidden">
+        
+        <!-- Top Stats: Physical Entry Sheet from ALL REPORT.xlsx -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-2.5 shrink-0">
+          <div class="glass-stat-card glass-stat-amber p-3 px-3.5 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Total Production Output</span>
+              <p id="stat-entry-total-output" class="text-lg sm:text-xl font-extrabold text-amber-600 dark:text-amber-400 font-tabular leading-tight mt-0.5">77,303 Pcs</p>
+              <span class="text-[10px] text-amber-600 dark:text-amber-400 font-bold block mt-0.5">Physical Floor August Output</span>
+            </div>
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-amber-500 to-orange-500 text-white shadow-md flex items-center justify-center text-sm">
+              <i class="ph-bold ph-factory"></i>
+            </div>
+          </div>
+
+          <div class="glass-stat-card glass-stat-rose p-3 px-3.5 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Ceiling Fan Body Output</span>
+              <p id="stat-entry-body-output" class="text-lg sm:text-xl font-extrabold text-rose-600 dark:text-rose-400 font-tabular leading-tight mt-0.5">37,991 Pcs</p>
+              <span class="text-[10px] text-rose-600 dark:text-rose-400 font-bold block mt-0.5">Motor & Stator Body Assemblies</span>
+            </div>
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-rose-500 to-pink-500 text-white shadow-md flex items-center justify-center text-sm">
+              <i class="ph-bold ph-fan"></i>
+            </div>
+          </div>
+
+          <div class="glass-stat-card glass-stat-cyan p-3 px-3.5 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Ceiling Fan Blade Output</span>
+              <p id="stat-entry-blade-output" class="text-lg sm:text-xl font-extrabold text-teal-600 dark:text-teal-400 font-tabular leading-tight mt-0.5">39,312 Pcs</p>
+              <span class="text-[10px] text-teal-600 dark:text-teal-400 font-bold block mt-0.5">Stamping & Powder Coated Sets</span>
+            </div>
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-teal-500 to-cyan-500 text-white shadow-md flex items-center justify-center text-sm">
+              <i class="ph-bold ph-wind"></i>
+            </div>
+          </div>
+
+          <div class="glass-stat-card glass-stat-indigo p-3 px-3.5 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Live Excel Sheet Sync</span>
+              <p id="stat-entry-total-shifts" class="text-lg sm:text-xl font-extrabold text-indigo-600 dark:text-indigo-400 font-tabular leading-tight mt-0.5">79 Records</p>
+              <span class="text-[10px] text-indigo-600 dark:text-indigo-400 font-bold block mt-0.5">Tab: Entry Sheet Physical</span>
+            </div>
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-indigo-500 to-blue-500 text-white shadow-md flex items-center justify-center text-sm">
+              <i class="ph-bold ph-file-xls"></i>
+            </div>
+          </div>
+        </section>
+
+        <!-- Logged Shift Records Datagrid -->
+        <section class="glass-card datagrid-card-section flex-1 min-h-0 flex flex-col overflow-hidden">
+          <div class="p-3 px-4 flex flex-wrap items-center justify-between gap-3 border-b border-slate-200/60 dark:border-slate-800/60 bg-white/40 dark:bg-dark-800/40 shrink-0">
+            <div class="flex items-center gap-2">
+              <div class="w-6 h-6 rounded-lg bg-amber-500/20 text-amber-600 dark:text-amber-400 flex items-center justify-center">
+                <i class="ph-bold ph-file-xls text-sm"></i>
+              </div>
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Physical Floor Entry Sheet (ALL REPORT.xlsx)</span>
+              <span id="badge-entry-count" class="glass-pill glass-pill-amber text-[10px] font-mono font-bold py-0.5 px-2">79 Records</span>
+            </div>
+
+            <!-- Segmented Filter & Live Search -->
+            <div class="flex items-center gap-2">
+              <!-- Part Filter Chips -->
+              <div class="inline-flex p-1 rounded-xl bg-slate-100 dark:bg-dark-800 border border-slate-200/80 dark:border-slate-700/80 text-xs">
+                <button type="button" onclick="setPhysicalPartFilter('')" id="filter-part-all" class="px-2.5 py-1 rounded-lg font-bold text-xs bg-white dark:bg-dark-700 shadow-2xs text-amber-600 dark:text-amber-400">All</button>
+                <button type="button" onclick="setPhysicalPartFilter('body')" id="filter-part-body" class="px-2.5 py-1 rounded-lg font-semibold text-xs text-slate-600 dark:text-slate-300 hover:text-slate-900">Body</button>
+                <button type="button" onclick="setPhysicalPartFilter('blade')" id="filter-part-blade" class="px-2.5 py-1 rounded-lg font-semibold text-xs text-slate-600 dark:text-slate-300 hover:text-slate-900">Blade</button>
+              </div>
+
+              <!-- Search -->
+              <input 
+                type="text" 
+                id="search-physical-entry" 
+                placeholder="Filter by code, name, model, date..." 
+                class="w-48 sm:w-64 px-3 py-1.5 rounded-xl bg-white/90 dark:bg-dark-800 border border-slate-200 dark:border-slate-700 text-xs focus:outline-none focus:ring-2 focus:ring-amber-500 text-slate-800 dark:text-slate-100 shadow-2xs"
+                oninput="renderPhysicalEntrySheet()"
+              />
+
+              <!-- Export CSV & Reload Excel -->
+              <button type="button" onclick="fetchPhysicalEntrySheet(true)" class="btn-glass-secondary px-2.5 py-1.5 text-xs rounded-xl font-bold flex items-center gap-1 text-slate-700 dark:text-slate-200" title="Reload from ALL REPORT.xlsx">
+                <i class="ph ph-arrows-clockwise text-xs"></i>
+                <span class="hidden sm:inline">Reload Excel</span>
+              </button>
+              <button type="button" onclick="exportPhysicalEntryLogs()" class="btn-primary-enterprise px-3 py-1.5 text-xs rounded-xl font-bold flex items-center gap-1" title="Export to CSV">
+                <i class="ph-bold ph-download-simple text-xs"></i>
+                <span>Export CSV</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="flex-1 min-h-0 overflow-y-auto overflow-x-auto datagrid-scroll-wrap">
+            <table class="w-full text-left text-xs sm:text-sm border-collapse datagrid-table density-comfortable">
+              <thead>
+                <tr class="text-amber-950 dark:text-amber-100 font-extrabold uppercase tracking-wider text-[11px]">
+                  <th class="py-3 px-3 w-12 text-center font-mono">#</th>
+                  <th class="py-3 px-3.5 w-28 font-mono">Date</th>
+                  <th class="py-3 px-3.5 w-40 font-mono">Item Code</th>
+                  <th class="py-3 px-3.5">Production Item Name</th>
+                  <th class="py-3 px-3.5 w-28 text-center">Type</th>
+                  <th class="py-3 px-3.5 w-28 text-center">Model</th>
+                  <th class="py-3 px-3.5 w-24 text-center">Part</th>
+                  <th class="py-3 px-3.5 w-32 text-center font-mono">Achievement (Pcs)</th>
+                </tr>
+              </thead>
+              <tbody id="physical-entry-sheet-table-body" class="divide-y divide-slate-100/60 dark:divide-slate-800/60 text-slate-700 dark:text-slate-300 text-xs">
+                <!-- Dynamically populated via renderPhysicalEntrySheet() -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- ================= VIEW: ERP PRODUCTION ORDERS & FEASIBILITY ================= -->
+      <div id="view-erp-production" class="hidden flex-1 flex flex-col min-h-0 space-y-2.5 overflow-hidden">
+        
+        <!-- Top Stats -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-2.5 shrink-0">
+          <div class="glass-stat-card glass-stat-cyan p-3 px-3.5 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Active ERP Orders</span>
+              <p class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white font-tabular leading-tight mt-0.5">18 Batches</p>
+              <span class="text-[10px] text-cyan-600 dark:text-cyan-400 font-bold block mt-0.5">SAP Work Orders Synced</span>
+            </div>
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-500 text-white shadow-md flex items-center justify-center text-sm">
+              <i class="ph-bold ph-cloud-arrow-up"></i>
+            </div>
+          </div>
+
+          <div class="glass-stat-card glass-stat-emerald p-3 px-3.5 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Materials 100% Staged</span>
+              <p class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white font-tabular leading-tight mt-0.5">14 Batches</p>
+              <span class="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold block mt-0.5">Ready for Immediate Dispatch</span>
+            </div>
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-500 text-white shadow-md flex items-center justify-center text-sm">
+              <i class="ph-bold ph-check-circle"></i>
+            </div>
+          </div>
+
+          <div class="glass-stat-card glass-stat-rose p-3 px-3.5 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Deficit / Staging Hold</span>
+              <p class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white font-tabular leading-tight mt-0.5">4 Batches</p>
+              <span class="text-[10px] text-rose-600 dark:text-rose-400 font-bold block mt-0.5">Awaiting Floor Issue (Report 91223)</span>
+            </div>
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-rose-500 to-pink-500 text-white shadow-md flex items-center justify-center text-sm">
+              <i class="ph-bold ph-warning"></i>
+            </div>
+          </div>
+
+          <div class="glass-stat-card glass-stat-indigo p-3 px-3.5 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Total ERP Target Qty</span>
+              <p class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white font-tabular leading-tight mt-0.5">12,450 Pcs</p>
+              <span class="text-[10px] text-indigo-600 dark:text-indigo-400 font-bold block mt-0.5">August Production Schedule</span>
+            </div>
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-indigo-500 to-cyan-500 text-white shadow-md flex items-center justify-center text-sm">
+              <i class="ph-bold ph-chart-line-up"></i>
+            </div>
+          </div>
+        </section>
+
+        <!-- ERP Datagrid Container -->
+        <section class="glass-card datagrid-card-section flex-1 min-h-0 flex flex-col overflow-hidden">
+          <div class="p-3 px-4 flex flex-wrap items-center justify-between gap-3 border-b border-slate-200/60 dark:border-slate-800/60 bg-white/40 dark:bg-dark-800/40 shrink-0">
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">ERP Work Orders & Production Batch Dispatch</span>
+              <span class="glass-pill glass-pill-cyan text-[10px] font-mono font-bold py-0.5 px-2">LIVE SYNC</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="relative">
+                <i class="ph ph-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+                <input type="text" id="search-erp-batches" onkeyup="filterErpBatches()" placeholder="Search ERP Batch / Model..." class="input-glass pl-8 pr-3 py-1.5 h-8 text-xs rounded-xl w-60" />
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-1 min-h-0 overflow-y-auto overflow-x-auto datagrid-scroll-wrap">
+            <table class="w-full text-left text-xs sm:text-sm border-collapse datagrid-table density-comfortable">
+              <thead>
+                <tr class="text-cyan-950 dark:text-cyan-100 font-extrabold uppercase tracking-wider text-[11px]">
+                  <th class="py-3 px-3 w-12 text-center font-mono">#</th>
+                  <th class="py-3 px-3.5 w-32 font-mono">ERP Batch No</th>
+                  <th class="py-3 px-3.5">Target Product Model</th>
+                  <th class="py-3 px-3.5 w-28 text-center font-mono">Order Qty</th>
+                  <th class="py-3 px-3.5 w-36 text-center">Staging Feasibility</th>
+                  <th class="py-3 px-3.5 w-36">Scheduled Floor</th>
+                  <th class="py-3 px-3.5 w-28 font-mono">Scheduled Date</th>
+                  <th class="py-3 px-3.5 w-24 text-center">Action</th>
+                </tr>
+              </thead>
+              <tbody id="erp-table-body" class="divide-y divide-slate-100/60 dark:divide-slate-800/60 text-slate-700 dark:text-slate-300 text-xs">
+                <!-- Dynamically populated via renderErpProduction() -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- ================= VIEW: SEMI-FINISHED GOODS (SFG) STOCK ================= -->
+      <div id="view-sfg-stock" class="hidden flex-1 flex flex-col min-h-0 space-y-2.5 overflow-hidden">
+        
+        <!-- SFG Stock Top Stats -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-2.5 shrink-0">
+          <div class="glass-stat-card glass-stat-cyan p-3 px-3.5 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Total SFG Assemblies</span>
+              <p class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white font-tabular leading-tight mt-0.5">42 Stages</p>
+              <span class="text-[10px] text-cyan-600 dark:text-cyan-400 font-bold block mt-0.5">Active Shop Floor Buffers</span>
+            </div>
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-cyan-500 to-teal-500 text-white shadow-md flex items-center justify-center text-sm">
+              <i class="ph-bold ph-stack"></i>
+            </div>
+          </div>
+
+          <div class="glass-stat-card glass-stat-emerald p-3 px-3.5 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">WIP Units Ready</span>
+              <p class="text-lg sm:text-xl font-extrabold text-emerald-600 dark:text-emerald-400 font-tabular leading-tight mt-0.5">18,650 Pcs</p>
+              <span class="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold block mt-0.5">Wound & Varnished Stators</span>
+            </div>
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-emerald-500 to-green-500 text-white shadow-md flex items-center justify-center text-sm">
+              <i class="ph-bold ph-check-square-offset"></i>
+            </div>
+          </div>
+
+          <div class="glass-stat-card glass-stat-amber p-3 px-3.5 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">WIP Aging Average</span>
+              <p class="text-lg sm:text-xl font-extrabold text-amber-600 dark:text-amber-400 font-tabular leading-tight mt-0.5">1.8 Days</p>
+              <span class="text-[10px] text-amber-600 dark:text-amber-400 font-bold block mt-0.5">High Turnover Buffer</span>
+            </div>
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-amber-500 to-orange-500 text-white shadow-md flex items-center justify-center text-sm">
+              <i class="ph-bold ph-hourglass-high"></i>
+            </div>
+          </div>
+
+          <div class="glass-stat-card glass-stat-indigo p-3 px-3.5 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Floor Buffer Health</span>
+              <p class="text-lg sm:text-xl font-extrabold text-indigo-600 dark:text-indigo-400 font-tabular leading-tight mt-0.5">99.1% QC Pass</p>
+              <span class="text-[10px] text-indigo-600 dark:text-indigo-400 font-bold block mt-0.5">Zero High-Voltage Defects</span>
+            </div>
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-indigo-500 to-blue-500 text-white shadow-md flex items-center justify-center text-sm">
+              <i class="ph-bold ph-shield-check"></i>
+            </div>
+          </div>
+        </section>
+
+        <!-- SFG Datagrid Table Container -->
+        <section class="glass-card datagrid-card-section flex-1 min-h-0 flex flex-col overflow-hidden">
+          <div class="p-3 px-4 flex flex-wrap items-center justify-between gap-3 border-b border-slate-200/60 dark:border-slate-800/60 bg-white/40 dark:bg-dark-800/40 shrink-0">
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Semi-Finished Goods (SFG) Work-In-Progress (WIP) Buffer Table</span>
+              <span class="glass-pill glass-pill-cyan text-[10px] font-mono font-bold py-0.5 px-2">WIP STAGES</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="relative">
+                <i class="ph ph-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+                <input type="text" id="search-sfg-stock" onkeyup="filterSfgStock()" placeholder="Search SFG Code, Assembly, Buffer..." class="input-glass pl-8 pr-3 py-1.5 h-8 text-xs rounded-xl w-64" />
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-1 min-h-0 overflow-y-auto overflow-x-auto datagrid-scroll-wrap">
+            <table class="w-full text-left text-xs sm:text-sm border-collapse datagrid-table density-comfortable">
+              <thead>
+                <tr class="text-cyan-950 dark:text-cyan-100 font-extrabold uppercase tracking-wider text-[11px]">
+                  <th class="py-3 px-3 w-12 text-center font-mono">#</th>
+                  <th class="py-3 px-3.5 w-32 font-mono">SFG Code</th>
+                  <th class="py-3 px-3.5">Sub-Assembly Description</th>
+                  <th class="py-3 px-3.5 w-36">Associated BOM</th>
+                  <th class="py-3 px-3.5 w-36">Process Stage</th>
+                  <th class="py-3 px-3.5 w-28 text-center font-mono">WIP Qty</th>
+                  <th class="py-3 px-3.5 w-36">Floor Buffer Location</th>
+                  <th class="py-3 px-3.5 w-32 text-center">QC Status</th>
+                  <th class="py-3 px-3.5 w-24 text-center">Action</th>
+                </tr>
+              </thead>
+              <tbody id="sfg-stock-table-body" class="divide-y divide-slate-100/60 dark:divide-slate-800/60 text-slate-700 dark:text-slate-300 text-xs">
+                <!-- Dynamically populated via renderSfgStock() -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- ================= VIEW: OVERALL EQUIPMENT EFFECTIVENESS (OEE) ================= -->
+      <div id="view-oee" class="hidden flex-1 flex flex-col min-h-0 space-y-2.5 overflow-hidden">
+        
+        <!-- OEE Top KPI Metrics -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-2.5 shrink-0">
+          <div class="glass-stat-card glass-stat-amber p-3 px-3.5 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Plant Overall OEE</span>
+              <p class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white font-tabular leading-tight mt-0.5">92.4%</p>
+              <span class="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold block mt-0.5">World-Class (Target: >85%)</span>
+            </div>
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-amber-500 to-orange-500 text-white shadow-md flex items-center justify-center text-sm">
+              <i class="ph-bold ph-gauge"></i>
+            </div>
+          </div>
+
+          <div class="glass-stat-card glass-stat-emerald p-3 px-3.5 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Availability (Uptime)</span>
+              <p class="text-lg sm:text-xl font-extrabold text-emerald-600 dark:text-emerald-400 font-tabular leading-tight mt-0.5">96.8%</p>
+              <span class="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold block mt-0.5">7.75 hrs / 8.00 hrs Running</span>
+            </div>
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-500 text-white shadow-md flex items-center justify-center text-sm">
+              <i class="ph-bold ph-clock"></i>
+            </div>
+          </div>
+
+          <div class="glass-stat-card glass-stat-cyan p-3 px-3.5 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Performance (Speed)</span>
+              <p class="text-lg sm:text-xl font-extrabold text-cyan-600 dark:text-cyan-400 font-tabular leading-tight mt-0.5">95.5%</p>
+              <span class="text-[10px] text-cyan-600 dark:text-cyan-400 font-bold block mt-0.5">Rated Line Speed Maintained</span>
+            </div>
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-500 text-white shadow-md flex items-center justify-center text-sm">
+              <i class="ph-bold ph-trend-up"></i>
+            </div>
+          </div>
+
+          <div class="glass-stat-card glass-stat-indigo p-3 px-3.5 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Quality (First Pass Yield)</span>
+              <p class="text-lg sm:text-xl font-extrabold text-indigo-600 dark:text-indigo-400 font-tabular leading-tight mt-0.5">99.4%</p>
+              <span class="text-[10px] text-indigo-600 dark:text-indigo-400 font-bold block mt-0.5">Zero High Voltage Failures</span>
+            </div>
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-indigo-500 to-purple-500 text-white shadow-md flex items-center justify-center text-sm">
+              <i class="ph-bold ph-seal-check"></i>
+            </div>
+          </div>
+        </section>
+
+        <!-- OEE Line Performance Table -->
+        <section class="glass-card datagrid-card-section flex-1 min-h-0 flex flex-col overflow-hidden">
+          <div class="p-3 px-4 flex flex-wrap items-center justify-between gap-3 border-b border-slate-200/60 dark:border-slate-800/60 bg-white/40 dark:bg-dark-800/40 shrink-0">
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Assembly Line OEE Matrix & Loss Analytics</span>
+              <span class="glass-pill glass-pill-amber text-[10px] font-mono font-bold py-0.5 px-2">TPM AUDIT</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <button onclick="renderOEE()" class="btn-glass-secondary px-3 py-1.5 h-8 text-xs rounded-xl flex items-center gap-1.5 font-bold">
+                <i class="ph ph-arrows-clockwise text-xs"></i>
+                <span>Recalculate OEE</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="flex-1 min-h-0 overflow-y-auto overflow-x-auto datagrid-scroll-wrap">
+            <table class="w-full text-left text-xs sm:text-sm border-collapse datagrid-table density-comfortable">
+              <thead>
+                <tr class="text-amber-950 dark:text-amber-100 font-extrabold uppercase tracking-wider text-[11px]">
+                  <th class="py-3 px-3 w-12 text-center font-mono">#</th>
+                  <th class="py-3 px-3.5 w-28 font-mono">Line ID</th>
+                  <th class="py-3 px-3.5">Assembly Line Station</th>
+                  <th class="py-3 px-3.5 w-28 text-center font-mono">Availability (A)</th>
+                  <th class="py-3 px-3.5 w-28 text-center font-mono">Performance (P)</th>
+                  <th class="py-3 px-3.5 w-28 text-center font-mono">Quality (Q)</th>
+                  <th class="py-3 px-3.5 w-32 text-center font-mono">Composite OEE</th>
+                  <th class="py-3 px-3.5 w-32 text-center">TPM Rating</th>
+                  <th class="py-3 px-3.5 w-36">Major Loss Factor</th>
+                </tr>
+              </thead>
+              <tbody id="oee-table-body" class="divide-y divide-slate-100/60 dark:divide-slate-800/60 text-slate-700 dark:text-slate-300 text-xs">
+                <!-- Dynamically populated via renderOEE() -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- ================= VIEW: INTER-COMPANY STOCK & RAW MATERIAL TRANSFERS ================= -->
+      <div id="view-inter-company" class="hidden flex-1 flex flex-col min-h-0 space-y-2.5 overflow-hidden">
+        
+        <!-- Inter-Company Top Stats -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-2.5 shrink-0">
+          <div class="glass-stat-card glass-stat-amber p-3 px-3.5 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Active Requisitions</span>
+              <p class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white font-tabular leading-tight mt-0.5">12 Vouchers</p>
+              <span class="text-[10px] text-amber-600 dark:text-amber-400 font-bold block mt-0.5">Inter-Entity Dispatches</span>
+            </div>
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-amber-500 to-orange-500 text-white shadow-md flex items-center justify-center text-sm">
+              <i class="ph-bold ph-arrows-left-right"></i>
+            </div>
+          </div>
+
+          <div class="glass-stat-card glass-stat-cyan p-3 px-3.5 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Outbound Dispatched</span>
+              <p class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white font-tabular leading-tight mt-0.5">38,450 Units</p>
+              <span class="text-[10px] text-cyan-600 dark:text-cyan-400 font-bold block mt-0.5">To MEP Cable & Electronics</span>
+            </div>
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-500 text-white shadow-md flex items-center justify-center text-sm">
+              <i class="ph-bold ph-export"></i>
+            </div>
+          </div>
+
+          <div class="glass-stat-card glass-stat-emerald p-3 px-3.5 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Inbound Received</span>
+              <p class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white font-tabular leading-tight mt-0.5">24,120 Units</p>
+              <span class="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold block mt-0.5">From Central Bulk Store</span>
+            </div>
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-500 text-white shadow-md flex items-center justify-center text-sm">
+              <i class="ph-bold ph-download-simple"></i>
+            </div>
+          </div>
+
+          <div class="glass-stat-card glass-stat-indigo p-3 px-3.5 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Reconciliation Index</span>
+              <p class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white font-tabular leading-tight mt-0.5">99.8% Matched</p>
+              <span class="text-[10px] text-indigo-600 dark:text-indigo-400 font-bold block mt-0.5">ERP Stock Ledger Balanced</span>
+            </div>
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-indigo-500 to-cyan-500 text-white shadow-md flex items-center justify-center text-sm">
+              <i class="ph-bold ph-scales"></i>
+            </div>
+          </div>
+        </section>
+
+        <!-- Inter-Company Datagrid Container -->
+        <section class="glass-card datagrid-card-section flex-1 min-h-0 flex flex-col overflow-hidden">
+          <div class="p-3 px-4 flex flex-wrap items-center justify-between gap-3 border-b border-slate-200/60 dark:border-slate-800/60 bg-white/40 dark:bg-dark-800/40 shrink-0">
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-bold text-slate-800 dark:text-slate-200">Inter-Company Raw Material & Stock Movement Registry</span>
+              <span class="glass-pill glass-pill-amber text-[10px] font-mono font-bold py-0.5 px-2">CROSS-PLANT</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="relative">
+                <i class="ph ph-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+                <input type="text" id="search-inter-company" onkeyup="filterInterCompanyTransfers()" placeholder="Search Voucher, Plant, Item..." class="input-glass pl-8 pr-3 py-1.5 h-8 text-xs rounded-xl w-64" />
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-1 min-h-0 overflow-y-auto overflow-x-auto datagrid-scroll-wrap">
+            <table class="w-full text-left text-xs sm:text-sm border-collapse datagrid-table density-comfortable">
+              <thead>
+                <tr class="text-amber-950 dark:text-amber-100 font-extrabold uppercase tracking-wider text-[11px]">
+                  <th class="py-3 px-3 w-12 text-center font-mono">#</th>
+                  <th class="py-3 px-3.5 w-32 font-mono">Transfer Voucher</th>
+                  <th class="py-3 px-3.5 w-40">Source (From)</th>
+                  <th class="py-3 px-3.5 w-40">Destination (To)</th>
+                  <th class="py-3 px-3.5">Material & Description</th>
+                  <th class="py-3 px-3.5 w-28 text-center font-mono">Transfer Qty</th>
+                  <th class="py-3 px-3.5 w-32 text-center">Status</th>
+                  <th class="py-3 px-3.5 w-28 font-mono">Transfer Date</th>
+                  <th class="py-3 px-3.5 w-24 text-center">Action</th>
+                </tr>
+              </thead>
+              <tbody id="inter-company-table-body" class="divide-y divide-slate-100/60 dark:divide-slate-800/60 text-slate-700 dark:text-slate-300 text-xs">
+                <!-- Dynamically populated via renderInterCompany() -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- ================= VIEW 3: DIFFERENTIAL AUDIT LOG ================= -->
+      <div id="view-history" class="hidden flex-1 flex flex-col min-h-0 space-y-2.5 overflow-hidden">
+        <div class="glass-card p-3 px-4 shrink-0">
+          <h2 class="text-sm font-bold text-slate-900 dark:text-white">Differential Audit Trail & Synchronization Log</h2>
+          <p class="text-[11px] text-slate-500 dark:text-slate-400">Complete historical records of all automated updates, showing added, modified and removed formulations.</p>
+        </div>
+
+        <div id="history-container" class="flex-1 min-h-0 overflow-y-auto space-y-2.5 datagrid-scroll-wrap pr-1">
           <!-- History Cards rendered here -->
         </div>
       </div>
@@ -504,27 +1521,27 @@
   </div>
 
   <!-- ================= PRODUCT SPECIFICATION & BATCH CAPACITY SIMULATOR MODAL ================= -->
-  <div id="analysis-modal" onclick="if (event.target === this) closeAnalysisModal()" class="fixed inset-0 z-50 hidden bg-slate-950/60 backdrop-blur-md flex items-center justify-center p-3 sm:p-5 overflow-hidden">
+  <div id="analysis-modal" onclick="if (event.target === this) closeAnalysisModal()" class="fixed inset-0 z-[10000] hidden bg-slate-950/70 backdrop-blur-md flex items-center justify-center p-3 sm:p-5 overflow-hidden">
     <div class="glass-card bg-white/95 dark:bg-dark-850/95 backdrop-blur-2xl rounded-3xl max-w-[97vw] xl:max-w-[1380px] w-full h-[92vh] max-h-[92vh] flex flex-col overflow-hidden shadow-2xl border border-white/80 dark:border-white/10 !p-0">
       
       <!-- ▌ HERO HEADER — Gradient Bar + Product Info -->
-      <div class="relative overflow-hidden border-b border-slate-200/60 dark:border-slate-800/60 bg-white/40 dark:bg-dark-800/40 backdrop-blur-md shrink-0">
+      <div class="relative overflow-hidden border-b border-slate-200/60 dark:border-slate-800/60 bg-white/60 dark:bg-dark-850/60 backdrop-blur-2xl shrink-0">
         <!-- Top gradient accent bar -->
-        <div class="h-1 w-full bg-gradient-to-r from-emerald-500 via-teal-400 to-cyan-500"></div>
+        <div class="h-1.5 w-full bg-gradient-to-r from-emerald-500 via-teal-400 to-cyan-500"></div>
         
         <div class="p-4 sm:p-5 flex items-start justify-between">
           <div class="space-y-2 flex-1 pr-4">
-            <!-- Badge row -->
+            <!-- Badge row (Frosted Gradient Glass Badges) -->
             <div class="flex flex-wrap items-center gap-2">
               <div id="modal-history-nav" class="hidden"></div>
-              <span id="modal-bom-no" class="glass-pill glass-pill-emerald font-bold font-mono text-xs">
+              <span id="modal-bom-no" class="gradient-glass-bom font-bold font-mono text-xs">
                 <i class="ph-bold ph-hash"></i> BOM-XXXXX
               </span>
               <span class="glass-pill glass-pill-neutral font-mono font-bold text-xs">
                 <i class="ph ph-barcode text-slate-400"></i> <span id="modal-item-code">--</span>
               </span>
-              <span id="modal-status" class="glass-pill glass-pill-neutral font-bold text-xs text-blue-600 dark:text-blue-400">
-                <i class="ph ph-seal-check"></i> APPROVED
+              <span id="modal-status" class="gradient-glass-emerald font-bold font-mono text-xs px-2.5 py-0.5">
+                <i class="ph-bold ph-seal-check"></i> APPROVED
               </span>
               <span id="modal-section" class="glass-pill glass-pill-neutral text-xs font-medium">
                 <i class="ph ph-factory text-slate-400"></i> FAN Assemble
@@ -541,89 +1558,74 @@
             <button onclick="copyBOMTable()" class="btn-glass-secondary w-9 h-9 flex items-center justify-center rounded-xl" title="Copy Table">
               <i class="ph ph-copy text-base"></i>
             </button>
-            <button onclick="closeAnalysisModal()" class="btn-glass-secondary w-9 h-9 flex items-center justify-center rounded-xl" title="Close (ESC)">
+            <button onclick="closeAnalysisModal()" class="btn-glass-secondary w-9 h-9 flex items-center justify-center rounded-xl hover:text-rose-500" title="Close (ESC)">
               <i class="ph ph-x text-base"></i>
             </button>
           </div>
         </div>
       </div>
 
-      <!-- ▌ METRIC CARDS — 5 Stats with colored top accent -->
+      <!-- ▌ METRIC CARDS — 5 Frosted Gradient Glass Stats -->
       <div class="px-4 sm:px-5 py-3 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 text-xs border-b border-slate-200/60 dark:border-slate-800/60 shrink-0">
         
-        <!-- Card 1: Output Batch (Blue accent) -->
-        <div class="rounded-xl overflow-hidden border border-slate-200/80 dark:border-slate-700/60 bg-white/60 dark:bg-dark-800/60 backdrop-blur-md shadow-2xs">
-          <div class="h-1 bg-gradient-to-r from-blue-500 to-blue-400"></div>
-          <div class="p-2.5 px-3">
-            <div class="flex items-center justify-between">
-              <span class="text-[10px] uppercase font-bold tracking-wider text-slate-400">Output Batch</span>
-              <div class="w-6 h-6 rounded-lg flex items-center justify-center bg-blue-50 dark:bg-blue-950/50">
-                <i class="ph ph-package text-blue-500 text-xs"></i>
-              </div>
+        <!-- Card 1: Output Batch (Cyan Luxury Gradient Glass) -->
+        <div class="glass-stat-card glass-stat-cyan p-3 px-3.5">
+          <div class="flex items-center justify-between">
+            <span class="text-[10px] uppercase font-bold tracking-wider text-cyan-900 dark:text-cyan-300">Output Batch</span>
+            <div class="w-7 h-7 rounded-lg bg-gradient-to-tr from-cyan-500 to-blue-500 text-white shadow-xs flex items-center justify-center text-xs">
+              <i class="ph-bold ph-package"></i>
             </div>
-            <strong id="modal-output-batch" class="text-slate-900 dark:text-white font-mono text-base font-black mt-1 block">1 Pcs</strong>
+          </div>
+          <strong id="modal-output-batch" class="text-cyan-950 dark:text-cyan-100 font-mono text-base font-black mt-1 block">1 Pcs</strong>
+        </div>
+
+        <!-- Card 2: Formula Items (Indigo Luxury Gradient Glass) -->
+        <div class="glass-stat-card glass-stat-indigo p-3 px-3.5">
+          <div class="flex items-center justify-between">
+            <span class="text-[10px] uppercase font-bold tracking-wider text-indigo-900 dark:text-indigo-300">Formula Items</span>
+            <div class="w-7 h-7 rounded-lg bg-gradient-to-tr from-indigo-500 to-cyan-500 text-white shadow-xs flex items-center justify-center text-xs">
+              <i class="ph-bold ph-stack"></i>
+            </div>
+          </div>
+          <strong id="modal-component-count" class="text-indigo-950 dark:text-indigo-100 font-mono text-base font-black mt-1 block">36 Items</strong>
+        </div>
+
+        <!-- Card 3: Max Buildable (Emerald / Rose Luxury Gradient Glass) -->
+        <div id="modal-max-buildable-card" class="glass-stat-card glass-stat-emerald p-3 px-3.5">
+          <div class="flex items-center justify-between">
+            <span id="modal-max-buildable-label" class="text-[10px] uppercase font-bold tracking-wider text-emerald-900 dark:text-emerald-300">Max Buildable</span>
+            <div id="modal-max-buildable-icon-box" class="w-7 h-7 rounded-lg bg-gradient-to-tr from-emerald-500 to-teal-500 text-white shadow-xs flex items-center justify-center text-xs">
+              <i id="modal-max-buildable-icon" class="ph-bold ph-trend-up"></i>
+            </div>
+          </div>
+          <strong id="modal-max-buildable" class="text-emerald-950 dark:text-emerald-100 font-mono text-base font-black mt-1 block">23 Units</strong>
+        </div>
+
+        <!-- Card 4: Target Build Qty (Amber Luxury Interactive Gradient Glass) -->
+        <div id="modal-target-card" class="glass-stat-card glass-stat-amber p-3 px-3.5 flex flex-col justify-between">
+          <div class="flex items-center justify-between">
+            <label for="modal-target-input" class="text-[10px] uppercase font-bold tracking-wider text-amber-900 dark:text-amber-300">Target Build Qty</label>
+            <div class="w-7 h-7 rounded-lg bg-gradient-to-tr from-amber-500 to-orange-500 text-white shadow-xs flex items-center justify-center text-xs">
+              <i class="ph-bold ph-crosshair"></i>
+            </div>
+          </div>
+          <div class="relative flex items-center mt-1">
+            <input type="number" id="modal-target-input" value="0" min="0" oninput="onModalTargetQtyChange(this.value)" placeholder="0" class="w-full h-7 pl-2.5 pr-12 font-mono font-black text-sm bg-white/90 dark:bg-dark-850/90 border border-amber-400/70 dark:border-amber-500/50 rounded-lg text-slate-900 dark:text-white shadow-inner focus:outline-none focus:ring-2 focus:ring-amber-500" />
+            <span class="absolute right-2 text-[10px] font-extrabold font-mono text-amber-700 dark:text-amber-400 pointer-events-none select-none">Units</span>
           </div>
         </div>
 
-        <!-- Card 2: Formula Items (Indigo accent) -->
-        <div class="rounded-xl overflow-hidden border border-slate-200/80 dark:border-slate-700/60 bg-white/60 dark:bg-dark-800/60 backdrop-blur-md shadow-2xs">
-          <div class="h-1 bg-gradient-to-r from-indigo-500 to-violet-400"></div>
-          <div class="p-2.5 px-3">
-            <div class="flex items-center justify-between">
-              <span class="text-[10px] uppercase font-bold tracking-wider text-slate-400">Formula Items</span>
-              <div class="w-6 h-6 rounded-lg flex items-center justify-center bg-indigo-50 dark:bg-indigo-950/50">
-                <i class="ph ph-stack text-indigo-500 text-xs"></i>
-              </div>
-            </div>
-            <strong id="modal-component-count" class="text-indigo-600 dark:text-indigo-400 font-mono text-base font-black mt-1 block">36 Items</strong>
-          </div>
-        </div>
-
-        <!-- Card 3: Max Buildable (Emerald accent) -->
-        <div class="rounded-xl overflow-hidden border border-slate-200/80 dark:border-slate-700/60 bg-white/60 dark:bg-dark-800/60 backdrop-blur-md shadow-2xs">
-          <div class="h-1 bg-gradient-to-r from-emerald-500 to-teal-400"></div>
-          <div class="p-2.5 px-3">
-            <div class="flex items-center justify-between">
-              <span class="text-[10px] uppercase font-bold tracking-wider text-slate-400">Max Buildable</span>
-              <div class="w-6 h-6 rounded-lg flex items-center justify-center bg-emerald-50 dark:bg-emerald-950/50">
-                <i class="ph ph-trend-up text-emerald-500 text-xs"></i>
-              </div>
-            </div>
-            <strong id="modal-max-buildable" class="text-emerald-600 dark:text-emerald-400 font-mono text-base font-black mt-1 block">🟢 36 Units</strong>
-          </div>
-        </div>
-
-        <!-- Card 4: Target Build Qty (Amber accent, interactive) -->
-        <div id="modal-target-card" class="rounded-xl overflow-hidden border-2 border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-dark-800/80 backdrop-blur-md transition-all shadow-2xs">
-          <div id="modal-target-accent" class="h-1 bg-gradient-to-r from-amber-400 to-orange-400"></div>
-          <div class="p-2.5 px-3">
-            <div class="flex items-center justify-between">
-              <label for="modal-target-input" class="text-[10px] uppercase font-bold tracking-wider text-slate-600 dark:text-slate-300">Target Build Qty</label>
-              <div class="w-6 h-6 rounded-lg flex items-center justify-center bg-amber-50 dark:bg-amber-950/50">
-                <i class="ph ph-crosshair text-amber-500 text-xs"></i>
-              </div>
-            </div>
-            <div class="flex items-center gap-1.5 mt-0.5">
-              <input type="number" id="modal-target-input" value="0" min="0" oninput="onModalTargetQtyChange(this.value)" placeholder="0" class="w-full px-2 py-0.5 text-center font-mono font-black text-sm bg-slate-50 dark:bg-dark-900 border border-slate-200 dark:border-slate-650 rounded-lg text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500" />
-              <span class="text-slate-400 text-[10px] font-bold font-mono shrink-0">Units</span>
+        <!-- Card 5: Shortage Status (Rose Luxury Gradient Glass) -->
+        <div class="glass-stat-card glass-stat-rose p-3 px-3.5">
+          <div class="flex items-center justify-between">
+            <span class="text-[10px] uppercase font-bold tracking-wider text-rose-900 dark:text-rose-300">Shortage Status</span>
+            <div class="w-7 h-7 rounded-lg bg-gradient-to-tr from-rose-500 to-red-500 text-white shadow-xs flex items-center justify-center text-xs">
+              <i class="ph-bold ph-warning-octagon"></i>
             </div>
           </div>
-        </div>
-
-        <!-- Card 5: Shortage Status (Rose accent) -->
-        <div class="rounded-xl overflow-hidden border border-slate-200/80 dark:border-slate-700/60 bg-white/60 dark:bg-dark-800/60 backdrop-blur-md shadow-2xs">
-          <div id="modal-shortage-accent" class="h-1 bg-gradient-to-r from-slate-300 to-slate-200 dark:from-slate-600 dark:to-slate-700"></div>
-          <div class="p-2.5 px-3">
-            <div class="flex items-center justify-between">
-              <span class="text-[10px] uppercase font-bold tracking-wider text-slate-400">Shortage Status</span>
-              <div class="w-6 h-6 rounded-lg flex items-center justify-center bg-rose-50 dark:bg-rose-950/50">
-                <i class="ph ph-warning-octagon text-rose-500 text-xs"></i>
-              </div>
-            </div>
-            <div class="mt-1 flex items-center justify-between">
-              <strong id="modal-shortage-count" class="text-slate-900 dark:text-white font-mono text-base font-black">0 Items</strong>
-              <span id="modal-shortage-subtext" class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-slate-100 text-slate-500 dark:bg-dark-750 dark:text-slate-400">Ready</span>
-            </div>
+          <div class="mt-1 flex items-center justify-between">
+            <strong id="modal-shortage-count" class="text-rose-950 dark:text-rose-100 font-mono text-base font-black">0 Items</strong>
+            <span id="modal-shortage-subtext" class="px-2 py-0.5 rounded-full text-[10px] font-bold tag-badge-emerald">Ready</span>
           </div>
         </div>
 
@@ -633,13 +1635,13 @@
       <div class="p-4 sm:p-5 pt-3 space-y-2.5 flex-1 min-h-0 flex flex-col overflow-hidden">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 shrink-0">
           <div class="flex items-center gap-2.5">
-            <div class="w-8 h-8 rounded-xl flex items-center justify-center text-white text-sm bg-gradient-to-br from-emerald-500 to-teal-600 shadow-xs">
+            <div class="w-8 h-8 rounded-xl flex items-center justify-center text-white text-sm bg-gradient-to-br from-emerald-500 to-teal-600 shadow-md shadow-emerald-500/25">
               <i class="ph-bold ph-stack"></i>
             </div>
             <div>
               <h3 class="font-black text-slate-900 dark:text-white text-sm tracking-tight">Raw Materials & Warehouse Stock</h3>
             </div>
-            <span id="modal-rm-count-badge" class="glass-pill glass-pill-emerald text-[11px] font-bold font-mono">
+            <span id="modal-rm-count-badge" class="gradient-glass-emerald text-[11px] font-bold font-mono px-2.5 py-0.5 rounded-full">
               36 items
             </span>
           </div>
@@ -656,41 +1658,28 @@
           </div>
         </div>
 
-        <!-- Table with clear, solid, professional header -->
-        <div class="flex-1 min-h-0 overflow-y-auto rounded-2xl border border-slate-200/80 dark:border-slate-700/80 bg-white/60 dark:bg-dark-850/60 backdrop-blur-md shadow-xs">
-          <table class="w-full text-left text-xs border-collapse">
-            <thead class="sticky top-0 z-10 bg-slate-100/90 dark:bg-dark-800/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-700 shadow-xs">
-              <tr class="text-slate-700 dark:text-slate-200 font-bold text-[10px] uppercase tracking-wider">
-                <th class="py-2.5 px-2 w-8 text-center" rowspan="2">#</th>
+        <div class="flex-1 min-h-0 overflow-y-auto rounded-2xl border border-slate-200/80 dark:border-slate-700/80 bg-white/60 dark:bg-dark-850/60 backdrop-blur-md shadow-xs datagrid-scroll-wrap">
+          <table class="w-full text-left text-xs border-collapse modal-rm-table">
+            <thead class="sticky top-0 z-25">
+              <tr class="text-emerald-950 dark:text-emerald-100 font-extrabold text-[10px] uppercase tracking-wider">
+                <th class="py-2.5 px-2 w-8 text-center" rowspan="2">SL</th>
                 <th class="py-2.5 px-2.5 w-24" rowspan="2">Category</th>
                 <th class="py-2.5 px-2.5 w-28 font-mono" rowspan="2">Item Code</th>
                 <th class="py-2.5 px-3" rowspan="2">Item Description</th>
                 <th class="py-2.5 px-2 w-10 text-center" rowspan="2">Unit</th>
-                <th class="py-2.5 px-2 w-16 text-right font-mono" rowspan="2">
-                  <span>BOM Req</span><br>
-                  <span class="text-[9px] lowercase font-normal text-slate-500 dark:text-slate-400">(per unit)</span>
-                </th>
-                <th class="py-2.5 px-2.5 w-22 text-right font-mono text-slate-800 dark:text-slate-100" rowspan="2">
-                  <span>Required</span><br>
-                  <span id="th-target-qty-label" class="text-[9px] lowercase font-normal text-slate-500 dark:text-slate-400">(for 0 units)</span>
-                </th>
-                <th class="py-1.5 px-2 text-center text-[10px] tracking-wider font-extrabold border-b border-slate-200 dark:border-slate-700 bg-slate-200/70 dark:bg-dark-750 text-slate-800 dark:text-slate-200" colspan="3">
+                <th class="py-2.5 px-2 w-20 text-center font-mono" rowspan="2">BOM<br>Quantity</th>
+                <th class="py-2.5 px-2.5 w-22 text-right font-mono text-emerald-950 dark:text-emerald-100" rowspan="2">Required</th>
+                <th class="py-1.5 px-2 text-center text-[10px] tracking-wider font-black modal-th-stock-group" colspan="3">
                   Available Warehouse Stock
                 </th>
-                <th class="py-2.5 px-2.5 w-20 text-center font-mono" rowspan="2">
-                  <span>Max Build</span><br>
-                  <span class="text-[9px] lowercase font-normal text-slate-500 dark:text-slate-400">(from stock)</span>
-                </th>
-                <th class="py-2.5 px-2.5 w-22 text-right font-mono" rowspan="2">
-                  <span>Shortage</span><br>
-                  <span class="text-[9px] lowercase font-normal text-slate-500 dark:text-slate-400">(deficit)</span>
-                </th>
-                <th class="py-2.5 px-2 w-20 text-center" rowspan="2">Status</th>
+                <th class="py-2.5 px-2.5 min-w-[105px] text-center font-mono" rowspan="2">Max Build</th>
+                <th class="py-2.5 px-2.5 min-w-[90px] text-right font-mono" rowspan="2">Shortage</th>
+                <th class="py-2.5 px-2.5 min-w-[125px] text-center" rowspan="2">Status</th>
               </tr>
-              <tr class="bg-slate-100/90 dark:bg-dark-800/90 border-b border-slate-200 dark:border-slate-700 font-bold text-[9px]">
-                <th class="py-1.5 px-2 text-right font-mono text-cyan-600 dark:text-cyan-400 w-16">Store</th>
-                <th class="py-1.5 px-2 text-right font-mono text-purple-600 dark:text-purple-400 w-16">Floor</th>
-                <th class="py-1.5 px-2 text-right font-mono font-extrabold text-slate-900 dark:text-white w-18">Total</th>
+              <tr class="font-bold text-[9px]">
+                <th class="py-1.5 px-2 text-right font-mono text-cyan-700 dark:text-cyan-300 w-16 modal-th-stock-group">Store</th>
+                <th class="py-1.5 px-2 text-right font-mono text-purple-700 dark:text-purple-300 w-16 modal-th-stock-group">Floor</th>
+                <th class="py-1.5 px-2 text-right font-mono font-extrabold text-emerald-950 dark:text-white w-18 modal-th-stock-group">Total</th>
               </tr>
             </thead>
             <tbody id="modal-rm-tbody" class="divide-y divide-slate-100/60 dark:divide-slate-800/60 text-slate-700 dark:text-slate-300">
@@ -713,7 +1702,7 @@
   </div>
 
   <!-- ================= LIVE ERP SYNCHRONIZATION MODAL ================= -->
-  <div id="sync-modal" class="fixed inset-0 z-50 hidden bg-slate-950/60 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+  <div id="sync-modal" class="fixed inset-0 z-[10000] hidden bg-slate-950/70 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
     <div class="glass-card bg-white/95 dark:bg-dark-850/95 backdrop-blur-2xl max-w-2xl w-full flex flex-col overflow-hidden shadow-2xl !p-0 !rounded-3xl border border-white/80 dark:border-white/10">
       
       <!-- Sync Header -->
@@ -797,6 +1786,6 @@
   </div>
 
   <!-- Application Logic -->
-  <script src="js/app.js?v=20260828stocklive"></script>
+  <script src="js/app.js?v=20260830clean1"></script>
 </body>
 </html>

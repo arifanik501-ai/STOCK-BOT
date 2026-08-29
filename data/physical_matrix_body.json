@@ -1,0 +1,1074 @@
+{
+  "part": "body",
+  "part_label": "Ceiling Fan Body Assembly",
+  "models": [
+    "5601",
+    "5606",
+    "5607",
+    "4801",
+    "3601",
+    "2401"
+  ],
+  "model_totals": {
+    "5601": 28431,
+    "5606": 49,
+    "5607": 336,
+    "4801": 1167,
+    "3601": 4907,
+    "2401": 3101
+  },
+  "model_shares": [
+    {
+      "model": "5601",
+      "quantity": 28431,
+      "percentage": 74.8
+    },
+    {
+      "model": "3601",
+      "quantity": 4907,
+      "percentage": 12.9
+    },
+    {
+      "model": "2401",
+      "quantity": 3101,
+      "percentage": 8.2
+    },
+    {
+      "model": "4801",
+      "quantity": 1167,
+      "percentage": 3.1
+    },
+    {
+      "model": "5607",
+      "quantity": 336,
+      "percentage": 0.9
+    },
+    {
+      "model": "5606",
+      "quantity": 49,
+      "percentage": 0.1
+    }
+  ],
+  "total_production": 37991,
+  "monthly_target": 45500,
+  "achievement_pct": 83.5,
+  "daily_target": 1750,
+  "daily_rows": [
+    {
+      "date": "2026-08-01",
+      "day_name": "Saturday",
+      "models": {
+        "5601": 450,
+        "5606": 0,
+        "5607": 0,
+        "4801": 0,
+        "3601": 0,
+        "2401": 995
+      },
+      "total": 1445,
+      "target": 1750,
+      "variance": -305,
+      "loss": 305,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-02",
+      "day_name": "Sunday",
+      "models": {
+        "5601": 1357,
+        "5606": 11,
+        "5607": 0,
+        "4801": 0,
+        "3601": 0,
+        "2401": 96
+      },
+      "total": 1464,
+      "target": 1750,
+      "variance": -286,
+      "loss": 286,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-03",
+      "day_name": "Monday",
+      "models": {
+        "5601": 1800,
+        "5606": 0,
+        "5607": 0,
+        "4801": 0,
+        "3601": 0,
+        "2401": 0
+      },
+      "total": 1800,
+      "target": 1750,
+      "variance": 50,
+      "loss": -50,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-04",
+      "day_name": "Tuesday",
+      "models": {
+        "5601": 1629,
+        "5606": 0,
+        "5607": 119,
+        "4801": 0,
+        "3601": 0,
+        "2401": 0
+      },
+      "total": 1748,
+      "target": 1750,
+      "variance": -2,
+      "loss": 2,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-05",
+      "day_name": "Wednesday",
+      "models": {
+        "5601": 0,
+        "5606": 0,
+        "5607": 0,
+        "4801": 0,
+        "3601": 0,
+        "2401": 0
+      },
+      "total": 0,
+      "target": 0,
+      "variance": 0,
+      "loss": 0,
+      "has_production": false
+    },
+    {
+      "date": "2026-08-06",
+      "day_name": "Thursday",
+      "models": {
+        "5601": 0,
+        "5606": 0,
+        "5607": 0,
+        "4801": 0,
+        "3601": 0,
+        "2401": 0
+      },
+      "total": 0,
+      "target": 0,
+      "variance": 0,
+      "loss": 0,
+      "has_production": false
+    },
+    {
+      "date": "2026-08-07",
+      "day_name": "Friday",
+      "models": {
+        "5601": 0,
+        "5606": 0,
+        "5607": 0,
+        "4801": 0,
+        "3601": 0,
+        "2401": 0
+      },
+      "total": 0,
+      "target": 0,
+      "variance": 0,
+      "loss": 0,
+      "has_production": false
+    },
+    {
+      "date": "2026-08-08",
+      "day_name": "Saturday",
+      "models": {
+        "5601": 1283,
+        "5606": 38,
+        "5607": 53,
+        "4801": 0,
+        "3601": 0,
+        "2401": 0
+      },
+      "total": 1374,
+      "target": 1750,
+      "variance": -376,
+      "loss": 376,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-09",
+      "day_name": "Sunday",
+      "models": {
+        "5601": 1700,
+        "5606": 0,
+        "5607": 0,
+        "4801": 0,
+        "3601": 0,
+        "2401": 0
+      },
+      "total": 1700,
+      "target": 1750,
+      "variance": -50,
+      "loss": 50,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-10",
+      "day_name": "Monday",
+      "models": {
+        "5601": 3178,
+        "5606": 0,
+        "5607": 0,
+        "4801": 0,
+        "3601": 0,
+        "2401": 0
+      },
+      "total": 3178,
+      "target": 1750,
+      "variance": 1428,
+      "loss": -1428,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-11",
+      "day_name": "Tuesday",
+      "models": {
+        "5601": 1700,
+        "5606": 0,
+        "5607": 0,
+        "4801": 0,
+        "3601": 0,
+        "2401": 0
+      },
+      "total": 1700,
+      "target": 1750,
+      "variance": -50,
+      "loss": 50,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-12",
+      "day_name": "Wednesday",
+      "models": {
+        "5601": 1050,
+        "5606": 0,
+        "5607": 164,
+        "4801": 0,
+        "3601": 0,
+        "2401": 0
+      },
+      "total": 1214,
+      "target": 1750,
+      "variance": -536,
+      "loss": 536,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-13",
+      "day_name": "Thursday",
+      "models": {
+        "5601": 1732,
+        "5606": 0,
+        "5607": 0,
+        "4801": 0,
+        "3601": 0,
+        "2401": 0
+      },
+      "total": 1732,
+      "target": 1750,
+      "variance": -18,
+      "loss": 18,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-14",
+      "day_name": "Friday",
+      "models": {
+        "5601": 1700,
+        "5606": 0,
+        "5607": 0,
+        "4801": 0,
+        "3601": 0,
+        "2401": 0
+      },
+      "total": 1700,
+      "target": 1750,
+      "variance": -50,
+      "loss": 50,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-15",
+      "day_name": "Saturday",
+      "models": {
+        "5601": 1700,
+        "5606": 0,
+        "5607": 0,
+        "4801": 0,
+        "3601": 0,
+        "2401": 0
+      },
+      "total": 1700,
+      "target": 1750,
+      "variance": -50,
+      "loss": 50,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-16",
+      "day_name": "Sunday",
+      "models": {
+        "5601": 165,
+        "5606": 0,
+        "5607": 0,
+        "4801": 800,
+        "3601": 0,
+        "2401": 0
+      },
+      "total": 965,
+      "target": 1750,
+      "variance": -785,
+      "loss": 785,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-17",
+      "day_name": "Monday",
+      "models": {
+        "5601": 1050,
+        "5606": 0,
+        "5607": 0,
+        "4801": 367,
+        "3601": 0,
+        "2401": 0
+      },
+      "total": 1417,
+      "target": 1750,
+      "variance": -333,
+      "loss": 333,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-18",
+      "day_name": "Tuesday",
+      "models": {
+        "5601": 1700,
+        "5606": 0,
+        "5607": 0,
+        "4801": 0,
+        "3601": 0,
+        "2401": 0
+      },
+      "total": 1700,
+      "target": 1750,
+      "variance": -50,
+      "loss": 50,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-19",
+      "day_name": "Wednesday",
+      "models": {
+        "5601": 1000,
+        "5606": 0,
+        "5607": 0,
+        "4801": 0,
+        "3601": 610,
+        "2401": 0
+      },
+      "total": 1610,
+      "target": 1750,
+      "variance": -140,
+      "loss": 140,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-20",
+      "day_name": "Thursday",
+      "models": {
+        "5601": 0,
+        "5606": 0,
+        "5607": 0,
+        "4801": 0,
+        "3601": 1200,
+        "2401": 0
+      },
+      "total": 1200,
+      "target": 1750,
+      "variance": -550,
+      "loss": 550,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-21",
+      "day_name": "Friday",
+      "models": {
+        "5601": 0,
+        "5606": 0,
+        "5607": 0,
+        "4801": 0,
+        "3601": 0,
+        "2401": 0
+      },
+      "total": 0,
+      "target": 0,
+      "variance": 0,
+      "loss": 0,
+      "has_production": false
+    },
+    {
+      "date": "2026-08-22",
+      "day_name": "Saturday",
+      "models": {
+        "5601": 0,
+        "5606": 0,
+        "5607": 0,
+        "4801": 0,
+        "3601": 1400,
+        "2401": 0
+      },
+      "total": 1400,
+      "target": 1750,
+      "variance": -350,
+      "loss": 350,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-23",
+      "day_name": "Sunday",
+      "models": {
+        "5601": 0,
+        "5606": 0,
+        "5607": 0,
+        "4801": 0,
+        "3601": 1697,
+        "2401": 0
+      },
+      "total": 1697,
+      "target": 1750,
+      "variance": -53,
+      "loss": 53,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-24",
+      "day_name": "Monday",
+      "models": {
+        "5601": 1600,
+        "5606": 0,
+        "5607": 0,
+        "4801": 0,
+        "3601": 0,
+        "2401": 0
+      },
+      "total": 1600,
+      "target": 1750,
+      "variance": -150,
+      "loss": 150,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-25",
+      "day_name": "Tuesday",
+      "models": {
+        "5601": 287,
+        "5606": 0,
+        "5607": 0,
+        "4801": 0,
+        "3601": 0,
+        "2401": 450
+      },
+      "total": 737,
+      "target": 1750,
+      "variance": -1013,
+      "loss": 1013,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-26",
+      "day_name": "Wednesday",
+      "models": {
+        "5601": 0,
+        "5606": 0,
+        "5607": 0,
+        "4801": 0,
+        "3601": 0,
+        "2401": 1560
+      },
+      "total": 1560,
+      "target": 1750,
+      "variance": -190,
+      "loss": 190,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-27",
+      "day_name": "Thursday",
+      "models": {
+        "5601": 2000,
+        "5606": 0,
+        "5607": 0,
+        "4801": 0,
+        "3601": 0,
+        "2401": 0
+      },
+      "total": 2000,
+      "target": 1750,
+      "variance": 250,
+      "loss": -250,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-28",
+      "day_name": "Friday",
+      "models": {
+        "5601": 0,
+        "5606": 0,
+        "5607": 0,
+        "4801": 0,
+        "3601": 0,
+        "2401": 0
+      },
+      "total": 0,
+      "target": 0,
+      "variance": 0,
+      "loss": 0,
+      "has_production": false
+    },
+    {
+      "date": "2026-08-29",
+      "day_name": "Saturday",
+      "models": {
+        "5601": 1350,
+        "5606": 0,
+        "5607": 0,
+        "4801": 0,
+        "3601": 0,
+        "2401": 0
+      },
+      "total": 1350,
+      "target": 1750,
+      "variance": -400,
+      "loss": 400,
+      "has_production": true
+    },
+    {
+      "date": "2026-08-30",
+      "day_name": "Sunday",
+      "models": {
+        "5601": 0,
+        "5606": 0,
+        "5607": 0,
+        "4801": 0,
+        "3601": 0,
+        "2401": 0
+      },
+      "total": 0,
+      "target": 0,
+      "variance": 0,
+      "loss": 0,
+      "has_production": false
+    },
+    {
+      "date": "2026-08-31",
+      "day_name": "Monday",
+      "models": {
+        "5601": 0,
+        "5606": 0,
+        "5607": 0,
+        "4801": 0,
+        "3601": 0,
+        "2401": 0
+      },
+      "total": 0,
+      "target": 0,
+      "variance": 0,
+      "loss": 0,
+      "has_production": false
+    }
+  ],
+  "active_days_count": 24,
+  "average_daily_output": 1583,
+  "peak_day": {
+    "date": "2026-08-10",
+    "day_name": "Monday",
+    "models": {
+      "5601": 3178,
+      "5606": 0,
+      "5607": 0,
+      "4801": 0,
+      "3601": 0,
+      "2401": 0
+    },
+    "total": 3178,
+    "target": 1750,
+    "variance": 1428,
+    "loss": -1428,
+    "has_production": true
+  },
+  "raw_entries": [
+    {
+      "id": 1,
+      "date": "2026-08-01",
+      "item_code": "CF5601/CF5601IV",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Body}",
+      "qty": 450,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 2,
+      "date": "2026-08-01",
+      "item_code": "CF2401/CF2401IV",
+      "item_name": "24 Inch Super Ceiling Fan - Ivory {Body}",
+      "qty": 995,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "2401",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 4,
+      "date": "2026-08-02",
+      "item_code": "CF5601/CF5601IV",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Body}",
+      "qty": 1282,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 5,
+      "date": "2026-08-02",
+      "item_code": "CF2401/CF2401IV",
+      "item_name": "24 Inch Super Ceiling Fan - Ivory {Body}",
+      "qty": 96,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "2401",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 6,
+      "date": "2026-08-02",
+      "item_code": "CR5601IV",
+      "item_name": "56 Inch Premium Ceiling Fan- Ivory (Without Regulator) {Body}",
+      "qty": 75,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 7,
+      "date": "2026-08-02",
+      "item_code": "CF5606/CF5606IV",
+      "item_name": "56 Inch Premium Plus Ceiling Fan - Ivory {Body}",
+      "qty": 11,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5606",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 9,
+      "date": "2026-08-03",
+      "item_code": "CF5601/CF5601IV",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Body}",
+      "qty": 1800,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 12,
+      "date": "2026-08-04",
+      "item_code": "CF5601/CF5601IV",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Body}",
+      "qty": 1581,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 13,
+      "date": "2026-08-04",
+      "item_code": "CF5607/CF5607IV",
+      "item_name": "56 Inch Crown Ceiling Fan - Ivory {Body}",
+      "qty": 119,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5607",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 14,
+      "date": "2026-08-04",
+      "item_code": "CF5601/CF5601IV",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Body}",
+      "qty": 48,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 16,
+      "date": "2026-08-08",
+      "item_code": "CF5601/CF5601IV",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Body}",
+      "qty": 1283,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 17,
+      "date": "2026-08-08",
+      "item_code": "CF5606/CF5606IV",
+      "item_name": "56 Inch Premium Plus Ceiling Fan - Ivory {Body}",
+      "qty": 38,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5606",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 18,
+      "date": "2026-08-08",
+      "item_code": "CF5607/CF5607IV",
+      "item_name": "56 Inch Crown Ceiling Fan - Ivory {Body}",
+      "qty": 53,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5607",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 21,
+      "date": "2026-08-09",
+      "item_code": "CF5601/CF5601IV",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Body}",
+      "qty": 1700,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 24,
+      "date": "2026-08-10",
+      "item_code": "CF5601/CF5601IV",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Body}",
+      "qty": 3178,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 26,
+      "date": "2026-08-11",
+      "item_code": "CF5601/CF5601IV",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Body}",
+      "qty": 1700,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 28,
+      "date": "2026-08-12",
+      "item_code": "CF5601/CF5601IV",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Body}",
+      "qty": 1050,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 29,
+      "date": "2026-08-12",
+      "item_code": "CF5607/CF5607IV",
+      "item_name": "56 Inch Crown Ceiling Fan - Ivory {Body}",
+      "qty": 164,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5607",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 31,
+      "date": "2026-08-13",
+      "item_code": "CF5601/CF5601IV",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Body}",
+      "qty": 1650,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 32,
+      "date": "2026-08-13",
+      "item_code": "CF5601/CF5601IV",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Body}",
+      "qty": 82,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 36,
+      "date": "2026-08-14",
+      "item_code": "CF5601/CF5601IV",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Body}",
+      "qty": 1700,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 40,
+      "date": "2026-08-15",
+      "item_code": "CF5601/CF5601IV",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Body}",
+      "qty": 1700,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 45,
+      "date": "2026-08-16",
+      "item_code": "CF4801/CF4801IV",
+      "item_name": "48 Inch Popular Ceiling Fan - Ivory {Body}",
+      "qty": 800,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "4801",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 46,
+      "date": "2026-08-16",
+      "item_code": "CF5601/CF5601IV",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Body}",
+      "qty": 115,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 47,
+      "date": "2026-08-16",
+      "item_code": "CF5601/CF5601IV",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Body}",
+      "qty": 50,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 49,
+      "date": "2026-08-17",
+      "item_code": "CF5601/CF5601IV",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Body}",
+      "qty": 1050,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 50,
+      "date": "2026-08-17",
+      "item_code": "CF4801/CF4801IV",
+      "item_name": "48 Inch Popular Ceiling Fan - Ivory {Body}",
+      "qty": 367,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "4801",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 52,
+      "date": "2026-08-18",
+      "item_code": "CF5601/CF5601IV",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Body}",
+      "qty": 1700,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 54,
+      "date": "2026-08-19",
+      "item_code": "CF5601/CF5601IV",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Body}",
+      "qty": 1000,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 55,
+      "date": "2026-08-19",
+      "item_code": "CF3601/CF3601IV",
+      "item_name": "36 Inch Hero Ceiling Fan - Ivory {Body}",
+      "qty": 610,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "3601",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 57,
+      "date": "2026-08-20",
+      "item_code": "CF3601/CF3601IV",
+      "item_name": "36 Inch Hero Ceiling Fan - Ivory {Body}",
+      "qty": 1200,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "3601",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 59,
+      "date": "2026-08-22",
+      "item_code": "CF3601/CF3601IV",
+      "item_name": "36 Inch Hero Ceiling Fan - Ivory {Body}",
+      "qty": 1400,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "3601",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 62,
+      "date": "2026-08-23",
+      "item_code": "CF3601/CF3601IV",
+      "item_name": "36 Inch Hero Ceiling Fan - Ivory {Body}",
+      "qty": 1697,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "3601",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 64,
+      "date": "2026-08-24",
+      "item_code": "CF5601/CF5601IV",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Body}",
+      "qty": 1600,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 67,
+      "date": "2026-08-25",
+      "item_code": "CF5601/CF5601IV",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Body}",
+      "qty": 287,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 68,
+      "date": "2026-08-25",
+      "item_code": "CF2401/CF2401IV",
+      "item_name": "24 Inch Super Ceiling Fan - Ivory {Body}",
+      "qty": 450,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "2401",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 71,
+      "date": "2026-08-26",
+      "item_code": "CF2401/CF2401IV",
+      "item_name": "24 Inch Super Ceiling Fan - Ivory {Body}",
+      "qty": 1560,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "2401",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 74,
+      "date": "2026-08-27",
+      "item_code": "CF5601/CF5601IV",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Body}",
+      "qty": 2000,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601",
+      "part_type": "body",
+      "year": 2026
+    },
+    {
+      "id": 78,
+      "date": "2026-08-29",
+      "item_code": "CF5601/CF5601IV",
+      "item_name": "56 Inch Premium Ceiling Fan - Ivory {Body}",
+      "qty": 1350,
+      "month": "August",
+      "type": "Ceiling Fan",
+      "model_num": "5601",
+      "part_type": "body",
+      "year": 2026
+    }
+  ]
+}

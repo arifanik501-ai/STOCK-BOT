@@ -6,6 +6,7 @@ import io
 import csv
 import threading
 import mimetypes
+import hashlib
 from datetime import datetime
 from typing import Any, Dict, List, Optional
 from urllib.parse import urlparse, parse_qs, unquote
@@ -25,103 +26,94 @@ class SyncManager:
     def __init__(self, base_dir: str):
         self.base_dir = base_dir
         self.db = Database(base_dir)
-        self.is_syncing = False
-        self.progress_pct = 0
-        self.current_status = "Idle"
-        self.logs: list[dict] = []
-        self.last_report: dict = {}
         self.lock = threading.Lock()
-
-    def add_log(self, pct: int, msg: str, log_line: str):
-        with self.lock:
-            self.progress_pct = pct
-            self.current_status = msg
-            self.logs.append({
-                "time": datetime.now().strftime("%H:%M:%S"),
-                "percent": pct,
-                "message": log_line
-            })
-            if len(self.logs) > 500:
-                self.logs.pop(0)
+        self.is_running = False
+        self.progress_pct = 0
+        self.current_step = ""
+        self.last_log = ""
+        self.logs = []
+        self.last_report = None
+        self.status = "IDLE"
 
     def trigger_sync(self, config: dict) -> dict:
         with self.lock:
-            if self.is_syncing:
-                return {"status": "ALREADY_RUNNING", "message": "Sync is already in progress."}
-            self.is_syncing = True
-            self.progress_pct = 0
-            self.current_status = "Starting..."
-            self.logs = []
-            self.last_report = {}
+            if self.is_running:
+                return {"status": "ALREADY_RUNNING", "message": "Scrape operation currently in progress."}
+            self.is_running = True
+            self.progress_pct = 5
+            self.current_step = "Initializing connection..."
+            self.last_log = "[INIT] Background worker thread spawned."
+            self.logs = [self.last_log]
+            self.status = "AUTHENTICATING"
 
-        thread = threading.Thread(target=self._run_sync_worker, args=(config,), daemon=True)
-        thread.start()
-        return {"status": "STARTED", "message": "Sync initiated successfully."}
+        t = threading.Thread(target=self._run_sync_worker, args=(config,), daemon=True)
+        t.start()
+        return {"status": "STARTED", "message": "Synchronization task successfully queued."}
+
+    def _progress_cb(self, pct: int, msg: str, log_line: str):
+        with self.lock:
+            self.progress_pct = pct
+            self.current_step = msg
+            self.last_log = log_line
+            self.logs.append(log_line)
+            if len(self.logs) > 100:
+                self.logs.pop(0)
 
     def _run_sync_worker(self, config: dict):
         start_time = time.time()
         sync_time_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        self.add_log(1, "Starting Unified ERP Sync...", f"[START] Sync initiated at {sync_time_str}")
 
         try:
-            # 1. Load existing BOMs for differential comparison
+            with self.lock:
+                self.status = "SCRAPING"
+
             old_boms = self.db.get_all_boms()
-            self.add_log(3, "Loaded current local store.", f"[DB] Loaded {len(old_boms)} existing records for diff comparison.")
-
-            # 2. Run Scraper for BOMs and Warehouse Stock
-            scraper = BOMScraper(config, progress_callback=self.add_log)
+            scraper = BOMScraper(config, progress_callback=self._progress_cb)
             scrape_res = scraper.run_full_scrape()
-
             new_boms = scrape_res.get("boms", [])
             warehouse_stock = scrape_res.get("stock", [])
 
-            if not new_boms:
-                raise Exception("No BOMs could be retrieved from ERP.")
-
-            # 3. Calculate Differential on BOMs
-            self.add_log(96, "Calculating differences...", "[DIFF] Comparing newly scraped data with local database...")
             duration = time.time() - start_time
-            diff_report = DiffEngine.calculate_diff(old_boms, new_boms, duration_seconds=duration, sync_time_str=sync_time_str)
-            diff_report["total_stock_items"] = len(warehouse_stock)
+            diff = DiffEngine.calculate_diff(old_boms, new_boms, duration_seconds=duration, sync_time_str=sync_time_str)
+            diff["total_stock_items"] = len(warehouse_stock)
 
-            # 4. Save BOMs and Warehouse Stock to Database
-            self.add_log(98, "Saving to SQLite & JSON...", "[SAVE] Writing updated BOMs and Warehouse Stock datasets...")
-            self.db.save_all_boms(new_boms, sync_report=diff_report)
+            # Persist dataset
+            self.db.save_all_boms(new_boms, sync_report=diff)
             if warehouse_stock:
                 self.db.save_warehouse_stock(warehouse_stock)
 
-            # 5. Complete
-            summary_msg = f"+{diff_report['added_count']} Added, ~{diff_report['updated_count']} Updated (Total: {diff_report['total_boms']} BOMs & {len(warehouse_stock)} Stock Items)"
-            self.add_log(100, "Sync Complete!", f"[DONE] {summary_msg} in {duration:.2f}s.")
-            
             with self.lock:
-                self.last_report = diff_report
                 self.progress_pct = 100
-                self.current_status = "Completed"
+                self.current_step = "Sync completed successfully."
+                self.last_report = diff
+                self.status = "SUCCESS"
+                self.is_running = False
 
         except Exception as e:
-            err_msg = str(e)
-            self.add_log(100, f"Sync Failed: {err_msg}", f"[ERROR] {err_msg}")
             with self.lock:
-                self.progress_pct = 100
-                self.current_status = f"Error: {err_msg}"
+                self.status = f"Error: {str(e)}"
+                self.is_running = False
+                self.progress_pct = 0
+                self.current_step = "Sync encountered an unhandled error."
                 self.last_report = {
                     "status": "FAILED",
-                    "error": err_msg,
-                    "sync_time": sync_time_str
+                    "error": str(e),
+                    "sync_time": sync_time_str,
+                    "duration_seconds": round(time.time() - start_time, 2)
                 }
-        finally:
-            with self.lock:
-                self.is_syncing = False
 
     def get_progress(self) -> dict:
         with self.lock:
             return {
-                "is_syncing": self.is_syncing,
+                "is_running": self.is_running,
+                "is_syncing": self.is_running,
+                "progress_pct": self.progress_pct,
                 "percent": self.progress_pct,
-                "status": self.current_status,
+                "current_step": self.current_step,
+                "last_log": self.last_log,
                 "logs": list(self.logs),
-                "last_report": self.last_report
+                "last_report": self.last_report,
+                "status": self.status
             }
 
 
@@ -131,10 +123,11 @@ class BOMRequestHandler(BaseHTTPRequestHandler):
     base_dir: str = ""
 
     def log_message(self, format, *args):
+        # Mute standard noisy HTTP access logs in console for clean terminal
         pass
 
     def _send_json(self, data: Any, status_code: int = 200):
-        body = json.dumps(data, ensure_ascii=False).encode("utf-8")
+        body = json.dumps(data, indent=2, ensure_ascii=False).encode("utf-8")
         self.send_response(status_code)
         self.send_header("Content-Type", "application/json; charset=utf-8")
         self.send_header("Content-Length", str(len(body)))
@@ -180,6 +173,19 @@ class BOMRequestHandler(BaseHTTPRequestHandler):
         if path == "/api/stock":
             stock = self.sync_mgr.db.get_warehouse_stock()
             self._send_json(stock)
+            return
+
+        if path == "/api/physical-entry-sheet":
+            force = query_params.get("force", ["0"])[0] in ["1", "true"]
+            entries = self.sync_mgr.db.load_physical_entry_sheet(force_refresh=force)
+            self._send_json(entries)
+            return
+
+        if path == "/api/physical-matrix":
+            part = query_params.get("part", ["body"])[0]
+            force = query_params.get("force", ["0"])[0] in ["1", "true"]
+            matrix = self.sync_mgr.db.get_physical_matrix(part_type=part, force_refresh=force)
+            self._send_json(matrix)
             return
 
         if path == "/api/feasibility/matrix":

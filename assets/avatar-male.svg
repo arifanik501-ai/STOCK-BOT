@@ -1,0 +1,99 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="50%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDDCB5" />
+      <stop offset="100%" stop-color="#EBB383" />
+    </linearGradient>
+    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D3748" />
+      <stop offset="100%" stop-color="#1A202C" />
+    </linearGradient>
+    <linearGradient id="suitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="shirtGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#E2E8F0" />
+    </linearGradient>
+    <linearGradient id="tieGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="128" height="128" rx="32" fill="url(#bgGrad)" />
+
+  <!-- Subtle Rim Light / Inner Ring -->
+  <rect x="2" y="2" width="124" height="124" rx="30" fill="none" stroke="#A7F3D0" stroke-width="2" stroke-opacity="0.45" />
+
+  <!-- Shoulders & Body / Suit -->
+  <g filter="url(#softShadow)">
+    <path d="M22 128 C22 96, 38 88, 64 88 C90 88, 106 96, 106 128 Z" fill="url(#suitGrad)" />
+    <!-- White Shirt Collar -->
+    <path d="M50 88 L64 104 L78 88 L70 82 L64 88 L58 82 Z" fill="url(#shirtGrad)" />
+    <!-- Emerald Green Necktie -->
+    <path d="M62 89 L66 89 L67 106 L64 112 L61 106 Z" fill="url(#tieGrad)" />
+    <!-- Suit Lapels -->
+    <path d="M38 98 L50 88 L58 104 L44 128 Z" fill="#334155" opacity="0.8" />
+    <path d="M90 98 L78 88 L70 104 L84 128 Z" fill="#1E293B" opacity="0.9" />
+  </g>
+
+  <!-- Neck -->
+  <path d="M54 70 L74 70 L74 86 L54 86 Z" fill="url(#skinGrad)" />
+  <!-- Neck Shadow -->
+  <path d="M54 70 C58 76, 70 76, 74 70 L74 76 C70 82, 58 82, 54 76 Z" fill="#D97706" opacity="0.18" />
+
+  <!-- Head Base -->
+  <g filter="url(#softShadow)">
+    <ellipse cx="64" cy="52" rx="22" ry="26" fill="url(#skinGrad)" />
+  </g>
+
+  <!-- Ears -->
+  <ellipse cx="42" cy="53" rx="3.5" ry="6.5" fill="url(#skinGrad)" />
+  <ellipse cx="86" cy="53" rx="3.5" ry="6.5" fill="url(#skinGrad)" />
+  <path d="M42 51 C43 53, 43 55, 42 56" stroke="#CA8A04" stroke-width="1" stroke-linecap="round" fill="none" opacity="0.5" />
+  <path d="M86 51 C85 53, 85 55, 86 56" stroke="#CA8A04" stroke-width="1" stroke-linecap="round" fill="none" opacity="0.5" />
+
+  <!-- Male Hairstyle (Modern Executive Side-Part / Pompadour) -->
+  <path d="M42 46 C40 30, 52 20, 68 20 C82 20, 88 28, 88 40 C88 46, 85 49, 85 49 C85 49, 83 40, 78 37 C73 34, 58 35, 46 42 C44 43, 43 45, 42 46 Z" fill="url(#hairGrad)" />
+  <!-- Sideburns -->
+  <path d="M42 45 L44 54 L46 54 L44 45 Z" fill="url(#hairGrad)" />
+  <path d="M86 45 L84 54 L82 54 L84 45 Z" fill="url(#hairGrad)" />
+
+  <!-- Eyebrows -->
+  <path d="M50 45 Q56 42 60 45" stroke="#1E293B" stroke-width="2.5" stroke-linecap="round" fill="none" />
+  <path d="M68 45 Q72 42 78 45" stroke="#1E293B" stroke-width="2.5" stroke-linecap="round" fill="none" />
+
+  <!-- Eyes -->
+  <ellipse cx="55" cy="50" rx="2.5" ry="3" fill="#0F172A" />
+  <ellipse cx="73" cy="50" rx="2.5" ry="3" fill="#0F172A" />
+  <circle cx="56" cy="49" r="0.9" fill="#FFFFFF" />
+  <circle cx="74" cy="49" r="0.9" fill="#FFFFFF" />
+
+  <!-- Modern Glasses (Smart Professional Frame) -->
+  <rect x="47" y="44" width="15" height="12" rx="3.5" fill="none" stroke="#0F172A" stroke-width="1.8" />
+  <rect x="66" y="44" width="15" height="12" rx="3.5" fill="none" stroke="#0F172A" stroke-width="1.8" />
+  <path d="M62 49 L66 49" stroke="#0F172A" stroke-width="1.8" stroke-linecap="round" />
+  <path d="M47 48 L42 46" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" />
+  <path d="M81 48 L86 46" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" />
+  <!-- Glass Lens Sheen -->
+  <path d="M49 46 L53 46 L49 53 Z" fill="#FFFFFF" opacity="0.35" />
+  <path d="M68 46 L72 46 L68 53 Z" fill="#FFFFFF" opacity="0.35" />
+
+  <!-- Nose -->
+  <path d="M64 51 L63 58 L66 58" stroke="#CA8A04" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.6" />
+
+  <!-- Confident Smile -->
+  <path d="M57 63 Q64 68 71 63" stroke="#9A3412" stroke-width="1.8" stroke-linecap="round" fill="none" />
+
+</svg>
