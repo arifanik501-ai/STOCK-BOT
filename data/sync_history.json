@@ -1,5 +1,434 @@
 [
   {
+    "sync_time": "2026-09-01 12:38:08",
+    "duration_seconds": 16.84,
+    "total_boms": 174,
+    "added_count": 0,
+    "updated_count": 46,
+    "deleted_count": 0,
+    "unchanged_count": 128,
+    "added": [],
+    "updated": [
+      {
+        "bom_no": "23090001",
+        "product_name": "SFG1010001-Top Cover - 2401 (184mm)",
+        "item_code": "SFG1010001",
+        "section": "Dhalai and Die Casting Section",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090004",
+        "product_name": "SFG1010010-Bottom Cover  - 3601,  2401 (184mm)",
+        "item_code": "SFG1010010",
+        "section": "Dhalai and Die Casting Section",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090006",
+        "product_name": "SFG1010019-Armature 5.5 Circle 16mm",
+        "item_code": "SFG1010019",
+        "section": "Power Press and Stamping",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090009",
+        "product_name": "SFG1010031-Rotor 5.5 Circle 15.5mm",
+        "item_code": "SFG1010031",
+        "section": "Power Press and Stamping",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090010",
+        "product_name": "SFG1010035-Rotor with Ingot 5.5 Circle 15.5mm",
+        "item_code": "SFG1010035",
+        "section": "Dhalai and Die Casting Section",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090012",
+        "product_name": "SFG1010046-MS Blade 2401 (Sheet)",
+        "item_code": "SFG1010046",
+        "section": "Power Press and Stamping",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090015",
+        "product_name": "SFG1010061-Down Pipe 10 Inch -(5602,3601,2401)",
+        "item_code": "SFG1010061",
+        "section": "Power Press and Stamping",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090021",
+        "product_name": "SFG1010043-Aluminum Blade 3601 (Sheet)",
+        "item_code": "SFG1010043",
+        "section": "Power Press and Stamping",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090022",
+        "product_name": "SFG1010048-Blade MS Shank (3601)",
+        "item_code": "SFG1010048",
+        "section": "Power Press and Stamping",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090027",
+        "product_name": "SFG1010002-Top Cover-4801 (220mm)",
+        "item_code": "SFG1010002",
+        "section": "Dhalai and Die Casting Section",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090029",
+        "product_name": "SFG1010011-Bottom Cover-4801 (220mm)",
+        "item_code": "SFG1010011",
+        "section": "Dhalai and Die Casting Section",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090031",
+        "product_name": "SFG1010020-Armature 6 Circle 16 mm",
+        "item_code": "SFG1010020",
+        "section": "Power Press and Stamping",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090034",
+        "product_name": "SFG1010032-Rotor 6 Circle 15.5mm",
+        "item_code": "SFG1010032",
+        "section": "Power Press and Stamping",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090035",
+        "product_name": "SFG1010036-Rotor with Ingot 6 Circle 15.5mm",
+        "item_code": "SFG1010036",
+        "section": "Dhalai and Die Casting Section",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090037",
+        "product_name": "SFG1010044-Aluminum Blade 4801 (Sheet)",
+        "item_code": "SFG1010044",
+        "section": "Power Press and Stamping",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090042",
+        "product_name": "SFG1010003-Top Cover-5601 (232mm)",
+        "item_code": "SFG1010003",
+        "section": "Dhalai and Die Casting Section",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090044",
+        "product_name": "SFG1010012-Bottom Cover-5601 (232mm)",
+        "item_code": "SFG1010012",
+        "section": "Dhalai and Die Casting Section",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090046",
+        "product_name": "SFG1010022-Armature 7 Circle 15mm",
+        "item_code": "SFG1010022",
+        "section": "Power Press and Stamping",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090049",
+        "product_name": "SFG1010034-Rotor 7 Circle 14.5mm",
+        "item_code": "SFG1010034",
+        "section": "Power Press and Stamping",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090050",
+        "product_name": "SFG1010038-Rotor with Ingot 7 Circle 14.5mm",
+        "item_code": "SFG1010038",
+        "section": "Dhalai and Die Casting Section",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090052",
+        "product_name": "SFG1010045-Aluminum Blade 5601 (Sheet)",
+        "item_code": "SFG1010045",
+        "section": "Power Press and Stamping",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090053",
+        "product_name": "SFG1010049-Blade MS Shank (5601,4801)",
+        "item_code": "SFG1010049",
+        "section": "Power Press and Stamping",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090057",
+        "product_name": "SFG1010060-Down Pipe 10 Inch- 4801, 5601, 5603",
+        "item_code": "SFG1010060",
+        "section": "Power Press and Stamping",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090060",
+        "product_name": "SFG1010066-Down Pipe Clamp - 4801, 5601, 5603",
+        "item_code": "SFG1010066",
+        "section": "Power Press and Stamping",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090064",
+        "product_name": "SFG1010004-Top Cover-5602 (217mm)",
+        "item_code": "SFG1010004",
+        "section": "Dhalai and Die Casting Section",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090066",
+        "product_name": "SFG1010013-Bottom Cover-5602 (217mm)",
+        "item_code": "SFG1010013",
+        "section": "Dhalai and Die Casting Section",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090068",
+        "product_name": "SFG1010021-Armature 6 Circle 15mm Black Sheet",
+        "item_code": "SFG1010021",
+        "section": "Power Press and Stamping",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090071",
+        "product_name": "SFG1010033-Rotor 6 Circle 14.5mm Black Sheet",
+        "item_code": "SFG1010033",
+        "section": "Power Press and Stamping",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090072",
+        "product_name": "SFG1010037-Rotor with Ingot 6 Circle 14.5mm Black Sheet",
+        "item_code": "SFG1010037",
+        "section": "Dhalai and Die Casting Section",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090074",
+        "product_name": "SFG1010047-MS Blade 5602 (Sheet)",
+        "item_code": "SFG1010047",
+        "section": "Power Press and Stamping",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090075",
+        "product_name": "SFG1010050-Blade MS Shank (5602)",
+        "item_code": "SFG1010050",
+        "section": "Power Press and Stamping",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090087",
+        "product_name": "SFG1010084-Top Cover-5603 (232mm)",
+        "item_code": "SFG1010084",
+        "section": "Dhalai and Die Casting Section",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090090",
+        "product_name": "SFG1010091-Bottom Cover-5603 (232mm)",
+        "item_code": "SFG1010091",
+        "section": "Dhalai and Die Casting Section",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090092",
+        "product_name": "SFG1010093-Aluminum Blade 5603",
+        "item_code": "SFG1010093",
+        "section": "Power Press and Stamping",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090093",
+        "product_name": "SFG1010098-Blade MS Shank (5603)",
+        "item_code": "SFG1010098",
+        "section": "Power Press and Stamping",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090100",
+        "product_name": "SFG1010083-Top Cover  - 3601 (184mm)",
+        "item_code": "SFG1010083",
+        "section": "Dhalai and Die Casting Section",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090105",
+        "product_name": "SFG1010101-FAN Aluminium Bar",
+        "item_code": "SFG1010101",
+        "section": "Dhalai and Die Casting Section",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23100107",
+        "product_name": "SFG1010102-Down Pipe 1 Inch - Ivory",
+        "item_code": "SFG1010102",
+        "section": "Power Press and Stamping",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23120132",
+        "product_name": "SFG1010121-Armature 7 Circle 16mm",
+        "item_code": "SFG1010121",
+        "section": "Power Press and Stamping",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23120135",
+        "product_name": "SFG1010124-Rotor 7 Circle 15.5mm",
+        "item_code": "SFG1010124",
+        "section": "Power Press and Stamping",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23120136",
+        "product_name": "SFG1010125-Rotor with Ingot 7 Circle 15.5mm",
+        "item_code": "SFG1010125",
+        "section": "Dhalai and Die Casting Section",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23120138",
+        "product_name": "SFG1010127-Aluminum Blade 5607",
+        "item_code": "SFG1010127",
+        "section": "Power Press and Stamping",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23120139",
+        "product_name": "SFG1010128-Blade MS Shank (5607)",
+        "item_code": "SFG1010128",
+        "section": "Power Press and Stamping",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23120142",
+        "product_name": "SFG1010131-Top Cover - 5607",
+        "item_code": "SFG1010131",
+        "section": "Dhalai and Die Casting Section",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23120143",
+        "product_name": "SFG1010132-Bottom Cover - 5607",
+        "item_code": "SFG1010132",
+        "section": "Dhalai and Die Casting Section",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "24067048",
+        "product_name": "SFG1010143-Aluminium Bar (SFG)",
+        "item_code": "SFG1010143",
+        "section": "Dhalai and Die Casting Section",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      }
+    ],
+    "deleted": [],
+    "status": "SUCCESS",
+    "total_stock_items": 419
+  },
+  {
     "sync_time": "2026-09-01 07:19:48",
     "duration_seconds": 17.97,
     "total_boms": 174,
