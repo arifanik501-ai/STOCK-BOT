@@ -1,5 +1,19 @@
 [
   {
+    "sync_time": "2026-09-03 06:53:41",
+    "duration_seconds": 15.2,
+    "total_boms": 174,
+    "added_count": 0,
+    "updated_count": 0,
+    "deleted_count": 0,
+    "unchanged_count": 174,
+    "added": [],
+    "updated": [],
+    "deleted": [],
+    "status": "SUCCESS",
+    "total_stock_items": 419
+  },
+  {
     "sync_time": "2026-09-02 15:21:53",
     "duration_seconds": 15.38,
     "total_boms": 174,
