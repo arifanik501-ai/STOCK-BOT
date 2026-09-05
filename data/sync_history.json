@@ -1,5 +1,232 @@
 [
   {
+    "sync_time": "2026-09-05 06:42:53",
+    "duration_seconds": 17.04,
+    "total_boms": 181,
+    "added_count": 7,
+    "updated_count": 18,
+    "deleted_count": 0,
+    "unchanged_count": 156,
+    "added": [
+      {
+        "bom_no": "26090753",
+        "product_name": "FOA01400/FOA01400-56 Inch Speed King Celing Fan Body Carton",
+        "item_code": "FOA01400/FOA01400",
+        "section": "FAN Assemble",
+        "raw_materials_count": 1
+      },
+      {
+        "bom_no": "26090754",
+        "product_name": "FOA01500/FOA01500-56 Inch Speed King Celing Fan Blade Carton",
+        "item_code": "FOA01500/FOA01500",
+        "section": "FAN Assemble",
+        "raw_materials_count": 1
+      },
+      {
+        "bom_no": "26090755",
+        "product_name": "FOA02200/FOA02200-48 Inch Popular Ceiling Fan Body Carton",
+        "item_code": "FOA02200/FOA02200",
+        "section": "FAN Assemble",
+        "raw_materials_count": 1
+      },
+      {
+        "bom_no": "26090756",
+        "product_name": "FOA02300/FOA02300-48 Inch Popular Ceiling Fan Blade Carton",
+        "item_code": "FOA02300/FOA02300",
+        "section": "FAN Assemble",
+        "raw_materials_count": 1
+      },
+      {
+        "bom_no": "26090757",
+        "product_name": "FOA02400/FOA02400-36 Inch Hero Ceiling Fan Body Carton",
+        "item_code": "FOA02400/FOA02400",
+        "section": "FAN Assemble",
+        "raw_materials_count": 1
+      },
+      {
+        "bom_no": "26090758",
+        "product_name": "FOA02500/FOA02500-36 Inch Hero Ceiling Fan Blade Carton",
+        "item_code": "FOA02500/FOA02500",
+        "section": "FAN Assemble",
+        "raw_materials_count": 1
+      },
+      {
+        "bom_no": "26090759",
+        "product_name": "FOA02600/FOA02600-24 Inch Super Ceiling Fan Body Carton",
+        "item_code": "FOA02600/FOA02600",
+        "section": "FAN Assemble",
+        "raw_materials_count": 1
+      }
+    ],
+    "updated": [
+      {
+        "bom_no": "23090019",
+        "product_name": "SFG1010076-2401 Super Ceiling Fan Complete Body - Ivory",
+        "item_code": "SFG1010076",
+        "section": "FAN Assemble",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090026",
+        "product_name": "SFG1010077-3601 Hero Ceiling Fan Complete Body - Ivory",
+        "item_code": "SFG1010077",
+        "section": "FAN Assemble",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090041",
+        "product_name": "SFG1010078-4801 Popular Ceiling Fan Complete Body - Ivory",
+        "item_code": "SFG1010078",
+        "section": "FAN Assemble",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090063",
+        "product_name": "SFG1010079-5601 Premium Ceiling Fan Complete Body - Ivory",
+        "item_code": "SFG1010079",
+        "section": "FAN Assemble",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090097",
+        "product_name": "SFG1010097-5603 Premium Gold Complete Body - Ivory",
+        "item_code": "SFG1010097",
+        "section": "FAN Assemble",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090105",
+        "product_name": "SFG1010101-FAN Aluminium Bar",
+        "item_code": "SFG1010101",
+        "section": "Dhalai and Die Casting Section",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23100116",
+        "product_name": "SFG1010111-5601 Premium Ceiling Fan Complete Body-White",
+        "item_code": "SFG1010111",
+        "section": "FAN Assemble",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23100118",
+        "product_name": "SFG1010112-5601 Premium Ceiling Fan Complete Body - White (W.R.)",
+        "item_code": "SFG1010112",
+        "section": "FAN Assemble",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23100120",
+        "product_name": "SFG1010116-5601 Premium Ceiling Fan Complete Body - Ivory (W.R.)",
+        "item_code": "SFG1010116",
+        "section": "FAN Assemble",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23100122",
+        "product_name": "SFG1010117-5603 Premium Gold Complete Body - Ivory (W.R.)",
+        "item_code": "SFG1010117",
+        "section": "FAN Assemble",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23100124",
+        "product_name": "SFG1010118-4801 Popular Ceiling Fan Complete Body - Ivory (W.R.)",
+        "item_code": "SFG1010118",
+        "section": "FAN Assemble",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23100126",
+        "product_name": "SFG1010113-3601 Hero Ceiling Fan Complete Body - Ivory (W.R.)",
+        "item_code": "SFG1010113",
+        "section": "FAN Assemble",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23120131",
+        "product_name": "SFG1010120-5601 Premium Ceiling Fan Complete Body -Ivory (Gang Regulator)",
+        "item_code": "SFG1010120",
+        "section": "FAN Assemble",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23120299",
+        "product_name": "SFG1010137-5606 Premium Plus Ceiling Fan Complete Body - Ivory",
+        "item_code": "SFG1010137",
+        "section": "FAN Assemble",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23120300",
+        "product_name": "SFG1010138-5606 Premium Plus Ceiling Fan Complete Body - Ivory (W.R)",
+        "item_code": "SFG1010138",
+        "section": "FAN Assemble",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23120304",
+        "product_name": "SFG1010140-5606 Premium Plus Ceiling Fan Complete Body - Ivory (Gang Regulator)",
+        "item_code": "SFG1010140",
+        "section": "FAN Assemble",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "25120751",
+        "product_name": "CF5601M-7 Inch Circle Electric Motor (Premium)",
+        "item_code": "CF5601M",
+        "section": "FAN Assemble",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "25120754",
+        "product_name": "CF3601M-5.5 Inchs Circle Electric Motor (Hero)",
+        "item_code": "CF3601M",
+        "section": "FAN Assemble",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      }
+    ],
+    "deleted": [],
+    "status": "SUCCESS",
+    "total_stock_items": 419
+  },
+  {
     "sync_time": "2026-09-04 16:17:40",
     "duration_seconds": 15.67,
     "total_boms": 174,
