@@ -1,5 +1,34 @@
 [
   {
+    "sync_time": "2026-09-06 06:52:49",
+    "duration_seconds": 17.8,
+    "total_boms": 183,
+    "added_count": 2,
+    "updated_count": 0,
+    "deleted_count": 0,
+    "unchanged_count": 181,
+    "added": [
+      {
+        "bom_no": "26090773",
+        "product_name": "FOA04600-Swasti Body Carton - (Rec-12 inch)",
+        "item_code": "FOA04600",
+        "section": "Rojonigondha - FAN Floor",
+        "raw_materials_count": 1
+      },
+      {
+        "bom_no": "26090774",
+        "product_name": "FOA04700-Swasti Body Carton - (Rec-16 inch)",
+        "item_code": "FOA04700",
+        "section": "Rojonigondha - FAN Floor",
+        "raw_materials_count": 1
+      }
+    ],
+    "updated": [],
+    "deleted": [],
+    "status": "SUCCESS",
+    "total_stock_items": 419
+  },
+  {
     "sync_time": "2026-09-05 16:17:29",
     "duration_seconds": 16.56,
     "total_boms": 181,
