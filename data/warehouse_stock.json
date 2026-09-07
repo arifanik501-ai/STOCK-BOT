@@ -9,7 +9,7 @@
     "total_qty": 4239.00002,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "1500100003",
@@ -21,7 +21,7 @@
     "total_qty": 20315.2,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "1500100014",
@@ -33,7 +33,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010001",
@@ -45,7 +45,7 @@
     "total_qty": 32482.654,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010002",
@@ -57,7 +57,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010004",
@@ -69,7 +69,7 @@
     "total_qty": 19992.21,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010005",
@@ -81,7 +81,7 @@
     "total_qty": 95315.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010006",
@@ -93,7 +93,7 @@
     "total_qty": 51090.14,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010007",
@@ -105,7 +105,7 @@
     "total_qty": 3313.749,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010008",
@@ -117,7 +117,7 @@
     "total_qty": 999.45,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010011",
@@ -125,11 +125,11 @@
     "category": "Ceiling Raw",
     "unit": "KG",
     "store_qty": 0.0,
-    "section_qty": 14065.1,
-    "total_qty": 14065.1,
+    "section_qty": 12162.68,
+    "total_qty": 12162.68,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010012",
@@ -141,7 +141,7 @@
     "total_qty": 3969.64,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010013",
@@ -153,7 +153,7 @@
     "total_qty": 7420.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010014",
@@ -165,7 +165,7 @@
     "total_qty": 9170.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010015",
@@ -177,7 +177,7 @@
     "total_qty": 30506.06,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010016",
@@ -185,23 +185,23 @@
     "category": "Ceiling Raw",
     "unit": "KG",
     "store_qty": 73.06,
-    "section_qty": 4429.36,
-    "total_qty": 4502.42,
+    "section_qty": 3896.41,
+    "total_qty": 3969.47,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010017",
     "item_name": "Super Wire (SWG 34) / 0.233mm",
     "category": "Ceiling Raw",
     "unit": "KG",
-    "store_qty": 15.87,
+    "store_qty": 977.67,
     "section_qty": 25.811,
-    "total_qty": 41.681,
+    "total_qty": 1003.481,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010018",
@@ -209,11 +209,11 @@
     "category": "Ceiling Raw",
     "unit": "KG",
     "store_qty": 0.0,
-    "section_qty": 122.57,
-    "total_qty": 122.57,
+    "section_qty": 123.12,
+    "total_qty": 123.12,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010019",
@@ -221,11 +221,11 @@
     "category": "Ceiling Raw",
     "unit": "KG",
     "store_qty": 1638.733,
-    "section_qty": 102.6375,
-    "total_qty": 1741.3705,
+    "section_qty": 109.561,
+    "total_qty": 1748.2939999999999,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010020",
@@ -233,11 +233,11 @@
     "category": "Ceiling Raw",
     "unit": "KG",
     "store_qty": 1958.71,
-    "section_qty": 214.914,
-    "total_qty": 2173.624,
+    "section_qty": 201.485,
+    "total_qty": 2160.195,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010021",
@@ -245,11 +245,11 @@
     "category": "Ceiling Raw",
     "unit": "KG",
     "store_qty": 55.002,
-    "section_qty": 21.654,
-    "total_qty": 76.656,
+    "section_qty": 20.049,
+    "total_qty": 75.051,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010022",
@@ -257,11 +257,11 @@
     "category": "Ceiling Raw",
     "unit": "Mtr",
     "store_qty": 4780.0,
-    "section_qty": 8693.03,
-    "total_qty": 13473.03,
+    "section_qty": 8465.03,
+    "total_qty": 13245.03,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010023",
@@ -269,11 +269,11 @@
     "category": "Ceiling Raw",
     "unit": "Mtr",
     "store_qty": 9100.004,
-    "section_qty": 2205.373,
-    "total_qty": 11305.377,
+    "section_qty": 1980.647,
+    "total_qty": 11080.651000000002,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010024",
@@ -281,11 +281,11 @@
     "category": "Ceiling Raw",
     "unit": "Mtr",
     "store_qty": 0.0,
-    "section_qty": 874.102,
-    "total_qty": 874.102,
+    "section_qty": 818.902,
+    "total_qty": 818.902,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010025",
@@ -297,7 +297,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010026",
@@ -305,11 +305,11 @@
     "category": "Ceiling Raw",
     "unit": "Ltr",
     "store_qty": 1110.0,
-    "section_qty": 359.361,
-    "total_qty": 1469.3609999999999,
+    "section_qty": 412.927,
+    "total_qty": 1522.9270000000001,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010027",
@@ -317,11 +317,11 @@
     "category": "Ceiling Raw",
     "unit": "Ltr",
     "store_qty": 4150.0,
-    "section_qty": 335.381,
-    "total_qty": 4485.381,
+    "section_qty": 368.3,
+    "total_qty": 4518.3,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010028",
@@ -329,11 +329,11 @@
     "category": "Ceiling Raw",
     "unit": "KG",
     "store_qty": 37.97,
-    "section_qty": 0.878,
-    "total_qty": 38.848,
+    "section_qty": 29.81,
+    "total_qty": 67.78,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010030",
@@ -341,11 +341,11 @@
     "category": "Ceiling Raw",
     "unit": "Pcs",
     "store_qty": 43788.0,
-    "section_qty": 5861.0,
-    "total_qty": 49649.0,
+    "section_qty": 5661.0,
+    "total_qty": 49449.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010031",
@@ -353,11 +353,11 @@
     "category": "Ceiling Raw",
     "unit": "pcs",
     "store_qty": 7730.0,
-    "section_qty": 7474.0,
-    "total_qty": 15204.0,
+    "section_qty": 6474.0,
+    "total_qty": 14204.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010032",
@@ -369,7 +369,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010033",
@@ -381,7 +381,7 @@
     "total_qty": 2360.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010034",
@@ -393,7 +393,7 @@
     "total_qty": 10384.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010035",
@@ -405,7 +405,7 @@
     "total_qty": 14262.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010036",
@@ -413,11 +413,11 @@
     "category": "Ceiling Raw",
     "unit": "KG",
     "store_qty": 26.0008,
-    "section_qty": 19.54428,
-    "total_qty": 45.54508,
+    "section_qty": 19.78328,
+    "total_qty": 45.78408,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010037",
@@ -425,11 +425,11 @@
     "category": "Ceiling Raw",
     "unit": "KG",
     "store_qty": 6.003,
-    "section_qty": 7.6887,
-    "total_qty": 13.6917,
+    "section_qty": 7.5887,
+    "total_qty": 13.5917,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010038",
@@ -437,11 +437,11 @@
     "category": "Ceiling Raw",
     "unit": "KG",
     "store_qty": 4.0022,
-    "section_qty": 0.384,
-    "total_qty": 4.3862000000000005,
+    "section_qty": 0.364,
+    "total_qty": 4.3662,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010039",
@@ -449,11 +449,11 @@
     "category": "Ceiling Raw",
     "unit": "KG",
     "store_qty": 2980.0,
-    "section_qty": 1430.598,
-    "total_qty": 4410.598,
+    "section_qty": 1299.198,
+    "total_qty": 4279.198,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010040",
@@ -461,11 +461,11 @@
     "category": "Ceiling Raw",
     "unit": "KG",
     "store_qty": 450.0,
-    "section_qty": 392.3445,
-    "total_qty": 842.3444999999999,
+    "section_qty": 382.9245,
+    "total_qty": 832.9245000000001,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010041",
@@ -473,11 +473,11 @@
     "category": "Ceiling Raw",
     "unit": "Ltr",
     "store_qty": 350.0,
-    "section_qty": 174.1036,
-    "total_qty": 524.1036,
+    "section_qty": 166.6936,
+    "total_qty": 516.6936000000001,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010042",
@@ -485,11 +485,11 @@
     "category": "Ceiling Raw",
     "unit": "Ltr",
     "store_qty": 420.0,
-    "section_qty": 187.38115,
-    "total_qty": 607.3811499999999,
+    "section_qty": 176.85115,
+    "total_qty": 596.85115,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010043",
@@ -497,11 +497,11 @@
     "category": "Ceiling Raw",
     "unit": "Ltr",
     "store_qty": 525.0,
-    "section_qty": 366.279,
-    "total_qty": 891.279,
+    "section_qty": 352.279,
+    "total_qty": 877.279,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010044",
@@ -509,11 +509,11 @@
     "category": "Ceiling Raw",
     "unit": "Ltr",
     "store_qty": 100.0,
-    "section_qty": 79.10145,
-    "total_qty": 179.10145,
+    "section_qty": 77.50145,
+    "total_qty": 177.50145,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010045",
@@ -521,11 +521,11 @@
     "category": "Ceiling Raw",
     "unit": "Kg",
     "store_qty": 75.0,
-    "section_qty": 119.1015,
-    "total_qty": 194.1015,
+    "section_qty": 117.5015,
+    "total_qty": 192.5015,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010046",
@@ -533,11 +533,11 @@
     "category": "Ceiling Raw",
     "unit": "Ltr",
     "store_qty": 240.0,
-    "section_qty": 62.271,
-    "total_qty": 302.271,
+    "section_qty": 51.271,
+    "total_qty": 291.271,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010047",
@@ -549,7 +549,7 @@
     "total_qty": 61.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010048",
@@ -561,7 +561,7 @@
     "total_qty": 43.034,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010049",
@@ -569,11 +569,11 @@
     "category": "Ceiling Raw",
     "unit": "Ltr.",
     "store_qty": 30.0,
-    "section_qty": 54.63886,
-    "total_qty": 84.63886,
+    "section_qty": 53.90886,
+    "total_qty": 83.90886,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010054",
@@ -581,11 +581,11 @@
     "category": "Ceiling Raw",
     "unit": "Ltr",
     "store_qty": 0.003,
-    "section_qty": 3.4365,
-    "total_qty": 3.4395000000000002,
+    "section_qty": 14.4955,
+    "total_qty": 14.4985,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010056",
@@ -593,11 +593,11 @@
     "category": "Ceiling Raw",
     "unit": "Pcs",
     "store_qty": 137749.0,
-    "section_qty": 8095.0,
-    "total_qty": 145844.0,
+    "section_qty": 7895.0,
+    "total_qty": 145644.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010057",
@@ -609,7 +609,7 @@
     "total_qty": 8335.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010058",
@@ -617,11 +617,11 @@
     "category": "Ceiling Raw",
     "unit": "Pcs",
     "store_qty": 4500.0,
-    "section_qty": 4793.0,
-    "total_qty": 9293.0,
+    "section_qty": 3884.0,
+    "total_qty": 8384.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010059",
@@ -629,11 +629,11 @@
     "category": "Ceiling Raw",
     "unit": "Pcs",
     "store_qty": 22200.0,
-    "section_qty": 2619.0,
-    "total_qty": 24819.0,
+    "section_qty": 2552.0,
+    "total_qty": 24752.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010060",
@@ -641,11 +641,11 @@
     "category": "Ceiling Raw",
     "unit": "Pcs",
     "store_qty": 42200.0,
-    "section_qty": 24566.0,
-    "total_qty": 66766.0,
+    "section_qty": 23648.0,
+    "total_qty": 65848.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010061",
@@ -653,11 +653,11 @@
     "category": "Ceiling Raw",
     "unit": "Pcs",
     "store_qty": 35000.0,
-    "section_qty": 13692.0,
-    "total_qty": 48692.0,
+    "section_qty": 13492.0,
+    "total_qty": 48492.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010062",
@@ -665,11 +665,11 @@
     "category": "Ceiling Raw",
     "unit": "Mtr",
     "store_qty": 53440.0,
-    "section_qty": 4692.0,
-    "total_qty": 58132.0,
+    "section_qty": 8352.0,
+    "total_qty": 61792.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010064",
@@ -681,7 +681,7 @@
     "total_qty": 2626.571,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010065",
@@ -689,11 +689,11 @@
     "category": "Ceiling Raw",
     "unit": "KG",
     "store_qty": 20.00886,
-    "section_qty": 49.79328,
-    "total_qty": 69.80214000000001,
+    "section_qty": 26.36348,
+    "total_qty": 46.372339999999994,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010066",
@@ -701,11 +701,11 @@
     "category": "Ceiling Raw",
     "unit": "KG",
     "store_qty": 525.0,
-    "section_qty": 220.745,
-    "total_qty": 745.745,
+    "section_qty": 216.665,
+    "total_qty": 741.665,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010067",
@@ -713,11 +713,11 @@
     "category": "Ceiling Raw",
     "unit": "Pcs",
     "store_qty": 30750.0,
-    "section_qty": 38579.0,
-    "total_qty": 69329.0,
+    "section_qty": 37661.0,
+    "total_qty": 68411.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010068",
@@ -725,11 +725,11 @@
     "category": "Ceiling Raw",
     "unit": "KG",
     "store_qty": 50.004,
-    "section_qty": 96.902,
-    "total_qty": 146.906,
+    "section_qty": 96.102,
+    "total_qty": 146.106,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010069",
@@ -737,11 +737,11 @@
     "category": "Ceiling Raw",
     "unit": "KG",
     "store_qty": 50.0,
-    "section_qty": 61.7116,
-    "total_qty": 111.7116,
+    "section_qty": 60.0036,
+    "total_qty": 110.0036,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010070",
@@ -749,35 +749,35 @@
     "category": "Ceiling Raw",
     "unit": "KG",
     "store_qty": 7.3,
-    "section_qty": 82.9262,
-    "total_qty": 90.22619999999999,
+    "section_qty": 95.291,
+    "total_qty": 102.591,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010071",
     "item_name": "Down Pipe Bolt 8mm x 1.5```` (50/kg)",
     "category": "Ceiling Raw",
     "unit": "Pcs",
-    "store_qty": 4845.0,
-    "section_qty": 38191.0,
-    "total_qty": 43036.0,
+    "store_qty": 9551.0,
+    "section_qty": 36678.0,
+    "total_qty": 46229.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010072",
     "item_name": "Down Pipe Bolt 8mm x 2```` (45/kg)",
     "category": "Ceiling Raw",
     "unit": "Pcs",
-    "store_qty": 0.0,
-    "section_qty": 9172.8,
-    "total_qty": 9172.8,
+    "store_qty": 1293.0,
+    "section_qty": 11848.0,
+    "total_qty": 13141.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010073",
@@ -785,23 +785,23 @@
     "category": "Ceiling Raw",
     "unit": "Pcs",
     "store_qty": 0.0,
-    "section_qty": 225532.0,
-    "total_qty": 225532.0,
+    "section_qty": 223824.0,
+    "total_qty": 223824.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010074",
     "item_name": "Shaft/XL /Safity lock Screw 3/16x3/8```` (400/kg)",
     "category": "Ceiling Raw",
     "unit": "KG",
-    "store_qty": 51.604,
-    "section_qty": 292.078,
-    "total_qty": 343.68199999999996,
+    "store_qty": 92.004,
+    "section_qty": 289.842,
+    "total_qty": 381.846,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010075",
@@ -813,7 +813,7 @@
     "total_qty": 253.03,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010076",
@@ -825,19 +825,19 @@
     "total_qty": 116.036,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010077",
     "item_name": "Blade/Body Screw 12.7x6mm,H=10mm (220/kg)",
     "category": "Ceiling Raw",
     "unit": "KG",
-    "store_qty": 29.9461,
-    "section_qty": 1401.2741,
-    "total_qty": 1431.2202000000002,
+    "store_qty": 106.0461,
+    "section_qty": 1394.0741,
+    "total_qty": 1500.1202,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010078",
@@ -849,7 +849,7 @@
     "total_qty": 12347.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010079",
@@ -861,7 +861,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010080",
@@ -869,11 +869,11 @@
     "category": "Ceiling Raw",
     "unit": "Pcs",
     "store_qty": 21989.0,
-    "section_qty": 39158.0,
-    "total_qty": 61147.0,
+    "section_qty": 38958.0,
+    "total_qty": 60947.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010081",
@@ -881,11 +881,11 @@
     "category": "Ceiling Raw",
     "unit": "Pcs",
     "store_qty": 0.0,
-    "section_qty": 69193.0,
-    "total_qty": 69193.0,
+    "section_qty": 68593.0,
+    "total_qty": 68593.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010083",
@@ -897,7 +897,7 @@
     "total_qty": 42667.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010084",
@@ -905,11 +905,11 @@
     "category": "Ceiling Raw",
     "unit": "Pcs",
     "store_qty": 0.001,
-    "section_qty": 6000.0,
-    "total_qty": 6000.001,
+    "section_qty": 5800.0,
+    "total_qty": 5800.001,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010085",
@@ -917,11 +917,11 @@
     "category": "Ceiling Raw",
     "unit": "Pcs",
     "store_qty": 0.0,
-    "section_qty": 61581.0,
-    "total_qty": 61581.0,
+    "section_qty": 61186.0,
+    "total_qty": 61186.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010086",
@@ -933,7 +933,7 @@
     "total_qty": 94885.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010087",
@@ -945,19 +945,19 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010090",
     "item_name": "Flaxible Cable 14x0.0076 - Red",
     "category": "Ceiling Raw",
     "unit": "Mtr",
-    "store_qty": 13340.0,
-    "section_qty": 22861.595,
-    "total_qty": 36201.595,
+    "store_qty": 31570.0,
+    "section_qty": 22420.355,
+    "total_qty": 53990.354999999996,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010091",
@@ -965,11 +965,11 @@
     "category": "Ceiling Raw",
     "unit": "Mtr",
     "store_qty": 1900.0,
-    "section_qty": 5578.606,
-    "total_qty": 7478.606,
+    "section_qty": 5418.726,
+    "total_qty": 7318.726,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010092",
@@ -981,7 +981,7 @@
     "total_qty": 8.3,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010094",
@@ -989,11 +989,11 @@
     "category": "Ceiling Raw",
     "unit": "KG",
     "store_qty": 11.997,
-    "section_qty": 13.124,
-    "total_qty": 25.121000000000002,
+    "section_qty": 22.4005,
+    "total_qty": 34.3975,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010107",
@@ -1005,7 +1005,7 @@
     "total_qty": 20740.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010108",
@@ -1013,11 +1013,11 @@
     "category": "Ceiling Raw",
     "unit": "Ltr",
     "store_qty": 28.527,
-    "section_qty": 73.1149,
-    "total_qty": 101.6419,
+    "section_qty": 70.7149,
+    "total_qty": 99.2419,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010109",
@@ -1029,7 +1029,7 @@
     "total_qty": 7885.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010110",
@@ -1041,31 +1041,31 @@
     "total_qty": 13543.57,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010111",
     "item_name": "Flaxible Cable 14x0.0076 - Yellow",
     "category": "Ceiling Raw",
     "unit": "Mtr",
-    "store_qty": 7000.0,
-    "section_qty": 10278.185,
-    "total_qty": 17278.184999999998,
+    "store_qty": 19300.0,
+    "section_qty": 9912.185,
+    "total_qty": 29212.184999999998,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010112",
     "item_name": "Flaxible Cable 14x0.0076 - Black",
     "category": "Ceiling Raw",
     "unit": "Mtr",
-    "store_qty": 8100.0,
-    "section_qty": 19039.0165,
-    "total_qty": 27139.0165,
+    "store_qty": 16500.0,
+    "section_qty": 18551.0165,
+    "total_qty": 35051.0165,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010113",
@@ -1077,7 +1077,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010114",
@@ -1089,7 +1089,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010115",
@@ -1101,7 +1101,7 @@
     "total_qty": 43.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010117",
@@ -1113,19 +1113,19 @@
     "total_qty": 35.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010118",
     "item_name": "FAN Copper Rod 8mm",
     "category": "Ceiling Raw",
     "unit": "KG",
-    "store_qty": 12264.68,
+    "store_qty": 11343.27,
     "section_qty": 0.0,
-    "total_qty": 12264.68,
+    "total_qty": 11343.27,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010119",
@@ -1137,7 +1137,7 @@
     "total_qty": 785.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010120",
@@ -1149,7 +1149,7 @@
     "total_qty": 1483.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010121",
@@ -1161,7 +1161,7 @@
     "total_qty": 1443.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010122",
@@ -1173,7 +1173,7 @@
     "total_qty": 1387.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010123",
@@ -1185,7 +1185,7 @@
     "total_qty": 836.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010124",
@@ -1197,7 +1197,7 @@
     "total_qty": 376.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010125",
@@ -1209,7 +1209,7 @@
     "total_qty": 585.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010126",
@@ -1221,7 +1221,7 @@
     "total_qty": 1164.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010127",
@@ -1233,7 +1233,7 @@
     "total_qty": 551.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010128",
@@ -1245,7 +1245,7 @@
     "total_qty": 200.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010129",
@@ -1257,7 +1257,7 @@
     "total_qty": 2181.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010130",
@@ -1269,7 +1269,7 @@
     "total_qty": 20.152,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010131",
@@ -1281,7 +1281,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010132",
@@ -1293,7 +1293,7 @@
     "total_qty": 132.74204,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010133",
@@ -1305,7 +1305,7 @@
     "total_qty": 42.63,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010134",
@@ -1317,31 +1317,31 @@
     "total_qty": 11270.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010135",
     "item_name": "Ball Bearing 6202 -(CnU)",
     "category": "Ceiling Raw",
     "unit": "Pcs",
-    "store_qty": 28800.0,
-    "section_qty": 11474.0,
-    "total_qty": 40274.0,
+    "store_qty": 126000.0,
+    "section_qty": 11274.0,
+    "total_qty": 137274.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010136",
     "item_name": "Ball Bearing 6203 (CnU)",
     "category": "Ceiling Raw",
     "unit": "Pcs",
-    "store_qty": 29700.0,
-    "section_qty": 11355.0,
-    "total_qty": 41055.0,
+    "store_qty": 126900.0,
+    "section_qty": 11155.0,
+    "total_qty": 138055.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010137",
@@ -1349,11 +1349,11 @@
     "category": "Ceiling Raw",
     "unit": "Pcs",
     "store_qty": 0.0,
-    "section_qty": 84099.0,
-    "total_qty": 84099.0,
+    "section_qty": 82899.0,
+    "total_qty": 82899.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010138",
@@ -1361,11 +1361,11 @@
     "category": "Ceiling Raw",
     "unit": "Pcs",
     "store_qty": 206058.0,
-    "section_qty": 56157.0,
-    "total_qty": 262215.0,
+    "section_qty": 55957.0,
+    "total_qty": 262015.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010139",
@@ -1377,7 +1377,7 @@
     "total_qty": 29736.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010140",
@@ -1389,7 +1389,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3101010141",
@@ -1401,31 +1401,31 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3102010001",
     "item_name": "Exhaust Fan Base (8``)",
     "category": "Exhaust Raw",
     "unit": "Pcs",
-    "store_qty": 143.0,
-    "section_qty": 3823.0,
-    "total_qty": 3966.0,
+    "store_qty": 593.0,
+    "section_qty": 2329.0,
+    "total_qty": 2922.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3102010002",
     "item_name": "Exhaust Fan Cover (8``)",
     "category": "Exhaust Raw",
     "unit": "Pcs",
-    "store_qty": 0.0,
-    "section_qty": 4264.0,
-    "total_qty": 4264.0,
+    "store_qty": 2680.0,
+    "section_qty": 2770.0,
+    "total_qty": 5450.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3102010003",
@@ -1433,11 +1433,11 @@
     "category": "Exhaust Raw",
     "unit": "Pcs",
     "store_qty": 0.0,
-    "section_qty": 2912.0,
-    "total_qty": 2912.0,
+    "section_qty": 2930.0,
+    "total_qty": 2930.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3102010004",
@@ -1445,11 +1445,11 @@
     "category": "Exhaust Raw",
     "unit": "Pcs",
     "store_qty": 0.0,
-    "section_qty": 2496.0,
-    "total_qty": 2496.0,
+    "section_qty": 1002.0,
+    "total_qty": 1002.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3102010005",
@@ -1457,11 +1457,11 @@
     "category": "Exhaust Raw",
     "unit": "Pcs",
     "store_qty": 0.0,
-    "section_qty": 2944.0,
-    "total_qty": 2944.0,
+    "section_qty": 1450.0,
+    "total_qty": 1450.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3102010006",
@@ -1469,11 +1469,11 @@
     "category": "Exhaust Raw",
     "unit": "Pcs",
     "store_qty": 0.0,
-    "section_qty": 874.0,
-    "total_qty": 874.0,
+    "section_qty": 880.0,
+    "total_qty": 880.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3102010007",
@@ -1481,11 +1481,11 @@
     "category": "Exhaust Raw",
     "unit": "Pcs",
     "store_qty": 0.0,
-    "section_qty": 3772.0,
-    "total_qty": 3772.0,
+    "section_qty": 2278.0,
+    "total_qty": 2278.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3102010008",
@@ -1493,11 +1493,11 @@
     "category": "Exhaust Raw",
     "unit": "Pcs",
     "store_qty": 6459.0,
-    "section_qty": 5787.0,
-    "total_qty": 12246.0,
+    "section_qty": 4293.0,
+    "total_qty": 10752.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3102010009",
@@ -1505,11 +1505,11 @@
     "category": "Exhaust Raw",
     "unit": "Pcs",
     "store_qty": 0.0,
-    "section_qty": 15971.0,
-    "total_qty": 15971.0,
+    "section_qty": 14477.0,
+    "total_qty": 14477.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3102010010",
@@ -1521,7 +1521,7 @@
     "total_qty": 0.0048,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3102010011",
@@ -1529,11 +1529,11 @@
     "category": "Exhaust Raw",
     "unit": "Pcs",
     "store_qty": 3500.0,
-    "section_qty": 4919.0,
-    "total_qty": 8419.0,
+    "section_qty": 3425.0,
+    "total_qty": 6925.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3102010012",
@@ -1541,23 +1541,23 @@
     "category": "Exhaust Raw",
     "unit": "Mtr",
     "store_qty": 0.0,
-    "section_qty": 4258.02,
-    "total_qty": 4258.02,
+    "section_qty": 3331.74,
+    "total_qty": 3331.74,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3102010013",
     "item_name": "5/32 Inch, 9mm Screw",
     "category": "Exhaust Raw",
     "unit": "KG",
-    "store_qty": 10.004,
-    "section_qty": 6.439,
-    "total_qty": 16.442999999999998,
+    "store_qty": 0.004,
+    "section_qty": 2.993,
+    "total_qty": 2.997,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3102010014",
@@ -1569,7 +1569,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3102010016",
@@ -1581,7 +1581,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3102010017",
@@ -1593,7 +1593,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3102010019",
@@ -1601,11 +1601,11 @@
     "category": "Exhaust Raw",
     "unit": "Pcs",
     "store_qty": 0.0,
-    "section_qty": 14741.0,
-    "total_qty": 14741.0,
+    "section_qty": 13247.0,
+    "total_qty": 13247.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3102010020",
@@ -1613,11 +1613,11 @@
     "category": "Exhaust Raw",
     "unit": "Pcs",
     "store_qty": 0.0,
-    "section_qty": 1556.0,
-    "total_qty": 1556.0,
+    "section_qty": 62.0,
+    "total_qty": 62.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3102010021",
@@ -1629,7 +1629,7 @@
     "total_qty": 2004.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3102010022",
@@ -1637,11 +1637,11 @@
     "category": "Exhaust Raw",
     "unit": "Pcs",
     "store_qty": 0.0,
-    "section_qty": 3560.0,
-    "total_qty": 3560.0,
+    "section_qty": 2066.0,
+    "total_qty": 2066.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3102010023",
@@ -1653,19 +1653,19 @@
     "total_qty": 1303.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3102010024",
     "item_name": "Exhaust Fan Spring - FAN",
     "category": "Exhaust Raw",
     "unit": "Pcs",
-    "store_qty": 2150.0,
-    "section_qty": 54.0,
-    "total_qty": 2204.0,
+    "store_qty": 0.0,
+    "section_qty": 710.0,
+    "total_qty": 710.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3102010025",
@@ -1677,7 +1677,7 @@
     "total_qty": 44.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3102010026",
@@ -1689,7 +1689,7 @@
     "total_qty": 28.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010000",
@@ -1701,7 +1701,7 @@
     "total_qty": 1170.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010001",
@@ -1713,7 +1713,7 @@
     "total_qty": 1130.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010002",
@@ -1725,7 +1725,7 @@
     "total_qty": 969.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010003",
@@ -1737,7 +1737,7 @@
     "total_qty": 982.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010004",
@@ -1749,7 +1749,7 @@
     "total_qty": 1070.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010005",
@@ -1761,7 +1761,7 @@
     "total_qty": 1054.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010006",
@@ -1773,7 +1773,7 @@
     "total_qty": 1054.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010007",
@@ -1785,7 +1785,7 @@
     "total_qty": 1070.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010008",
@@ -1797,7 +1797,7 @@
     "total_qty": 1160.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010009",
@@ -1809,7 +1809,7 @@
     "total_qty": 2309.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010010",
@@ -1821,7 +1821,7 @@
     "total_qty": 1992.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010011",
@@ -1833,7 +1833,7 @@
     "total_qty": 2103.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010012",
@@ -1845,7 +1845,7 @@
     "total_qty": 2135.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010013",
@@ -1857,7 +1857,7 @@
     "total_qty": 2021.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010014",
@@ -1869,7 +1869,7 @@
     "total_qty": 1833.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010015",
@@ -1881,7 +1881,7 @@
     "total_qty": 1954.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010016",
@@ -1893,7 +1893,7 @@
     "total_qty": 2016.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010017",
@@ -1905,7 +1905,7 @@
     "total_qty": 2022.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010018",
@@ -1917,7 +1917,7 @@
     "total_qty": 1944.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010019",
@@ -1929,7 +1929,7 @@
     "total_qty": 1964.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010020",
@@ -1941,7 +1941,7 @@
     "total_qty": 2203.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010021",
@@ -1953,7 +1953,7 @@
     "total_qty": 1803.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010022",
@@ -1965,7 +1965,7 @@
     "total_qty": 2070.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010023",
@@ -1977,7 +1977,7 @@
     "total_qty": 1162.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010024",
@@ -1989,7 +1989,7 @@
     "total_qty": 1092.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010025",
@@ -2001,7 +2001,7 @@
     "total_qty": 1070.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010026",
@@ -2013,7 +2013,7 @@
     "total_qty": 1973.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010027",
@@ -2025,7 +2025,7 @@
     "total_qty": 2016.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010028",
@@ -2037,7 +2037,7 @@
     "total_qty": 1770.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010029",
@@ -2049,7 +2049,7 @@
     "total_qty": 1970.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010031",
@@ -2061,7 +2061,7 @@
     "total_qty": 992.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010032",
@@ -2073,7 +2073,7 @@
     "total_qty": 2276.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010033",
@@ -2085,7 +2085,7 @@
     "total_qty": 1112.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010034",
@@ -2097,7 +2097,7 @@
     "total_qty": 1956.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010035",
@@ -2109,7 +2109,7 @@
     "total_qty": 7880.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010036",
@@ -2121,7 +2121,7 @@
     "total_qty": 35970.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010037",
@@ -2133,7 +2133,7 @@
     "total_qty": 1934.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010038",
@@ -2145,7 +2145,7 @@
     "total_qty": 1970.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010039",
@@ -2157,7 +2157,7 @@
     "total_qty": 1970.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010040",
@@ -2169,7 +2169,7 @@
     "total_qty": 1944.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010041",
@@ -2181,7 +2181,7 @@
     "total_qty": 1952.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010042",
@@ -2193,7 +2193,7 @@
     "total_qty": 1952.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010043",
@@ -2205,7 +2205,7 @@
     "total_qty": 1965.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010044",
@@ -2217,7 +2217,7 @@
     "total_qty": 1611.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010045",
@@ -2229,7 +2229,7 @@
     "total_qty": 1970.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010046",
@@ -2241,7 +2241,7 @@
     "total_qty": 3935.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010047",
@@ -2253,7 +2253,7 @@
     "total_qty": 5866.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010048",
@@ -2265,7 +2265,7 @@
     "total_qty": 3935.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010049",
@@ -2277,7 +2277,7 @@
     "total_qty": 3935.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010050",
@@ -2289,7 +2289,7 @@
     "total_qty": 34815.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010051",
@@ -2301,7 +2301,7 @@
     "total_qty": 3940.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010052",
@@ -2313,7 +2313,7 @@
     "total_qty": 17856.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010053",
@@ -2325,7 +2325,7 @@
     "total_qty": 3935.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010054",
@@ -2337,7 +2337,7 @@
     "total_qty": 1070.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010055",
@@ -2349,7 +2349,7 @@
     "total_qty": 1070.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010056",
@@ -2361,7 +2361,7 @@
     "total_qty": 1970.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010057",
@@ -2373,7 +2373,7 @@
     "total_qty": 1970.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010058",
@@ -2385,7 +2385,7 @@
     "total_qty": 1970.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010059",
@@ -2397,7 +2397,7 @@
     "total_qty": 1070.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010060",
@@ -2409,7 +2409,7 @@
     "total_qty": 2140.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010061",
@@ -2421,7 +2421,7 @@
     "total_qty": 1232.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010062",
@@ -2433,7 +2433,7 @@
     "total_qty": 1424.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010063",
@@ -2445,7 +2445,7 @@
     "total_qty": 922.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010064",
@@ -2457,7 +2457,7 @@
     "total_qty": 1586.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010065",
@@ -2469,7 +2469,7 @@
     "total_qty": 1005.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010066",
@@ -2481,7 +2481,7 @@
     "total_qty": 906.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010067",
@@ -2493,7 +2493,7 @@
     "total_qty": 1143.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010068",
@@ -2505,7 +2505,7 @@
     "total_qty": 900.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010069",
@@ -2517,7 +2517,7 @@
     "total_qty": 1287.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010070",
@@ -2529,7 +2529,7 @@
     "total_qty": 1189.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010071",
@@ -2541,7 +2541,7 @@
     "total_qty": 822.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010072",
@@ -2553,7 +2553,7 @@
     "total_qty": 985.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010073",
@@ -2565,7 +2565,7 @@
     "total_qty": 822.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010074",
@@ -2577,7 +2577,7 @@
     "total_qty": 1693.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010075",
@@ -2589,7 +2589,7 @@
     "total_qty": 900.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010076",
@@ -2601,7 +2601,7 @@
     "total_qty": 900.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3103010077",
@@ -2613,7 +2613,7 @@
     "total_qty": 900.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "312024211310243",
@@ -2625,7 +2625,7 @@
     "total_qty": 2.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "313224511310244",
@@ -2637,7 +2637,7 @@
     "total_qty": 1.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010002",
@@ -2645,11 +2645,11 @@
     "category": "Packing Materials - FAN",
     "unit": "Pcs",
     "store_qty": 249105.0,
-    "section_qty": 62884.0,
-    "total_qty": 311989.0,
+    "section_qty": 58810.0,
+    "total_qty": 307915.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010003",
@@ -2657,11 +2657,11 @@
     "category": "Packing Materials - FAN",
     "unit": "Pcs",
     "store_qty": 41880.0,
-    "section_qty": 32639.44,
-    "total_qty": 74519.44,
+    "section_qty": 31177.54,
+    "total_qty": 73057.54000000001,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010004",
@@ -2669,11 +2669,11 @@
     "category": "Packing Materials - FAN",
     "unit": "Pcs",
     "store_qty": 91925.0,
-    "section_qty": 4451.0,
-    "total_qty": 96376.0,
+    "section_qty": 4251.0,
+    "total_qty": 96176.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010005",
@@ -2685,7 +2685,7 @@
     "total_qty": 868.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010006",
@@ -2697,7 +2697,7 @@
     "total_qty": 4967.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010007",
@@ -2709,7 +2709,7 @@
     "total_qty": 9181.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010008",
@@ -2721,7 +2721,7 @@
     "total_qty": 13245.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010009",
@@ -2733,7 +2733,7 @@
     "total_qty": 8770.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010010",
@@ -2745,7 +2745,7 @@
     "total_qty": 104106.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010011",
@@ -2757,7 +2757,7 @@
     "total_qty": 19772.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010013",
@@ -2765,11 +2765,11 @@
     "category": "Packing Materials - FAN",
     "unit": "Pcs",
     "store_qty": 37500.0,
-    "section_qty": 9143.0,
-    "total_qty": 46643.0,
+    "section_qty": 8225.0,
+    "total_qty": 45725.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010014",
@@ -2777,11 +2777,11 @@
     "category": "Packing Materials - FAN",
     "unit": "Pcs",
     "store_qty": 26500.0,
-    "section_qty": 48223.0,
-    "total_qty": 74723.0,
+    "section_qty": 46529.0,
+    "total_qty": 73029.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010015",
@@ -2789,11 +2789,11 @@
     "category": "Packing Materials - FAN",
     "unit": "Pcs",
     "store_qty": 58490.0,
-    "section_qty": 10660.0,
-    "total_qty": 69150.0,
+    "section_qty": 10460.0,
+    "total_qty": 68950.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010016",
@@ -2805,7 +2805,7 @@
     "total_qty": 7204.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010017",
@@ -2817,7 +2817,7 @@
     "total_qty": 1987.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010018",
@@ -2829,7 +2829,7 @@
     "total_qty": 4738.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010019",
@@ -2837,23 +2837,23 @@
     "category": "Packing Materials - FAN",
     "unit": "Pcs",
     "store_qty": 3100.0,
-    "section_qty": 1718.0,
-    "total_qty": 4818.0,
+    "section_qty": 1518.0,
+    "total_qty": 4618.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010020",
     "item_name": "Cork Sheet -5602````",
     "category": "Packing Materials - FAN",
     "unit": "Pcs",
-    "store_qty": 1474.0,
+    "store_qty": 5874.0,
     "section_qty": 1010.0,
-    "total_qty": 2484.0,
+    "total_qty": 6884.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010021",
@@ -2865,19 +2865,19 @@
     "total_qty": 4738.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010022",
     "item_name": "Body Carton -Premium (5601)-263x264x213mm",
     "category": "Packing Materials - FAN",
     "unit": "Pcs",
-    "store_qty": 7425.0,
-    "section_qty": 400.0,
-    "total_qty": 7825.0,
+    "store_qty": 5425.0,
+    "section_qty": 2200.0,
+    "total_qty": 7625.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010023",
@@ -2889,7 +2889,7 @@
     "total_qty": 1650.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010024",
@@ -2901,19 +2901,19 @@
     "total_qty": 273.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010026",
     "item_name": "Body Carton -Speed king (5602) -220x220x208mm",
     "category": "Packing Materials - FAN",
     "unit": "Pcs",
-    "store_qty": 319.0,
+    "store_qty": 1894.0,
     "section_qty": 1085.0,
-    "total_qty": 1404.0,
+    "total_qty": 2979.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010027",
@@ -2925,7 +2925,7 @@
     "total_qty": 1448.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010028",
@@ -2937,7 +2937,7 @@
     "total_qty": 1616.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010029",
@@ -2949,7 +2949,7 @@
     "total_qty": 3852.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010030",
@@ -2957,11 +2957,11 @@
     "category": "Packing Materials - FAN",
     "unit": "Pcs",
     "store_qty": 3980.0,
-    "section_qty": 2208.0,
-    "total_qty": 6188.0,
+    "section_qty": 2160.0,
+    "total_qty": 6140.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010031",
@@ -2973,7 +2973,7 @@
     "total_qty": 65.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010032",
@@ -2985,31 +2985,31 @@
     "total_qty": 71.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010034",
     "item_name": "Blade Carton -Speed king (5602)-622x127x30mm",
     "category": "Packing Materials - FAN",
     "unit": "Pcs",
-    "store_qty": 764.0,
+    "store_qty": 2114.0,
     "section_qty": 0.0,
-    "total_qty": 764.0,
+    "total_qty": 2114.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010035",
     "item_name": "Blade Carton -Popular (4801)-528x144x32mm",
     "category": "Packing Materials - FAN",
     "unit": "Pcs",
-    "store_qty": 4115.0,
-    "section_qty": 200.0,
-    "total_qty": 4315.0,
+    "store_qty": 2115.0,
+    "section_qty": 890.0,
+    "total_qty": 3005.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010036",
@@ -3021,7 +3021,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010037",
@@ -3029,11 +3029,11 @@
     "category": "Packing Materials - FAN",
     "unit": "KG",
     "store_qty": 650.0,
-    "section_qty": 81.137,
-    "total_qty": 731.137,
+    "section_qty": 362.038,
+    "total_qty": 1012.038,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010038",
@@ -3041,11 +3041,11 @@
     "category": "Packing Materials - FAN",
     "unit": "KG",
     "store_qty": 406.7,
-    "section_qty": 73.86,
-    "total_qty": 480.56,
+    "section_qty": 247.95,
+    "total_qty": 654.65,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010039",
@@ -3053,11 +3053,11 @@
     "category": "Packing Materials - FAN",
     "unit": "KG",
     "store_qty": 379.999,
-    "section_qty": 95.181,
-    "total_qty": 475.18,
+    "section_qty": 128.36,
+    "total_qty": 508.35900000000004,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010040",
@@ -3065,11 +3065,11 @@
     "category": "Packing Materials - FAN",
     "unit": "KG",
     "store_qty": 100.004,
-    "section_qty": 51.66,
-    "total_qty": 151.664,
+    "section_qty": 274.08,
+    "total_qty": 374.084,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010041",
@@ -3077,11 +3077,11 @@
     "category": "Packing Materials - FAN",
     "unit": "KG",
     "store_qty": 125.002,
-    "section_qty": 67.165,
-    "total_qty": 192.167,
+    "section_qty": 95.368,
+    "total_qty": 220.37,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010042",
@@ -3089,11 +3089,11 @@
     "category": "Packing Materials - FAN",
     "unit": "KG",
     "store_qty": 50.001,
-    "section_qty": 25.812,
-    "total_qty": 75.813,
+    "section_qty": 253.185,
+    "total_qty": 303.186,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010043",
@@ -3101,11 +3101,11 @@
     "category": "Packing Materials - FAN",
     "unit": "KG",
     "store_qty": 87.46,
-    "section_qty": 57.33815,
-    "total_qty": 144.79815,
+    "section_qty": 53.0308,
+    "total_qty": 140.49079999999998,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010046",
@@ -3113,11 +3113,11 @@
     "category": "Packing Materials - FAN",
     "unit": "Mtr",
     "store_qty": 64952.0,
-    "section_qty": 46701.1728,
-    "total_qty": 111653.1728,
+    "section_qty": 44210.6668,
+    "total_qty": 109162.6668,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010051",
@@ -3129,7 +3129,7 @@
     "total_qty": 765.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010052",
@@ -3137,11 +3137,11 @@
     "category": "Packing Materials - FAN",
     "unit": "Pcs",
     "store_qty": 4000.0,
-    "section_qty": 14103.0,
-    "total_qty": 18103.0,
+    "section_qty": 13801.0,
+    "total_qty": 17801.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010053",
@@ -3153,7 +3153,7 @@
     "total_qty": 80.6361,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010054",
@@ -3165,7 +3165,7 @@
     "total_qty": 11812.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010055",
@@ -3177,7 +3177,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010057",
@@ -3189,7 +3189,7 @@
     "total_qty": 1385.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010058",
@@ -3201,7 +3201,7 @@
     "total_qty": 1474.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010059",
@@ -3213,7 +3213,7 @@
     "total_qty": 200.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010060",
@@ -3225,7 +3225,7 @@
     "total_qty": 1434.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010061",
@@ -3237,7 +3237,7 @@
     "total_qty": 679.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010062",
@@ -3245,11 +3245,11 @@
     "category": "Packing Materials - FAN",
     "unit": "Pcs",
     "store_qty": 86900.0,
-    "section_qty": 25364.0,
-    "total_qty": 112264.0,
+    "section_qty": 23290.0,
+    "total_qty": 110190.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010063",
@@ -3261,7 +3261,7 @@
     "total_qty": 1466.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010064",
@@ -3273,7 +3273,7 @@
     "total_qty": 3694.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010065",
@@ -3285,7 +3285,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010066",
@@ -3297,7 +3297,7 @@
     "total_qty": 2670.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010067",
@@ -3309,7 +3309,7 @@
     "total_qty": 44.46,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010068",
@@ -3321,7 +3321,7 @@
     "total_qty": 128.81,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010070",
@@ -3333,7 +3333,7 @@
     "total_qty": 1000.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010071",
@@ -3345,7 +3345,7 @@
     "total_qty": 2900.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010072",
@@ -3357,7 +3357,7 @@
     "total_qty": 10220.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010073",
@@ -3369,7 +3369,7 @@
     "total_qty": 2163.3728,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010074",
@@ -3381,7 +3381,7 @@
     "total_qty": 6426.4384,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010075",
@@ -3393,19 +3393,19 @@
     "total_qty": 4310.9344,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010076",
     "item_name": "Capacitor Warranty Card 2.5 µF -Fan",
     "category": "Packing Materials - FAN",
     "unit": "Pcs",
-    "store_qty": 73500.0,
-    "section_qty": 5136.0,
+    "store_qty": 33500.0,
+    "section_qty": 45136.0,
     "total_qty": 78636.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010077",
@@ -3417,7 +3417,7 @@
     "total_qty": 37336.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010078",
@@ -3429,7 +3429,7 @@
     "total_qty": 14.60912,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010079",
@@ -3437,11 +3437,11 @@
     "category": "Packing Materials - FAN",
     "unit": "Pcs",
     "store_qty": 0.0,
-    "section_qty": 4367.0,
-    "total_qty": 4367.0,
+    "section_qty": 2873.0,
+    "total_qty": 2873.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010080",
@@ -3453,7 +3453,7 @@
     "total_qty": 1420.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010081",
@@ -3461,23 +3461,23 @@
     "category": "Packing Materials - FAN",
     "unit": "Pcs",
     "store_qty": 0.0,
-    "section_qty": 19310.0,
-    "total_qty": 19310.0,
+    "section_qty": 17816.0,
+    "total_qty": 17816.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010083",
     "item_name": "Warranty Card (Aero Flow)",
     "category": "Packing Materials - FAN",
     "unit": "Pcs",
-    "store_qty": 13300.0,
-    "section_qty": 12260.0,
-    "total_qty": 25560.0,
+    "store_qty": 29300.0,
+    "section_qty": 10766.0,
+    "total_qty": 40066.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3202010001",
@@ -3485,11 +3485,11 @@
     "category": "Exhaust Raw",
     "unit": "KG",
     "store_qty": 120.0,
-    "section_qty": 79.845,
-    "total_qty": 199.845,
+    "section_qty": 57.435,
+    "total_qty": 177.435,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3202010002",
@@ -3501,7 +3501,7 @@
     "total_qty": 965.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3202010007",
@@ -3509,11 +3509,11 @@
     "category": "Exhaust Raw",
     "unit": "KG",
     "store_qty": 48.07,
-    "section_qty": 57.0327,
-    "total_qty": 105.1027,
+    "section_qty": 46.8417,
+    "total_qty": 94.9117,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3202010008",
@@ -3525,7 +3525,7 @@
     "total_qty": 537.519,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3202010009",
@@ -3537,7 +3537,7 @@
     "total_qty": 1748.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3202010010",
@@ -3549,7 +3549,7 @@
     "total_qty": 7977.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3202010011",
@@ -3561,7 +3561,7 @@
     "total_qty": 6377.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3202010012",
@@ -3573,31 +3573,31 @@
     "total_qty": 18094.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3202010013",
     "item_name": "Exhaust Fan Shutter (10``)",
     "category": "Exhaust Raw",
     "unit": "Pcs",
-    "store_qty": 0.0,
+    "store_qty": 1000.0,
     "section_qty": 1056.0,
-    "total_qty": 1056.0,
+    "total_qty": 2056.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3202010014",
     "item_name": "Exhaust Fan Stick (10``)",
     "category": "Exhaust Raw",
     "unit": "Pcs",
-    "store_qty": 8929.0,
+    "store_qty": 16071.0,
     "section_qty": 499.0,
-    "total_qty": 9428.0,
+    "total_qty": 16570.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3202010015",
@@ -3609,7 +3609,7 @@
     "total_qty": 1657.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3202010016",
@@ -3621,7 +3621,7 @@
     "total_qty": 1059.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3202010017",
@@ -3633,7 +3633,7 @@
     "total_qty": 3012.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "60058",
@@ -3645,7 +3645,7 @@
     "total_qty": 10.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700000001",
@@ -3657,7 +3657,7 @@
     "total_qty": 42.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700000002",
@@ -3669,19 +3669,19 @@
     "total_qty": 2.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700000003",
     "item_name": "Hands Gloves - Cotton",
     "category": "Production Consumables - FAN",
     "unit": "Pcs",
-    "store_qty": 1926.0,
-    "section_qty": 0.0,
+    "store_qty": 1686.0,
+    "section_qty": 240.0,
     "total_qty": 1926.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700000004",
@@ -3693,7 +3693,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700000005",
@@ -3705,7 +3705,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700000006",
@@ -3717,7 +3717,7 @@
     "total_qty": 1.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700000007",
@@ -3729,7 +3729,7 @@
     "total_qty": 3.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700000008",
@@ -3741,7 +3741,7 @@
     "total_qty": 9.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700000009",
@@ -3753,7 +3753,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700000010",
@@ -3765,7 +3765,7 @@
     "total_qty": 3400.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700000011",
@@ -3777,7 +3777,7 @@
     "total_qty": 1380.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700000012",
@@ -3789,7 +3789,7 @@
     "total_qty": 20.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700000013",
@@ -3801,7 +3801,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700000014",
@@ -3813,7 +3813,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700000015",
@@ -3825,7 +3825,7 @@
     "total_qty": 110.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700000017",
@@ -3837,7 +3837,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700000018",
@@ -3849,7 +3849,7 @@
     "total_qty": 68.4,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700000019",
@@ -3861,7 +3861,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700000020",
@@ -3873,7 +3873,7 @@
     "total_qty": 50.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700000021",
@@ -3885,7 +3885,7 @@
     "total_qty": 236.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700000022",
@@ -3897,7 +3897,7 @@
     "total_qty": 207.9964,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700000023",
@@ -3909,7 +3909,7 @@
     "total_qty": 1300.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700000024",
@@ -3921,7 +3921,7 @@
     "total_qty": 3130.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700100023",
@@ -3933,7 +3933,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700100026",
@@ -3945,7 +3945,7 @@
     "total_qty": 4000.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700100027",
@@ -3957,7 +3957,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700100028",
@@ -3969,7 +3969,7 @@
     "total_qty": 1500.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700100029",
@@ -3981,7 +3981,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700100031",
@@ -3993,7 +3993,7 @@
     "total_qty": 30.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700100032",
@@ -4005,7 +4005,7 @@
     "total_qty": 100000.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700100033",
@@ -4017,7 +4017,7 @@
     "total_qty": 9.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700100034",
@@ -4029,7 +4029,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700100035",
@@ -4041,7 +4041,7 @@
     "total_qty": 100000.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700100036",
@@ -4053,7 +4053,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700100037",
@@ -4065,7 +4065,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700100038",
@@ -4077,7 +4077,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700100039",
@@ -4089,7 +4089,7 @@
     "total_qty": 5000.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "700100041",
@@ -4101,7 +4101,7 @@
     "total_qty": 25.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "Erro-2",
@@ -4113,7 +4113,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "Error-1",
@@ -4125,7 +4125,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010005",
@@ -4137,7 +4137,7 @@
     "total_qty": 2108.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010006",
@@ -4149,7 +4149,7 @@
     "total_qty": 8796.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010007",
@@ -4157,11 +4157,11 @@
     "category": "FAN SFG",
     "unit": "Pcs",
     "store_qty": 0.0,
-    "section_qty": 2242.0,
-    "total_qty": 2242.0,
+    "section_qty": 2742.0,
+    "total_qty": 2742.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010008",
@@ -4169,11 +4169,11 @@
     "category": "FAN SFG",
     "unit": "Pcs",
     "store_qty": 0.0,
-    "section_qty": 3689.0,
-    "total_qty": 3689.0,
+    "section_qty": 3489.0,
+    "total_qty": 3489.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010009",
@@ -4181,11 +4181,11 @@
     "category": "FAN SFG",
     "unit": "Pcs",
     "store_qty": 0.0,
-    "section_qty": 2887.0,
-    "total_qty": 2887.0,
+    "section_qty": 5287.0,
+    "total_qty": 5287.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010014",
@@ -4197,7 +4197,7 @@
     "total_qty": 3019.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010015",
@@ -4209,7 +4209,7 @@
     "total_qty": 8265.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010016",
@@ -4221,7 +4221,7 @@
     "total_qty": 3631.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010017",
@@ -4229,11 +4229,11 @@
     "category": "FAN SFG",
     "unit": "Pcs",
     "store_qty": 0.0,
-    "section_qty": 7535.0,
-    "total_qty": 7535.0,
+    "section_qty": 7335.0,
+    "total_qty": 7335.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010018",
@@ -4241,11 +4241,11 @@
     "category": "FAN SFG",
     "unit": "Pcs",
     "store_qty": 0.0,
-    "section_qty": 3062.0,
-    "total_qty": 3062.0,
+    "section_qty": 5562.0,
+    "total_qty": 5562.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010020",
@@ -4257,7 +4257,7 @@
     "total_qty": 2220.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010026",
@@ -4265,11 +4265,11 @@
     "category": "FAN SFG",
     "unit": "Pcs",
     "store_qty": 0.0,
-    "section_qty": 6724.0,
-    "total_qty": 6724.0,
+    "section_qty": 8139.0,
+    "total_qty": 8139.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010027",
@@ -4281,7 +4281,7 @@
     "total_qty": 52.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010028",
@@ -4289,11 +4289,11 @@
     "category": "FAN SFG",
     "unit": "Pcs",
     "store_qty": 0.0,
-    "section_qty": 20.0,
-    "total_qty": 20.0,
+    "section_qty": 1020.0,
+    "total_qty": 1020.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010029",
@@ -4305,7 +4305,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010030",
@@ -4317,7 +4317,7 @@
     "total_qty": 418.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010039",
@@ -4329,7 +4329,7 @@
     "total_qty": 3375.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010040",
@@ -4341,7 +4341,7 @@
     "total_qty": 2931.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010041",
@@ -4353,7 +4353,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010042",
@@ -4361,11 +4361,11 @@
     "category": "FAN SFG",
     "unit": "Pcs",
     "store_qty": 0.0,
-    "section_qty": 1736.0,
-    "total_qty": 1736.0,
+    "section_qty": 1536.0,
+    "total_qty": 1536.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010056",
@@ -4373,11 +4373,11 @@
     "category": "FAN SFG",
     "unit": "Set",
     "store_qty": 0.0,
-    "section_qty": 8029.0,
-    "total_qty": 8029.0,
+    "section_qty": 9029.0,
+    "total_qty": 9029.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010058",
@@ -4385,11 +4385,11 @@
     "category": "FAN SFG",
     "unit": "Set",
     "store_qty": 0.0,
-    "section_qty": 77.0,
-    "total_qty": 77.0,
+    "section_qty": 29.0,
+    "total_qty": 29.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010059",
@@ -4401,7 +4401,7 @@
     "total_qty": 31.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010064",
@@ -4409,11 +4409,11 @@
     "category": "FAN SFG",
     "unit": "Pcs",
     "store_qty": 0.0,
-    "section_qty": 9236.0,
-    "total_qty": 9236.0,
+    "section_qty": 9954.0,
+    "total_qty": 9954.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010065",
@@ -4425,7 +4425,7 @@
     "total_qty": 5835.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010068",
@@ -4437,7 +4437,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010069",
@@ -4449,7 +4449,7 @@
     "total_qty": 3680.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010070",
@@ -4457,11 +4457,11 @@
     "category": "FAN SFG",
     "unit": "Set",
     "store_qty": 0.0,
-    "section_qty": 7628.0,
-    "total_qty": 7628.0,
+    "section_qty": 7428.0,
+    "total_qty": 7428.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010071",
@@ -4473,7 +4473,7 @@
     "total_qty": 3168.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010072",
@@ -4485,7 +4485,7 @@
     "total_qty": 3.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010073",
@@ -4493,11 +4493,11 @@
     "category": "FAN SFG",
     "unit": "Set",
     "store_qty": 1.0,
-    "section_qty": 223.0,
-    "total_qty": 224.0,
+    "section_qty": 33.0,
+    "total_qty": 34.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010074",
@@ -4505,11 +4505,11 @@
     "category": "FAN SFG",
     "unit": "Set",
     "store_qty": 22.0,
-    "section_qty": 192.0,
-    "total_qty": 214.0,
+    "section_qty": 40.0,
+    "total_qty": 62.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010075",
@@ -4521,7 +4521,7 @@
     "total_qty": 102.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010076",
@@ -4533,7 +4533,7 @@
     "total_qty": 1.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010077",
@@ -4545,7 +4545,7 @@
     "total_qty": 98.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010078",
@@ -4553,11 +4553,11 @@
     "category": "FAN SFG",
     "unit": "Pcs",
     "store_qty": 97.0,
-    "section_qty": 1694.0,
-    "total_qty": 1791.0,
+    "section_qty": 194.0,
+    "total_qty": 291.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010079",
@@ -4569,7 +4569,7 @@
     "total_qty": 463.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010080",
@@ -4581,7 +4581,7 @@
     "total_qty": 311.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010081",
@@ -4589,11 +4589,11 @@
     "category": "FAN SFG",
     "unit": "Pcs",
     "store_qty": 0.0,
-    "section_qty": 8516.0,
-    "total_qty": 8516.0,
+    "section_qty": 8316.0,
+    "total_qty": 8316.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010082",
@@ -4605,7 +4605,7 @@
     "total_qty": 774.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010090",
@@ -4617,7 +4617,7 @@
     "total_qty": 3883.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010092",
@@ -4629,7 +4629,7 @@
     "total_qty": 1359.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010095",
@@ -4641,7 +4641,7 @@
     "total_qty": 4238.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010096",
@@ -4653,7 +4653,7 @@
     "total_qty": 7.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010097",
@@ -4665,7 +4665,7 @@
     "total_qty": 441.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010116",
@@ -4677,7 +4677,7 @@
     "total_qty": 4076.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010119",
@@ -4689,7 +4689,7 @@
     "total_qty": 244.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010123",
@@ -4701,7 +4701,7 @@
     "total_qty": 2.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010126",
@@ -4709,11 +4709,11 @@
     "category": "FAN SFG",
     "unit": "Pcs",
     "store_qty": 0.0,
-    "section_qty": 197.0,
-    "total_qty": 197.0,
+    "section_qty": 397.0,
+    "total_qty": 397.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010130",
@@ -4725,7 +4725,7 @@
     "total_qty": 1084.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010133",
@@ -4737,7 +4737,7 @@
     "total_qty": 501.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010134",
@@ -4749,7 +4749,7 @@
     "total_qty": 349.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010135",
@@ -4761,7 +4761,7 @@
     "total_qty": 3.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010136",
@@ -4773,7 +4773,7 @@
     "total_qty": 149.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "SFG1010142",
@@ -4781,11 +4781,11 @@
     "category": "FAN SFG",
     "unit": "Set",
     "store_qty": 0.0,
-    "section_qty": 2.0,
-    "total_qty": 2.0,
+    "section_qty": 197.0,
+    "total_qty": 197.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "CF5601/CF5601IV",
@@ -4797,7 +4797,7 @@
     "total_qty": 15.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "CF5602/CF5602IV",
@@ -4809,7 +4809,7 @@
     "total_qty": 35.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "CF5603/CF5603IV",
@@ -4821,7 +4821,7 @@
     "total_qty": 33.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "CF5607/CF5607IV",
@@ -4833,7 +4833,7 @@
     "total_qty": 2.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "CR5601IV",
@@ -4845,7 +4845,7 @@
     "total_qty": 65.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "CF4801/CF4801IV",
@@ -4857,7 +4857,7 @@
     "total_qty": 22.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "CF3601/CF3601IV",
@@ -4869,7 +4869,7 @@
     "total_qty": 39.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "CF2401/CF2401IV",
@@ -4881,7 +4881,7 @@
     "total_qty": 124.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "EF0801OW/EF0801OW",
@@ -4893,7 +4893,7 @@
     "total_qty": 109.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "EF1001OW/EF1001OW",
@@ -4905,7 +4905,7 @@
     "total_qty": 79.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "MRTF1201",
@@ -4917,7 +4917,7 @@
     "total_qty": 4.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "MRTF1601",
@@ -4929,7 +4929,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "TF16316/GTF00100",
@@ -4941,7 +4941,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "TF16320/GTF00200",
@@ -4953,7 +4953,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "CFB3601/FB3601IV",
@@ -4965,7 +4965,7 @@
     "total_qty": 0.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "CFB4801/FB4801IV",
@@ -4977,7 +4977,7 @@
     "total_qty": 8.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "CFB5601/FB5601IV",
@@ -4989,7 +4989,7 @@
     "total_qty": 22.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "CFB5602/FB5602IV",
@@ -5001,7 +5001,7 @@
     "total_qty": 23.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "60477/FOA00500",
@@ -5013,7 +5013,7 @@
     "total_qty": 254.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   },
   {
     "item_code": "3201010056",
@@ -5025,6 +5025,6 @@
     "total_qty": 1463.0,
     "rate": 0.0,
     "stock_amount": 0.0,
-    "last_updated_at": "2026-09-06 17:11:09"
+    "last_updated_at": "2026-09-07 13:28:15"
   }
 ]
