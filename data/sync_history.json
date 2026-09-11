@@ -1,5 +1,38 @@
 [
   {
+    "sync_time": "2026-09-11 16:28:43",
+    "duration_seconds": 22.55,
+    "total_boms": 183,
+    "added_count": 0,
+    "updated_count": 2,
+    "deleted_count": 0,
+    "unchanged_count": 181,
+    "added": [],
+    "updated": [
+      {
+        "bom_no": "25020057",
+        "product_name": "MRTF1201-12 Inch Swasti Rechargeable Table Fan",
+        "item_code": "MRTF1201",
+        "section": "Rojonigondha - FAN Floor",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "25080348",
+        "product_name": "MRTF1601-16 Inch Swasti Rechargeable Table Fan",
+        "item_code": "MRTF1601",
+        "section": "Rojonigondha - FAN Floor",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      }
+    ],
+    "deleted": [],
+    "status": "SUCCESS",
+    "total_stock_items": 419
+  },
+  {
     "sync_time": "2026-09-11 12:10:06",
     "duration_seconds": 16.69,
     "total_boms": 183,
