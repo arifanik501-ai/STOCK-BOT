@@ -1,5 +1,38 @@
 [
   {
+    "sync_time": "2026-09-12 06:54:23",
+    "duration_seconds": 15.37,
+    "total_boms": 183,
+    "added_count": 0,
+    "updated_count": 2,
+    "deleted_count": 0,
+    "unchanged_count": 181,
+    "added": [],
+    "updated": [
+      {
+        "bom_no": "23090007",
+        "product_name": "SFG1010023-Winding Armature 5.5 Circle 16mm",
+        "item_code": "SFG1010023",
+        "section": "Armature Winding",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      },
+      {
+        "bom_no": "23090008",
+        "product_name": "SFG1010027-Complete Armature 5.5 Circle 16mm",
+        "item_code": "SFG1010027",
+        "section": "Armature Winding",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      }
+    ],
+    "deleted": [],
+    "status": "SUCCESS",
+    "total_stock_items": 419
+  },
+  {
     "sync_time": "2026-09-11 16:28:43",
     "duration_seconds": 22.55,
     "total_boms": 183,
