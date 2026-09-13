@@ -1,5 +1,29 @@
 [
   {
+    "sync_time": "2026-09-13 12:44:30",
+    "duration_seconds": 17.02,
+    "total_boms": 183,
+    "added_count": 0,
+    "updated_count": 1,
+    "deleted_count": 0,
+    "unchanged_count": 182,
+    "added": [],
+    "updated": [
+      {
+        "bom_no": "23090105",
+        "product_name": "SFG1010101-FAN Aluminium Bar",
+        "item_code": "SFG1010101",
+        "section": "Dhalai and Die Casting Section",
+        "changes": [
+          "Formula / Material specifications updated"
+        ]
+      }
+    ],
+    "deleted": [],
+    "status": "SUCCESS",
+    "total_stock_items": 419
+  },
+  {
     "sync_time": "2026-09-13 07:12:27",
     "duration_seconds": 17.3,
     "total_boms": 183,
